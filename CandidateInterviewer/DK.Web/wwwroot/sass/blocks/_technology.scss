@@ -1,0 +1,33 @@
+﻿.technology {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 719px;
+    height: 626px;
+    background: url("../images/technologies-bg.png") top right no-repeat;
+    background-size: contain;
+
+    &__model {
+        position: absolute;
+        display: block;
+        top: 55px;
+        left: 22px;
+        width: 665px;
+        height: 535px;
+        background: url("../images/technologies-model.png") top right no-repeat;
+        background-size: contain;
+    }
+
+    &__light {
+        animation-delay: 0.1s;
+        display: block;
+        height: 314px;
+        left: 173px;
+        position: absolute;
+        top: 0;
+        width: 400px;
+        background: url("../images/light.png") top center no-repeat;
+        background-size: contain;
+    }
+}

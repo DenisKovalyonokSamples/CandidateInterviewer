@@ -1,0 +1,35 @@
+﻿.nav {
+    padding: 0;
+
+    &__li {
+        display: inline-block;
+        vertical-align: middle;
+        list-style: none;
+
+        & + & {
+            margin-left: 30px;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        font-family: var(--fontMedium);
+        font-size: 17px;
+        text-transform: uppercase;
+        color: var(--brendCol);
+        transition: color 0.5s, border-color 0.5s;
+        border-bottom: 1px solid transparent;
+        line-height: 20px;
+
+        &:hover {
+            color: var(--brendColPink);
+            border-color: var(--brendColPink);
+        }
+    }
+
+    &__link--active {
+        color: var(--brendColPink);
+        border-color: var(--brendColPink);
+        cursor: default;
+    }
+}

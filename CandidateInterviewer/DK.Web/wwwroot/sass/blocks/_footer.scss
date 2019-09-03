@@ -1,0 +1,42 @@
+﻿.footer {
+    padding: 50px 0 15px;
+    position: relative;
+    z-index: 1;
+
+    &__outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        margin: 0 -15px;
+    }
+
+    &__itm {
+        padding: 0 15px;
+    }
+
+    &__copy {
+        font-weight: 600;
+        font-family: var(--alternativeFont);
+        font-size: 13px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .nav {
+        &__link {
+            color: var(--brendColLight);
+
+            &:hover {
+                color: var(--brendColPink);
+            }
+        }
+
+        &__link--active {
+            color: var(--brendColLight);
+            border-color: var(--brendColLight);
+        }
+    }
+}

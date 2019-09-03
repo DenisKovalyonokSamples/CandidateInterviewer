@@ -1,0 +1,102 @@
+﻿*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brendColPink);
+}
+
+html,
+body {
+    font-family: var(--fontMedium);
+    height: 100%;
+    line-height: 1.5;
+    background: var(--bgColorBody);
+    color: var(--brendColLight);
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+.container {
+    max-width: 1125px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.content {
+    min-height: 100%;
+    margin-bottom: -170px;
+
+    &__outer {
+        position: relative;
+        z-index: 1;
+        padding: 200px 0 100px;
+    }
+
+    &--bg-top {
+        background: url("../images/line-bg.png") top left no-repeat;
+        background-size: contain;
+    }
+
+    &--bg-bottom {
+        position: relative;
+
+        &:after {
+            background: url("../images/bg-bottom.png") right bottom no-repeat;
+            background-size: contain;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 554px;
+            height: 519px;
+            content: '';
+            z-index: 0;
+        }
+    }
+
+    &--clients-wrap {
+        background: url("../images/bg-wave.svg") center center no-repeat;
+        background-size: contain;
+    }
+
+    &--works-wrap {
+        background: url("../images/circle-bg.png") right center no-repeat;
+    }
+
+    &--works-bg {
+        background: url("../images/line-bg.png") bottom left no-repeat;
+        background-size: contain;
+    }
+
+    &--bg-preview {
+        background: url("../images/preview-bg.png") top right no-repeat;
+    }
+
+    &--main {
+        height: 100%;
+
+        .content__outer {
+            padding: 0;
+        }
+    }
+}
+
+.owl-dot {
+    &:focus {
+        outline: none;
+    }
+}

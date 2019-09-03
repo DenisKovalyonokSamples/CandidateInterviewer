@@ -1,0 +1,22 @@
+﻿.description {
+    text-align: center;
+    padding: 200px 0 300px;
+    background: url("../images/bg-left.png") -80px -25px no-repeat, url("../images/bg-right.png") top right no-repeat;
+    position: relative;
+
+    &:after {
+        background: url("../images/bg-elem.png") no-repeat;
+        display: block;
+        position: absolute;
+        bottom: -95px;
+        left: 0;
+        width: 417px;
+        height: 312px;
+        content: '';
+        background-size: contain;
+    }
+
+    .title-h2 {
+        margin-bottom: 60px;
+    }
+}

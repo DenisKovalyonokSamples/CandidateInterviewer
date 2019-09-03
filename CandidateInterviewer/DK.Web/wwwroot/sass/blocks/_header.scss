@@ -1,0 +1,72 @@
+﻿.header {
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    transition: background 0.2s;
+
+    &--fixed {
+        background: rgba(240,243,250,0.9);
+    }
+
+    &__outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        margin: 0 -15px;
+    }
+
+    &__itm {
+        padding: 0 15px;
+    }
+
+    &__btn {
+        cursor: pointer;
+        background: rgba(240,243,250,0.9);
+        border-radius: 5px;
+        width: 40px;
+        height: 35px;
+        box-shadow: 0 0 12px rgba(167, 169, 182, 0.5);
+        display: none;
+        position: relative;
+        z-index: 6;
+
+        span {
+            position: absolute;
+            display: block;
+            height: 3px;
+            border-radius: 10px;
+            background: #482fe7;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+        }
+
+        &:after {
+            top: 8px;
+        }
+
+        &:before {
+            bottom: 8px;
+        }
+
+        &:after,
+        &:before {
+            position: absolute;
+            content: '';
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            width: 70%;
+            height: 3px;
+            border-radius: 10px;
+            background: #482fe7;
+        }
+    }
+}

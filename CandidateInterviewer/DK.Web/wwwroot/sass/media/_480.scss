@@ -1,0 +1,128 @@
+﻿@media only screen and (max-width: 480px) {
+    .company {
+        height: 220px;
+        width: 165px;
+
+        &__elem {
+            height: 80px;
+            width: 58px;
+        }
+
+        &__laptop {
+            display: none;
+        }
+    }
+
+    .carousel {
+        &--preview {
+            .carousel__col--img {
+                max-width: 280px;
+            }
+        }
+
+        &__img {
+            margin-top: 0;
+        }
+
+        &__col--img {
+            width: auto;
+        }
+
+        .owl-carousel {
+            padding-right: 20px;
+
+            .owl-dot {
+                height: 15px;
+                margin-bottom: 10px;
+                width: 15px;
+            }
+        }
+    }
+
+    .project {
+        .slider {
+            margin-bottom: 0;
+        }
+
+        &__outer {
+            padding: 15px 15px 20px;
+        }
+    }
+
+    .about {
+        &__desc-wrap {
+            margin-bottom: 20px;
+        }
+    }
+
+    .relations {
+        &__outer {
+            margin: 0 -5px;
+        }
+
+        &__itm {
+            padding: 0 5px;
+        }
+    }
+
+    .step {
+        &__outer {
+            flex-direction: column;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &__itm {
+            width: 100%;
+        }
+    }
+
+    .form {
+        &__inp {
+            font-size: 18px;
+        }
+
+        &__outer {
+            flex-direction: column;
+        }
+
+        &__itm--budget,
+        &__itm--phone,
+        &__itm--email,
+        &__itm--name {
+            width: 100%;
+        }
+    }
+
+    .team {
+        &__outer {
+            flex-direction: column;
+        }
+
+        &__itm {
+            width: 100%;
+        }
+
+        &__itm--second {
+            margin-top: 30px;
+        }
+
+        &__itm--last {
+            margin-top: 30px;
+        }
+
+        .connection {
+            max-width: 180px;
+            margin: 0 auto;
+        }
+    }
+
+    .location {
+        &__num {
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+}

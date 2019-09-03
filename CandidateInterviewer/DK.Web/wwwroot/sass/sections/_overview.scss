@@ -1,0 +1,36 @@
+﻿.overview {
+    background: url("../images/overview-bg.png") left bottom no-repeat;
+    padding: 100px 0 90px;
+
+    &__outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: stretch;
+        margin: 0 -5px;
+    }
+
+    &__itm {
+        width: 30%;
+        padding: 0 10px;
+    }
+
+    &__itm--img {
+        width: 70%;
+    }
+
+    &__desc {
+        padding-top: 75px;
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+
+    .title-h2,
+    .title-h3 {
+        text-align: left;
+    }
+}

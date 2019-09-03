@@ -1,0 +1,141 @@
+﻿.carousel {
+    position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        background: url("../images/bg-elem-reverse.png") no-repeat;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 401px;
+        height: 354px;
+        position: absolute;
+        background-size: contain;
+    }
+
+    &--preview {
+        .carousel__outer {
+            position: relative;
+        }
+    }
+
+    &__itm {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__outer {
+        min-height: 540px;
+        max-width: 1400px;
+        margin: 0 auto;
+        background: url("../images/slider-bg.png") top left no-repeat;
+        background-size: contain;
+    }
+
+    &__desc {
+        padding: 0 20px;
+    }
+
+    &__desc-wrap {
+        margin-bottom: 30px;
+    }
+
+    &__desc-btn {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        color: var(--brendColPink);
+        border-bottom: 1px solid var(--brendColPink );
+        display: inline-block;
+        vertical-align: middle;
+        font-family: var(--fontBold);
+        margin: 0 25px;
+        font-size: 13px;
+        transition: color 0.2s, border-color 0.2s;
+
+        &:hover {
+            color: var(--brendColLight);
+            border-color: var(--brendColLight);
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    &__col--img {
+        width: 520px;
+    }
+
+    &__col--desc {
+        width: calc(100% - 520px);
+    }
+
+    &__img {
+        max-width: 100%;
+        margin-top: 35px;
+        display: block;
+    }
+
+    .title-h3 {
+        margin-bottom: 0;
+    }
+
+    .title-h2 {
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    .title-h2,
+    .title-h3 {
+        text-align: left;
+    }
+
+    .btn-b {
+        padding: 20px 25px;
+    }
+
+    .owl-carousel {
+        padding-right: 70px;
+        min-height: 540px;
+
+        .owl-dots {
+            bottom: 200px;
+            right: 20px;
+            position: absolute;
+        }
+
+        .owl-dot {
+            display: block;
+            width: 22px;
+            height: 22px;
+            border-radius: 11px;
+            background-color: #b3b9cc;
+            margin-bottom: 15px;
+
+            &.active {
+                box-shadow: 0 4px 12px rgba(167, 169, 182, 0.5);
+                background-color: #f6df34;
+            }
+        }
+
+        img {
+            width: auto;
+        }
+    }
+
+    .company__icon--circle {
+        left: auto;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

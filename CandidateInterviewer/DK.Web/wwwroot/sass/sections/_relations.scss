@@ -1,0 +1,45 @@
+﻿.relations {
+    padding-bottom: 150px;
+    margin-top: -105px;
+
+    &__outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: stretch;
+        margin: 0 -10px;
+    }
+
+    &__itm {
+        padding: 0 20px;
+        width: 60%;
+    }
+
+    &__itm--img {
+        width: 40%;
+    }
+
+    &__desc {
+        padding-top: 140px;
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+
+    &__wrap {
+        max-width: 420px;
+    }
+
+    .title-h2,
+    .title-h3 {
+        text-align: left;
+    }
+
+    .btn-b {
+        max-width: 225px;
+        display: block;
+    }
+}

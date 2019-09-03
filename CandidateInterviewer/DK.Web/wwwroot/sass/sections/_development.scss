@@ -1,0 +1,28 @@
+﻿.development {
+    padding-bottom: 185px;
+    background: url("../images/bg-wave.svg") center bottom no-repeat;
+    background-size: cover;
+
+    &__outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: stretch;
+        margin: 0 -20px;
+    }
+
+    &__itm {
+        padding: 0 20px;
+        min-height: 100%;
+        width: 25%;
+    }
+
+    &__wrap {
+        padding: 45px 70px;
+        background: rgba(255,255,255,0.4);
+        max-width: 1070px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,45 @@
+﻿.tools {
+    padding-bottom: 65px;
+
+    &__outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        align-content: stretch;
+        margin: 0 -10px 25px;
+        justify-content: space-between;
+    }
+
+    &__outer--left {
+        padding-right: 150px;
+    }
+
+    &__outer--right {
+        padding-left: 180px;
+    }
+
+    &__itm {
+        padding: 0 10px;
+        min-height: 100%;
+        max-width: 250px;
+    }
+
+    &__ttl {
+        line-height: 20px;
+        font-size: 24px;
+        color: var(--brendColPink);
+        margin-bottom: 25px;
+        display: block;
+        font-family: var(--fontBold);
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+    &__img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}

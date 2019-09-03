@@ -1,0 +1,16 @@
+﻿.process {
+    background: url("../images/process-bg.png") right top no-repeat, url("../images/bg-elem-reverse.png") 0 75% no-repeat;
+    padding-bottom: 55px;
+    margin-top: -70px;
+    min-height: 946px;
+
+    &__desc {
+        padding-top: 310px;
+        max-width: 400px;
+    }
+
+    .title-h2,
+    .title-h3 {
+        text-align: left;
+    }
+}

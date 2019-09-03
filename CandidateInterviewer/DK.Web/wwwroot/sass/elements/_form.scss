@@ -1,0 +1,93 @@
+﻿.form {
+    max-width: 670px;
+    margin: 0 auto;
+
+    &__outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        margin: 0 -10px;
+    }
+
+    &__itm {
+        width: 50%;
+        padding: 0 18px;
+        margin-bottom: 35px;
+        position: relative;
+
+        &--full-width {
+            width: 100%;
+        }
+
+        &--budget {
+            width: 40%;
+        }
+
+        &--phone {
+            width: 60%;
+        }
+
+        &--name {
+            width: 42%;
+        }
+
+        &--email {
+            width: 58%;
+        }
+    }
+
+    &__inp {
+        width: 100%;
+        padding: 7px 25px;
+        border-radius: 7px;
+        border: 3px solid var(--colorGray);
+        color: var(--brendColLight);
+        font-size: 23px;
+        transition: border-color 0.5s;
+
+        &::placeholder {
+            color: var(--colorGray);
+        }
+
+        &:focus {
+            outline: none;
+            border-color: var(--brendColLight);
+        }
+
+        &.required-error {
+            ~ .error-req {
+                opacity: 9;
+                visibility: visible;
+            }
+        }
+
+        &.email-error {
+            ~ .error-email {
+                opacity: 9;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__textarea {
+        resize: none;
+        height: 93px;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    .error {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        font-size: 13px;
+        font-family: var(--fontBold);
+        color: var(--brendColPink);
+        left: 20px;
+        top: 100%;
+        width: 100%;
+    }
+}

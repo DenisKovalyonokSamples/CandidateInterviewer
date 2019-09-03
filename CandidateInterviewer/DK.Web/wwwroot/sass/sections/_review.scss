@@ -1,0 +1,164 @@
+﻿.review {
+    padding: 140px 0 390px;
+    position: relative;
+
+    &:after,
+    &:before {
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+    }
+
+    &:after {
+        height: 145px;
+        top: 0;
+        background: url("../images/bg-review-top.png") left top no-repeat;
+        background-size: 100% 145px;
+    }
+
+    &:before {
+        height: 420px;
+        bottom: 0;
+        background: url("../images/bg-review-bottom.png") left top no-repeat;
+        background-size: 100% 420px;
+    }
+
+    &__wrap {
+        background: #30158e;
+        padding-top: 80px;
+        position: relative;
+
+        &:after {
+            z-index: 1;
+            position: absolute;
+            left: -12px;
+            content: '';
+            display: block;
+            width: 278px;
+            height: 383px;
+            top: 4px;
+            background: url("../images/bg-left.png") left top no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__container {
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__carousel {
+        position: relative;
+        border: 14px solid #fff;
+        border-radius: 30px;
+        max-width: 530px;
+        margin: 0 auto;
+
+        &:after {
+            z-index: 2;
+            position: absolute;
+            left: -48px;
+            top: -27px;
+            content: '';
+            display: block;
+            background: #30158e url("../images/icon-quote.png") no-repeat;
+            background-size: contain;
+            width: 115px;
+            height: 93px;
+        }
+
+        &:before {
+            z-index: 2;
+            position: absolute;
+            bottom: -26px;
+            right: -30px;
+            content: '';
+            display: block;
+            background: #30158e url("../images/icon-quote.png") no-repeat;
+            width: 115px;
+            background-size: contain;
+            height: 93px;
+            transform: scale(-1);
+        }
+    }
+
+    &__carousel-outer {
+        text-align: center;
+        transform: translateY(-103px);
+        margin: 0 auto -103px;
+    }
+
+    &__carousel-img {
+        width: 148px;
+        height: 149px;
+        border-radius: 50%;
+        margin: 0 auto 25px;
+    }
+
+    &__carousel-name {
+        line-height: 30px;
+        color: #ffffff;
+        font-family: var(--fontBold);
+        font-size: 25px;
+        display: block;
+    }
+
+    &__carousel__link-wrap {
+        margin-bottom: 40px;
+    }
+
+    &__carousel-company {
+        color: var(--brendColPink);
+        font-family: var(--fontBold);
+        font-size: 14px;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--brendColPink);
+        transition: color 0.2s, border-color 0.2s;
+
+        &:hover {
+            color: var(--brendColLight);
+            border-color: var(--brendColLight);
+        }
+    }
+
+    &__carousel-text {
+        margin: 0;
+        text-align: left;
+        color: #fff;
+    }
+
+    &__carousel-wrap {
+        padding: 0 85px 20px;
+    }
+
+    .owl-carousel {
+        .owl-dots {
+            top: 50%;
+            transform: translateY(-50%);
+            right: -280px;
+            position: absolute;
+        }
+
+        .owl-dot {
+            display: block;
+            width: 22px;
+            height: 22px;
+            border-radius: 11px;
+            background-color: #b3b9cc;
+            margin-bottom: 13px;
+
+            &.active {
+                box-shadow: 0 4px 12px rgba(167, 169, 182, 0.5);
+                background-color: #f6df34;
+            }
+        }
+
+        img {
+            width: 148px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+﻿.message {
+    &__wrap {
+        margin: 0 auto;
+        max-width: 1030px;
+    }
+
+    &__top {
+        background: #fff url("../images/message-bg.png") top center no-repeat;
+        background-size: cover;
+        min-height: 530px;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+    }
+
+    &__bottom {
+        background: #fffefe;
+        padding: 55px 20px 50px;
+        border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+}

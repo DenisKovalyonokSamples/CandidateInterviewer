@@ -1,0 +1,18 @@
+﻿.logo {
+    &__img {
+        border-radius: 10px;
+        background: #fff;
+        width: 70px;
+        height: 70px;
+        box-shadow: 0 0 12px rgba(167, 169, 182, 0.5);
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    &__text {
+        width: 35px;
+        height: 7px;
+        display: block;
+        margin: 0 auto;
+    }
+}

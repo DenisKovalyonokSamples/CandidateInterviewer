@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "6.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-cssmin": "0.2.0",
+    "gulp-npm-dist": "1.0.2",
+    "gulp-rename": "1.4.0",
+    "gulp-sass": "4.0.1",
+    "gulp-uglify": "3.0.1",
+    "jquery": "^3.4.1",
+    "jquery-migrate": "3.0.1",
+    "jquery.scrollbar": "0.2.11",
+    "modernizr": "^3.7.1",
+    "natives": "1.1.6",
+    "rimraf": "2.5.4"
+  }
+}

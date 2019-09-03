@@ -1,0 +1,73 @@
+﻿.model {
+    padding-bottom: 115px;
+
+    &__wrap {
+        max-width: 870px;
+        margin: 0 auto;
+    }
+
+    &__outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: stretch;
+        margin: 0 -40px;
+    }
+
+    &__itm {
+        width: 33%;
+        padding: 0 40px;
+    }
+
+    &__preview {
+        box-shadow: 0 4px 12px rgba(167, 169, 182, 0.5);
+        height: 100%;
+        padding-top: 285px;
+        border-radius: 7px;
+        max-width: 245px;
+        margin: 0 auto;
+    }
+
+    &__preview--team {
+        background-size: 220px 323px;
+        background: #fff url("../images/extended-team.png") top right no-repeat;
+    }
+
+    &__preview--product {
+        background-size: 244px 284px;
+        background: #fff url("../images/managed-product.png") top center no-repeat;
+    }
+
+    &__preview--service {
+        background-size: 228px 288px;
+        background: #fff url("../images/managed-service.png") top left no-repeat;
+    }
+
+    &__desc {
+        padding: 15px 25px 25px;
+    }
+
+    &__link-outer {
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        color: var(--brendColPink);
+        font-family: var(--fontBold);
+        font-size: 14px;
+        border-bottom: 1px solid var(--brendColPink);
+        transition: color 0.2s, border-color 0.2s;
+
+        &:hover {
+            color: var(--brendColLight);
+            border-color: var(--brendColLight);
+        }
+    }
+
+    &__text {
+        margin: 0;
+    }
+}

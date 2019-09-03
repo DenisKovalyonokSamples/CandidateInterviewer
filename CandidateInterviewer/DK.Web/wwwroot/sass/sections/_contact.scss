@@ -1,0 +1,29 @@
+﻿.contact {
+    padding: 90px 0 100px;
+    background: url("../images/bg-wave.svg") center bottom no-repeat;
+    background-size: contain;
+
+    &__wrap {
+        margin: 0 auto;
+        max-width: 870px;
+    }
+
+    &__outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: stretch;
+        margin: 0 -15px;
+    }
+
+    &__itm {
+        padding: 0 15px;
+        width: 33.3%;
+    }
+
+    .title-h2 {
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,602 @@
+﻿@media only screen and (max-width: 1024px) {
+    .header {
+        padding: 15px 0;
+    }
+
+    .nav {
+        &__li {
+            & + & {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .company {
+        height: 633px;
+        width: 492px;
+
+        &__elem {
+            height: 240px;
+            width: 174px;
+        }
+
+        &__laptop {
+            height: 359px;
+            width: 420px;
+            right: 40px;
+            top: 68px;
+        }
+
+        &__icon--btn {
+            left: 179px;
+            top: 393px;
+        }
+
+        &__icon--graph {
+            display: none;
+        }
+
+        &__icon--time {
+            left: 132px;
+            top: 212px;
+        }
+
+        &__icon--arrow {
+            display: none;
+        }
+
+        &__icon--circle {
+            top: 150px;
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    .title-h2 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .about {
+        &.about--service {
+            min-height: 470px;
+        }
+
+        &.about--technology {
+            min-height: 380px;
+            padding-bottom: 50px;
+        }
+
+        &.about--company {
+            min-height: 633px;
+            height: auto;
+
+            .container {
+                min-height: 633px;
+            }
+        }
+
+        &__caption {
+            font-size: 20px;
+        }
+
+        .title-h2 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .title-h3 {
+        font-size: 20px;
+    }
+
+    .btn-b {
+        padding: 15px 25px;
+    }
+
+    .carousel {
+        &__outer {
+            min-height: 370px;
+        }
+
+        &:after {
+            height: 236px;
+            width: 267px;
+        }
+
+        &__col--img {
+            width: 420px;
+        }
+
+        &__col--desc {
+            width: calc(100% - 420px);
+        }
+
+        &__desc-wrap {
+            margin-bottom: 20px;
+        }
+
+        .owl-carousel {
+            min-height: 370px;
+            padding-right: 50px;
+
+            .owl-dots {
+                right: 0;
+                bottom: auto;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .btn-b {
+            padding: 15px 25px;
+        }
+    }
+
+    .project {
+        padding: 80px 0 50px;
+    }
+
+    .technology {
+        height: 417px;
+        width: 479px;
+
+        &__model {
+            height: 356px;
+            left: 12px;
+            top: 40px;
+            width: 443px;
+        }
+
+        &__light {
+            height: 209px;
+            left: 98px;
+            width: 266px;
+        }
+    }
+
+    .content {
+        &__outer {
+            padding-top: 150px;
+        }
+
+        &--clients-wrap {
+            background-position: center 40%;
+        }
+
+        &--bg-preview {
+            background-size: 244px 109px;
+        }
+
+        &--bg-bottom {
+            &:after {
+                height: 346px;
+                width: 369px;
+            }
+        }
+    }
+
+    .dev {
+        padding-bottom: 80px;
+    }
+
+    .development {
+        padding-bottom: 90px;
+
+        &__wrap {
+            padding: 35px 30px;
+        }
+    }
+
+    .step {
+        background-size: 95px 268px;
+        padding-bottom: 35px;
+
+        &:after {
+            background-size: contain;
+            height: 249px;
+            top: -172px;
+            width: 149px;
+        }
+
+        &__outer {
+            &:after {
+                width: 10px;
+            }
+        }
+
+        &__ttl {
+            font-size: 22px;
+        }
+    }
+
+    .connection {
+        &__top--v-middle {
+            min-height: 120px;
+        }
+
+        &__info {
+            font-size: 22px;
+        }
+
+        &__icon--xamarin {
+            height: 56px;
+            width: 63px;
+        }
+
+        &__icon--lonic {
+            height: 58px;
+            width: 58px;
+        }
+
+        &__icon--net {
+            height: 40px;
+            width: 99px;
+        }
+
+        &__icon--obj-c {
+            height: 72px;
+            width: 72px;
+        }
+
+        &__svg--developers {
+            height: 77px;
+            width: 82px;
+        }
+
+        &__svg--testers {
+            height: 80px;
+            width: 85px;
+        }
+
+        &__svg--sales {
+            height: 73px;
+            width: 73px;
+        }
+
+        &__ttl {
+            font-size: 22px;
+        }
+    }
+
+    .service {
+        height: 590px;
+        width: 468px;
+
+        &__phone {
+            height: 416px;
+            top: 46px;
+            width: 365px;
+        }
+
+        &__icon--cube-blue {
+            left: 40px;
+            top: 75px;
+        }
+
+        &__icon--cube-yellow {
+            left: 25px;
+            top: 125px;
+        }
+
+        &__icon--platform {
+            bottom: 70px;
+            right: 63px;
+        }
+    }
+
+    .tools {
+        padding-bottom: 45px;
+
+        &__itm {
+            max-width: none;
+            width: 33.3%;
+        }
+
+        &__outer--left {
+            padding-right: 0;
+        }
+
+        &__outer--right {
+            padding-left: 0;
+        }
+
+        &__ttl {
+            font-size: 22px;
+        }
+    }
+
+    .model {
+        padding-bottom: 75px;
+
+        &__itm {
+            padding: 0 15px;
+        }
+
+        &__outer {
+            margin: 0 -15px;
+        }
+    }
+
+    .work {
+        padding-bottom: 45px;
+
+        &__itm {
+            width: 50%;
+        }
+
+        &__preview {
+            max-width: 100%;
+        }
+
+        &__outer--value {
+            flex-direction: column;
+
+            .work__itm {
+                width: 100%;
+            }
+        }
+
+        &__ttl {
+            font-size: 22px;
+        }
+
+        &__icon,
+        &__img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    .about-ryxol {
+        padding: 130px 0 200px;
+        background-size: 185px 255px, 95px 268px;
+        background-position: -53px -16px, top right;
+
+        &:after {
+            bottom: -63px;
+            height: 208px;
+            width: 278px;
+        }
+
+        .title-h2 {
+            margin-bottom: 40px;
+        }
+    }
+
+    .client {
+        padding-bottom: 55px;
+
+        &__outer {
+            margin-bottom: 55px;
+        }
+
+        &__about {
+            flex-direction: column;
+            padding: 0 20px;
+        }
+
+        &__img {
+            margin: 0 auto -30px;
+        }
+
+        &__name {
+            padding: 0;
+            font-size: 22px;
+        }
+
+        &__desc {
+            padding: 20px;
+        }
+
+        &__link-outer {
+            margin-bottom: 15px;
+        }
+
+        .title-h3 {
+            margin-bottom: 90px;
+        }
+    }
+
+    .review {
+        padding: 93px 0 260px;
+
+        &:after {
+            background-size: 100% 96px;
+            height: 96px;
+        }
+
+        &:before {
+            background-size: 100% 280px;
+            height: 280px;
+        }
+
+        &__wrap {
+            &:after {
+                height: 255px;
+                width: 185px;
+            }
+        }
+
+        &__carousel {
+            border-width: 10px;
+            width: 400px;
+
+            &:after,
+            &:before {
+                height: 62px;
+                width: 76px;
+            }
+
+            &:before {
+                bottom: -17px;
+                right: -20px;
+            }
+
+            &:after {
+                left: -32px;
+                top: -18px;
+            }
+        }
+
+        &__carousel-name {
+            font-size: 22px;
+        }
+
+        &__carousel-wrap {
+            padding: 0 45px 20px;
+        }
+
+        &__carousel-img {
+            height: 120px;
+        }
+
+        &__carousel-outer {
+            margin: 0 auto -70px;
+            transform: translateY(-70px);
+        }
+
+        &__wrap {
+            padding-top: 55px;
+        }
+
+        .owl-carousel {
+            img {
+                width: 120px;
+            }
+
+            .owl-dots {
+                right: -160px;
+            }
+        }
+    }
+
+    .location {
+        margin-top: -75px;
+        padding-bottom: 100px;
+    }
+
+    .team {
+        background-position: right -45px;
+        background-size: 460px 620px;
+        padding: 105px 0 140px;
+        min-height: 620px;
+
+        &:after {
+            height: 242px;
+            top: -50px;
+            width: 105px;
+        }
+
+        &__outer {
+            max-width: 510px;
+        }
+
+        .title-h2 {
+            margin-bottom: 30px;
+        }
+    }
+
+    .message {
+        &__top {
+            min-height: 350px;
+            background-position: bottom center;
+        }
+
+        &__bottom {
+            padding: 35px 20px;
+        }
+    }
+
+    .social {
+        max-width: 80px;
+        flex-wrap: wrap;
+
+        &__li {
+            width: 50%;
+            margin-bottom: 6px;
+        }
+    }
+
+    .footer {
+        padding: 30px 0 10px;
+
+        .nav {
+            text-align: center;
+
+            &__li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .feedback {
+        .title-h3 {
+            margin-bottom: 45px;
+        }
+    }
+
+    .overview {
+        padding: 65px 0;
+        background-size: 112px 268px;
+
+        &__desc {
+            padding-top: 50px;
+        }
+    }
+
+    .process {
+        margin-top: -45px;
+        min-height: 630px;
+        padding-bottom: 35px;
+        background-size: 526px 620px, 267px 236px;
+        background-position: right top, 0 50%;
+
+        &__desc {
+            padding-top: 205px;
+        }
+    }
+
+    .design {
+        margin-top: -35px;
+        padding-bottom: 65px;
+
+        &__desc {
+            padding-top: 100px;
+        }
+    }
+
+    .technical {
+        padding-bottom: 100px;
+    }
+
+    .relations {
+        margin-top: -70px;
+        padding-bottom: 100px;
+
+        &__desc {
+            padding-top: 70px;
+        }
+    }
+
+    .examples {
+        .title-h2 {
+            margin-bottom: 50px;
+        }
+    }
+
+    .contact {
+        padding: 60px 0;
+    }
+
+    .form {
+        &__inp {
+            padding: 5px 20px;
+            font-size: 20px;
+            border-width: 2px;
+        }
+
+        &__itm {
+            margin-bottom: 20px;
+        }
+    }
+}

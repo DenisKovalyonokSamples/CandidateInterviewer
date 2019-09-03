@@ -12,6 +12,14 @@
     <None Remove="wwwroot\NewFolder1\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="gulpfile.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="gulpfile.js" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
@@ -20,7 +28,8 @@
 
 
   <ItemGroup>
-    <Folder Include="wwwroot\src\fonts\" />
+    <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>

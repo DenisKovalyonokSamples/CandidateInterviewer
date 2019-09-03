@@ -1,0 +1,653 @@
+﻿@media only screen and (max-width: 768px) {
+    .header {
+        &__btn {
+            display: block;
+        }
+
+        &__nav {
+            display: none;
+
+            &--open {
+                display: block;
+                position: absolute;
+                padding: 20px;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(240,243,250,0.98);
+                min-height: 100%;
+                z-index: 5;
+
+                .nav__li + .nav__li {
+                    margin-left: 0;
+                }
+
+                .nav {
+                    &__li {
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav {
+        &__link {
+            font-size: 14px;
+        }
+
+        &__li {
+            & + & {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .footer {
+        padding-top: 0;
+
+        .logo {
+            display: none;
+        }
+
+        &__outer {
+            flex-direction: column;
+        }
+    }
+
+    .social {
+        margin-bottom: 15px;
+        max-width: 100%;
+        text-align: center;
+
+        &__li {
+            width: 25%;
+            margin-bottom: 0;
+        }
+    }
+
+    .title-h2 {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 15px;
+    }
+
+    .title-h3 {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .connection {
+        &__ttl {
+            font-size: 18px;
+        }
+
+        &__link-icon {
+            border-width: 2px;
+            height: 45px;
+            right: -4px;
+            transform: translateY(-50%);
+            width: 45px;
+
+            &:before {
+                border-width: 3px;
+                height: 15px;
+                width: 15px;
+            }
+        }
+
+        &__info {
+            font-size: 20px;
+        }
+    }
+
+    .carousel {
+        &:after {
+            display: none;
+        }
+
+        &__row {
+            flex-direction: column;
+        }
+
+        &__outer {
+            background: none;
+        }
+
+        &__col--img {
+            width: 280px;
+            margin-bottom: 20px;
+        }
+
+        &__col--desc {
+            width: 100%;
+        }
+
+        &__desc {
+            padding: 0;
+        }
+    }
+
+    .wrapper {
+        &--work {
+            .content__outer {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .company {
+        height: 330px;
+        width: 250px;
+
+        &__elem {
+            height: 120px;
+            width: 87px;
+        }
+
+        &__laptop {
+            height: 179px;
+            width: 210px;
+            right: 20px;
+            top: 34px;
+        }
+
+        &__icon {
+            display: none;
+        }
+    }
+
+    .btn-a {
+        padding: 15px 25px;
+    }
+
+    .about {
+        &__desc {
+            padding-top: 0;
+        }
+
+        &__arrow {
+            display: none !important;
+        }
+
+        &__caption {
+            font-size: 16px;
+        }
+
+        &.about--service {
+            min-height: 200px;
+        }
+
+        &.about--technology {
+            min-height: 190px;
+            padding-bottom: 25px;
+        }
+
+        &.about--company {
+            min-height: 315px;
+            height: auto;
+
+            .container {
+                min-height: 315px;
+            }
+
+            .about__desc {
+                padding-top: 120px;
+                left: auto;
+                position: relative;
+                top: auto;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    .logo {
+        &__img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .project {
+        padding: 50px 0;
+    }
+
+    .content {
+        &--bg-preview {
+            background: none;
+        }
+
+        &--works-wrap {
+            background: none;
+        }
+
+        &__outer {
+            padding-top: 100px;
+        }
+
+        &--bg-bottom {
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    .overview {
+        background: none;
+        padding: 40px 0;
+
+        &__outer {
+            flex-direction: column;
+        }
+
+        &__itm--img {
+            width: 100%;
+        }
+
+        &__itm {
+            width: 100%;
+        }
+
+        &__desc {
+            padding-top: 0;
+        }
+    }
+
+    .process {
+        background: url("../images/process-bg.png") right top no-repeat;
+        background-size: 230px 275px;
+        margin-top: 0;
+        min-height: 275px;
+        padding-bottom: 0;
+
+        &__desc {
+            padding-top: 10px;
+        }
+    }
+
+    .design {
+        padding-bottom: 40px;
+        margin-top: 0;
+
+        &__outer {
+            flex-direction: column-reverse;
+        }
+
+        &__itm--img {
+            width: 100%;
+        }
+
+        &__itm {
+            width: 100%;
+        }
+
+        &__desc {
+            padding-top: 0;
+        }
+    }
+
+    .technical {
+        padding-bottom: 65px;
+    }
+
+    .review {
+        padding: 0;
+
+        &:before {
+            display: none;
+        }
+
+        &:after {
+            display: none;
+        }
+
+        &__wrap {
+            padding: 80px 0 70px;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &__carousel {
+            border-width: 7px;
+            width: 100%;
+
+            &:after,
+            &:before {
+                height: 41px;
+                width: 50px;
+            }
+
+            &:before {
+                bottom: -11px;
+                right: -13px;
+            }
+
+            &:after {
+                left: -21px;
+                top: -12px;
+            }
+        }
+
+        &__carousel-wrap {
+            padding: 0 30px 20px;
+        }
+
+        &__carousel__link-wrap {
+            margin-bottom: 20px;
+        }
+
+        &__carousel-outer {
+            margin: 0 auto -45px;
+            transform: translateY(-45px);
+        }
+
+        &__carousel-img {
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        .owl-carousel {
+            img {
+                width: 80px;
+            }
+
+            .owl-dots {
+                padding-top: 30px;
+                left: 50%;
+                top: 100%;
+                transform: translate(-50%);
+                right: auto;
+            }
+
+            .owl-dot {
+                display: inline-block;
+                height: 15px;
+                margin: 0 10px 0 0;
+                width: 15px;
+            }
+        }
+    }
+
+    .relations {
+        margin-top: 0;
+        padding: 40px 0 50px;
+
+        &__desc {
+            padding-top: 0;
+        }
+
+        &__itm {
+            width: 70%;
+        }
+
+        &__itm--img {
+            width: 30%;
+        }
+
+        &__outer {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .examples {
+        .title-h2 {
+            margin-bottom: 15px;
+        }
+
+        &__outer {
+            padding: 0 15px 0;
+        }
+    }
+
+    .technology {
+        height: 208px;
+        width: 240px;
+
+        &__light {
+            display: none;
+        }
+
+        &__model {
+            display: none;
+        }
+    }
+
+    .step {
+        background-size: 63px 178px;
+
+        &:after {
+            height: 166px;
+            top: -114px;
+            width: 100px;
+        }
+
+        &__ttl {
+            font-size: 20px;
+        }
+
+        &__preview {
+            margin-bottom: 25px;
+        }
+
+        .title-h3 {
+            margin-bottom: 35px;
+        }
+    }
+
+    .dev {
+        padding-bottom: 50px;
+    }
+
+    .development {
+        padding-bottom: 55px;
+
+        &__outer {
+            justify-content: center;
+        }
+
+        &__itm {
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+        &__wrap {
+            padding: 30px 15px;
+        }
+
+        .connection {
+            width: 190px;
+            margin: 0 auto;
+        }
+    }
+
+    .feedback {
+        .title-h3 {
+            margin-bottom: 25px;
+        }
+    }
+
+    .message {
+        &__top {
+            min-height: 175px;
+        }
+    }
+
+    .contact {
+        padding: 40px 0 10px;
+        background-position: center center;
+
+        &__outer {
+            flex-direction: column;
+        }
+
+        &__itm {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+    }
+
+    .map {
+        padding: 25px 0 100px;
+
+        &__img {
+            max-width: 100%;
+        }
+    }
+
+    .client {
+        &__outer {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
+        &__itm {
+            width: 100%;
+            margin-bottom: 70px;
+        }
+
+        &__preview {
+            margin: 0 auto;
+        }
+
+        &__img {
+            height: 80px;
+            margin-bottom: -40px;
+            transform: translateY(-40px);
+            width: 80px;
+        }
+
+        &__name {
+            font-size: 20px;
+        }
+
+        .title-h3 {
+            margin-bottom: 60px;
+        }
+    }
+
+    .location {
+        margin-top: 0;
+        padding: 50px 0;
+
+        &__img {
+            max-width: 100%;
+        }
+
+        &__num {
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+        .title-h2 {
+            margin-bottom: 35px;
+        }
+    }
+
+    .work {
+        padding-bottom: 25px;
+
+        &__ttl {
+            font-size: 20px;
+        }
+
+        &__outer--value {
+            .work__preview {
+                padding: 20px 15px;
+            }
+
+            .work__icon,
+            .work__img {
+                height: 70px;
+                width: 70px;
+            }
+
+            .work__preview-row {
+                margin: 0 -10px;
+            }
+
+            .work__preview-col {
+                padding: 0 10px;
+            }
+        }
+
+        &__outer {
+            flex-direction: column;
+        }
+
+        &__itm {
+            width: 100%;
+        }
+    }
+
+    .team {
+        background-position: right -20px;
+        background-size: 230px 310px;
+        min-height: auto;
+        padding: 50px 0 100px;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    .service {
+        height: 300px;
+        width: 234px;
+
+        &__phone {
+            display: none;
+        }
+
+        &__icon {
+            display: none;
+        }
+    }
+
+    .tools {
+        padding-bottom: 25px;
+
+        &__outer {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
+        &__itm {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &__ttl {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+    }
+
+    .model {
+        padding-bottom: 45px;
+
+        &__outer {
+            flex-direction: column;
+        }
+
+        &__itm {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    .about-ryxol {
+        background-size: 90px 130px,45px 135px;
+        padding: 70px 0 120px;
+
+        &:after {
+            display: none;
+        }
+
+        .title-h2 {
+            margin-bottom: 25px;
+        }
+    }
+}

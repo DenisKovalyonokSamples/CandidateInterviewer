@@ -1,0 +1,47 @@
+﻿@media only screen and (max-width: 900px) {
+    .slider {
+        &__itm {
+            margin: 0 auto;
+        }
+
+        .owl-stage-outer {
+            padding: 30px 0;
+        }
+    }
+
+    .carousel {
+        &__col--img {
+            width: 380px;
+        }
+
+        &__col--desc {
+            width: calc(100% - 380px);
+        }
+
+        &__desc {
+            .title-h2 {
+                font-size: 30px;
+                line-height: 35px;
+            }
+        }
+
+        &__desc-btn {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        &__link {
+            margin: 0 10px;
+        }
+    }
+
+    .development {
+        &__itm {
+            padding: 0 10px;
+        }
+
+        &__outer {
+            margin: 0 -10px;
+        }
+    }
+}

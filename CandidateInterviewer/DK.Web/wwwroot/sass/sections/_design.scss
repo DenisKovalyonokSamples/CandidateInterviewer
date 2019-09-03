@@ -1,0 +1,36 @@
+﻿.design {
+    padding-bottom: 100px;
+    margin-top: -55px;
+
+    &__outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: stretch;
+        margin: 0 -10px;
+    }
+
+    &__itm {
+        padding: 0 20px;
+        width: 40%;
+    }
+
+    &__itm--img {
+        width: 60%;
+    }
+
+    &__desc {
+        padding-top: 220px;
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+
+    .title-h2,
+    .title-h3 {
+        text-align: left;
+    }
+}

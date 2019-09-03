@@ -1,0 +1,38 @@
+﻿.slider {
+    position: relative;
+    z-index: 2;
+
+    &__outer {
+        max-width: 990px;
+        margin: 0 auto;
+    }
+
+    &__itm {
+        height: 100%;
+        width: 100%;
+        max-width: 245px;
+    }
+
+    .owl-stage-outer {
+        padding: 30px;
+    }
+
+    .owl-dots {
+        display: none;
+    }
+
+    .owl-stage {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+    }
+
+    .owl-center {
+        .connection {
+            box-shadow: 0 0 40px 10px rgba(128, 44, 169, 0.29);
+        }
+    }
+}

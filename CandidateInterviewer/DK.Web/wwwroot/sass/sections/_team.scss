@@ -1,0 +1,57 @@
+﻿.team {
+    padding: 160px 0 170px;
+    background: url("../images/bg-team.png") right -70px no-repeat;
+    position: relative;
+    background-size: 690px 930px;
+    min-height: 930px;
+
+    &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        right: 0;
+        top: -75px;
+        width: 160px;
+        height: 363px;
+        background: url("../images/web-elem.png") no-repeat;
+        background-size: cover;
+        background-position: top left;
+    }
+
+    &__wrap {
+        max-width: 400px;
+        text-align: left;
+    }
+
+    &__outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0 -10px;
+        max-width: 610px;
+    }
+
+    &__itm {
+        width: 33.3%;
+        padding: 0 10px;
+    }
+
+    &__itm--second {
+        margin-top: 50px;
+    }
+
+    &__itm--last {
+        margin-top: 100px;
+    }
+
+    .title-h2 {
+        margin-bottom: 55px;
+    }
+
+    .title-h2,
+    .title-h3 {
+        text-align: left;
+    }
+}

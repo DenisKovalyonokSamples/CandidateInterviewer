@@ -1,0 +1,17 @@
+﻿.platform {
+    font-size: 0;
+    margin-bottom: 30px;
+
+    &__icon {
+        display: inline-block;
+        vertical-align: middle;
+
+        & + & {
+            margin-left: 15px;
+        }
+    }
+
+    &__svg {
+        fill: #ccd1d3;
+    }
+}

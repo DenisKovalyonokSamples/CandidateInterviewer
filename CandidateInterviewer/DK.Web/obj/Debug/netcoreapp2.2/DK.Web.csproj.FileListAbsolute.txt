@@ -27,3 +27,4 @@ D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.W
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\DK.Web.dll
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\DK.Web.pdb
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\DK.Web.csproj.CopyComplete
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\DK.Web.csprojAssemblyReference.cache

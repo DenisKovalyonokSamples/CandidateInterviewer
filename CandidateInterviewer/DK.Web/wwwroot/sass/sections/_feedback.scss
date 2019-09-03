@@ -1,0 +1,19 @@
+﻿.feedback {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+
+    &--center {
+        text-align: center;
+    }
+
+    .title-h3 {
+        margin-bottom: 65px;
+    }
+
+    .btn-b {
+        max-width: 225px;
+        display: block;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,55 @@
+﻿.service {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 702px;
+    height: 886px;
+    background: url("../images/service-bg.png") top right no-repeat;
+    background-size: contain;
+
+    &__phone {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 548px;
+        height: 625px;
+        background: url("../images/phone.png") top right no-repeat;
+        background-size: contain;
+    }
+
+    &__icon {
+        background-image: url("../images/service-icons.png");
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        animation-duration: 1.5s;
+    }
+
+    &__icon--cube-blue {
+        left: 120px;
+        top: 125px;
+        width: 44px;
+        height: 49px;
+        background-position: -5px -5px;
+        animation-delay: 0.3s;
+    }
+
+    &__icon--cube-yellow {
+        left: 104px;
+        top: 177px;
+        width: 78px;
+        height: 87px;
+        background-position: -5px -228px;
+        animation-delay: 0.1s;
+    }
+
+    &__icon--platform {
+        bottom: 160px;
+        right: 120px;
+        width: 116px;
+        height: 154px;
+        background-position: -5px -64px;
+        animation-delay: 0.2s;
+    }
+}

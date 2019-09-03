@@ -1,0 +1,12 @@
+﻿.examples {
+    padding-bottom: 100px;
+
+    .title-h2 {
+        margin-bottom: 80px;
+    }
+
+    &__outer {
+        background: rgba(255, 255,255,0.4);
+        padding: 20px 30px 40px;
+    }
+}

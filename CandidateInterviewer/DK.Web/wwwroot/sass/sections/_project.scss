@@ -1,0 +1,18 @@
+﻿.project {
+    padding: 120px 0;
+    background: url("../images/bg-wave.svg") center center no-repeat;
+    background-size: contain;
+
+    &--center {
+        text-align: center;
+    }
+
+    &__outer {
+        background: rgba(255, 255,255,0.4);
+        padding: 20px 30px 40px;
+    }
+
+    .slider {
+        margin-bottom: 30px;
+    }
+}
