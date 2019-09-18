@@ -1,6 +1,10 @@
 ﻿.nav {
     padding: 0;
 
+    &__ul {
+        display: inline-block;
+    }
+
     &__li {
         display: inline-block;
         vertical-align: middle;
@@ -23,7 +27,7 @@
 
         &:hover {
             color: var(--brendColPink);
-            border-color: var(--brendColPink);
+            border-color: transparent;
         }
     }
 

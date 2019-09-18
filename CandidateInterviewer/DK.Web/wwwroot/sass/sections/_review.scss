@@ -4,7 +4,6 @@
 
     &:after,
     &:before {
-        z-index: 1;
         position: absolute;
         left: 0;
         content: '';
@@ -48,7 +47,7 @@
     &__container {
         margin: 0 auto;
         position: relative;
-        z-index: 2;
+        z-index: 1;
     }
 
     &__carousel {
@@ -59,7 +58,7 @@
         margin: 0 auto;
 
         &:after {
-            z-index: 2;
+            z-index: 1;
             position: absolute;
             left: -48px;
             top: -27px;
@@ -72,7 +71,7 @@
         }
 
         &:before {
-            z-index: 2;
+            z-index: 1;
             position: absolute;
             bottom: -26px;
             right: -30px;
