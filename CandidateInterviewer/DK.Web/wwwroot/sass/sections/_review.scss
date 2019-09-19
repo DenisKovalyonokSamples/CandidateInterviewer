@@ -124,6 +124,16 @@
         }
     }
 
+    &__carousel-clients {
+        transform: translate3d(-1506px, 0px, 0px);
+        transition: all 0s ease 0s;
+        width: 2008px;
+    }
+
+    &__carousel-client {
+        width: 502px;
+    }
+
     &__carousel-text {
         margin: 0;
         text-align: left;

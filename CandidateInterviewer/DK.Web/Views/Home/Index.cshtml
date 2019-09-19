@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "How It Works";
+    ViewData["Title"] = "Home";
 }
 
 <div class="company">
@@ -57,6 +57,39 @@
     </div>
 </section>
 
+<section class="tools">
+    <div class="container">
+        <div class="tools__outer tools__outer--left">
+            <div class="tools__itm">
+                <span class="tools__ttl">iOS Development</span>
+                <p class="tools__text">We test modern programming languages such as Swift and Objective-C and proven technologies and approaches that allow to easily extend and scale our products</p>
+            </div>
+            <div class="tools__itm">
+                <span class="tools__ttl">UI/UX Design</span>
+                <p class="tools__text">We have tests for prototyping, branding, UI and UX design for web and  mobile products. Our approach is simple: we focus on how actual people will use our  products</p>
+            </div>
+            <div class="tools__itm">
+                <span class="tools__ttl">Project Management</span>
+                <p class="tools__text">We can test dedicated project managers ensure that all your expectations and requirements are met.</p>
+            </div>
+        </div><img class="tools__img" src="~/images/bg-tools.png">
+        <div class="tools__outer tools__outer--right">
+            <div class="tools__itm">
+                <span class="tools__ttl">Android  Development</span>
+                <p class="tools__text">We test Android developers in Java, Kotlin and Xamarin.</p>
+            </div>
+            <div class="tools__itm">
+                <span class="tools__ttl">Web Development</span>
+                <p class="tools__text">We provide both frontend and backend development tests. Our web development test team specializes in Ruby on Rails, JavaScript, PHP, AngularJS, React, Node.js, ASP.NET and Elixir.</p>
+            </div>
+            <div class="tools__itm">
+                <span class="tools__ttl">Quality Assurance</span>
+                <p class="tools__text">Our quality control team  verifies that developers meets business objectives, and ensures that  test results is realy greate</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="process">
     <div class="container">
         <div class="process__desc">
@@ -68,11 +101,87 @@
     </div>
 </section>
 
+<section class="examples">
+    <div class="container">
+        <h2 class="title-h2">Test Areas</h2>
+        <div class="examples__outer">
+            <div class="slider">
+                <div class="slider__outer owl-carousel owl-carousel-project owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">
+                            <div class="owl-item">
+                                <div class="slider__itm">
+                                    <div class="connection connection--slider">
+                                        <div class="connection__outer">
+                                            <div class="connection__top">
+                                                <div class="connection__wrap">
+                                                    <img class="platform__img" src="~/images/cat-core.png" />
+                                                </div>
+                                                <div class="connection__desc">
+                                                    <span class="connection__ttl">Project Name</span>
+                                                    <p class="connection__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididelu</p>
+                                                </div>
+                                            </div>
+                                            <div class="connection__bottom">
+                                                <a class="connection__link connection__link--arrow" href="#">MORE INFORMATION<span class="connection__link-icon"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="slider__itm">
+                                    <div class="connection connection--slider">
+                                        <div class="connection__outer">
+                                            <div class="connection__top">
+                                                <div class="connection__wrap">
+                                                    <img class="platform__img" src="~/images/cat-angular.png" />
+                                                </div>
+                                                <div class="connection__desc">
+                                                    <span class="connection__ttl">Project Name</span>
+                                                    <p class="connection__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididelu</p>
+                                                </div>
+                                            </div>
+                                            <div class="connection__bottom">
+                                                <a class="connection__link connection__link--arrow" href="#">MORE INFORMATION<span class="connection__link-icon"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="slider__itm">
+                                    <div class="connection connection--slider">
+                                        <div class="connection__outer">
+                                            <div class="connection__top">
+                                                <div class="connection__wrap">
+                                                    <img class="platform__img" src="~/images/cat-xamarin.png" />
+                                                </div>
+                                                <div class="connection__desc">
+                                                    <span class="connection__ttl">Project Name</span>
+                                                    <p class="connection__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididelu</p>
+                                                </div>
+                                            </div>
+                                            <div class="connection__bottom">
+                                                <a class="connection__link connection__link--arrow" href="#">MORE INFORMATION<span class="connection__link-icon"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="technical">
     <div class="container pad_bottom">
         <h2 class="title-h2">Our Process Flow</h2>
         <h3 class="title-h3">Technical scheme for our work flow.</h3>
-        <img class="technical__img" src="~/images/process-flow.png">
+        <img class="technical__img" src="~/images/process-flow.png" />
     </div>
 </section>
 
@@ -84,8 +193,8 @@
                     <div class="review__carousel">
                         <div class="review__carousel-outer owl-carousel owl-carousel-review owl-loaded">
                             <div class="owl-stage-outer">
-                                <div class="owl-stage" style="transform: translate3d(-1506px, 0px, 0px); transition: all 0s ease 0s; width: 2008px;">
-                                    <div class="owl-item" style="width: 502px;">
+                                <div class="owl-stage review__carousel-clients">
+                                    <div class="owl-item review__carousel-client">
                                         <div class="review__carousel-itm">
                                             <div class="review__carousel-wrap">
                                                 <img class="review__carousel-img" src="~/images/av-client-one.png">
@@ -94,7 +203,7 @@
                                                 <p class="review__carousel-text">Great platform! We have found a lot of candidates here.</p>
                                             </div>
                                         </div>
-                                    </div><div class="owl-item" style="width: 502px;">
+                                    </div><div class="owl-item review__carousel-client">
                                         <div class="review__carousel-itm">
                                             <div class="review__carousel-wrap">
                                                 <img class="review__carousel-img" src="~/images/av-client-two.png">
@@ -103,7 +212,7 @@
                                                 <p class="review__carousel-text">This team works fast, professionally and reliably !</p>
                                             </div>
                                         </div>
-                                    </div><div class="owl-item" style="width: 502px;">
+                                    </div><div class="owl-item review__carousel-client">
                                         <div class="review__carousel-itm">
                                             <div class="review__carousel-wrap">
                                                 <img class="review__carousel-img" src="~/images/av-client-three.png">
@@ -112,7 +221,7 @@
                                                 <p class="review__carousel-text">Reports always on time and with high quality.</p>
                                             </div>
                                         </div>
-                                    </div><div class="owl-item active" style="width: 502px;">
+                                    </div><div class="owl-item active review__carousel-client">
                                         <div class="review__carousel-itm">
                                             <div class="review__carousel-wrap">
                                                 <img class="review__carousel-img" src="~/images/av-client-four.png">
@@ -123,7 +232,29 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button></div>
+                            </div>
+                            <div class="owl-nav disabled">
+                                <button type="button" role="presentation" class="owl-prev">
+                                    <span aria-label="Previous">‹</span>
+                                </button>
+                                <button type="button" role="presentation" class="owl-next">
+                                    <span aria-label="Next">›</span>
+                                </button>
+                            </div>
+                            <div class="owl-dots">
+                                <button role="button" class="owl-dot">
+                                    <span></span>
+                                </button>
+                                <button role="button" class="owl-dot">
+                                    <span></span>
+                                </button>
+                                <button role="button" class="owl-dot">
+                                    <span></span>
+                                </button>
+                                <button role="button" class="owl-dot active">
+                                    <span></span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,10 +278,4 @@
         </div>
     </section>
 </div>
-
-<section class="map development">
-    <div class="container">
-        <h2 class="title-h2">Our Legal Address</h2><img class="map__img" src="~/images/map.png">
-    </div>
-</section>
 

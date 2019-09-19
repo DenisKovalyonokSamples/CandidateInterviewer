@@ -1,0 +1,221 @@
+﻿
+@{
+    ViewData["Title"] = "Contacts";
+}
+
+<div class="content__fixed">
+    <section class="message">
+        <div class="message__wrap">
+            <div class="container no-width">
+                <div class="message__top"></div>
+                <div class="message__bottom">
+                    <h2 class="title-h2">Got a question in mind?</h2>
+                    <h3 class="title-h3">Please let us know:</h3>
+                    <form class="form js-validForm">
+                        <div class="form__outer">
+                            <div class="form__itm form__itm--name">
+                                <input class="form__inp js-validRequired" placeholder="Your name" type="text">
+                                <span class="error error-req">Required to fill</span>
+                            </div>
+                            <div class="form__itm form__itm--email">
+                                <input class="form__inp js-validRequired js-noSpaces js-validEmail" placeholder="Your email address" type="email">
+                                <span class="error error-req">Required to fill</span>
+                                <span class="error error-email">Invalid email</span>
+                            </div>
+                        </div>
+                        <div class="form__outer">
+                            <div class="form__itm form__itm--phone">
+                                <input class="form__inp js-noSpaces" placeholder="Phone number" type="text">
+                            </div>
+                            <div class="form__itm form__itm--budget">
+                                <input class="form__inp js-noSpaces" placeholder="Skype (optional)" type="text">
+                            </div>
+                        </div>
+                        <div class="form__outer">
+                            <div class="form__itm form__itm--full-width">
+                                <textarea class="form__inp form__textarea" placeholder="Message or question"></textarea>
+                            </div>
+                        </div>
+                        <div class="form--center">
+                            <button class="btn-b js-submitBtn" type="button">
+                                <span>Send message</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="contact__wrap">
+            <div class="container no-width">
+                <h2 class="title-h2">More contacts</h2>
+                <div class="contact__outer">
+                    <div class="contact__itm">
+                        <div class="connection connection--contacts">
+                            <div class="connection__outer">
+                                <div class="connection__top">
+                                    <img class="connection__icon connection__icon--campaign" src="~/images/contact-category.png" />
+                                    <span class="connection__ttl">Project Inquiries</span>
+                                    <p class="connection__text">Got an app idea? Tell us about it!</p>
+                                    <a class="connection__link" href="mailto:dev@ci.dk">dev@ci.dk</a>
+                                </div>
+                                <div class="connection__bottom">
+                                    <a class="btn-b btn-b--small" href="mailto:dev@ci.dk">
+                                        <span>Send message</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__itm">
+                        <div class="connection connection--contacts">
+                            <div class="connection__outer">
+                                <div class="connection__top">
+                                    <img class="connection__icon connection__icon--campaign" src="~/images/contact-category.png" />
+                                    <span class="connection__ttl">Career</span>
+                                    <p class="connection__text">We’re looking for talented people!</p>
+                                    <a class="connection__link" href="mailto:hr@ci.dk">hr@ci.dk</a>
+                                </div>
+                                <div class="connection__bottom"><a class="btn-b btn-b--small" href="mailto:hr@ci.dk"><span>Send message</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__itm">
+                        <div class="connection connection--contacts">
+                            <div class="connection__outer">
+                                <div class="connection__top">
+                                    <img class="connection__icon connection__icon--campaign" src="~/images/contact-category.png" />
+                                    <span class="connection__ttl">Partneship</span>
+                                    <p class="connection__text">Want to become a partner?</p>
+                                    <a class="connection__link" href="mailto:sales@ci.dk">sales@ci.dk</a>
+                                </div>
+                                <div class="connection__bottom"><a class="btn-b btn-b--small" href="mailto:sales@ci.dk"><span>Send message</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <div class="team__wrap">
+                <h2 class="title-h2">Joint our team</h2>
+                <h3 class="title-h3">Looking forward to joining us? We're glad to see you among our team members!</h3>
+            </div>
+            <div class="team__outer">
+                <div class="team__itm">
+                    <div class="connection">
+                        <div class="connection__outer">
+                            <div class="connection__top">
+                                <img class="map__img" src="~/images/car-developers.png" />
+                            </div>
+                            <div class="connection__bottom connection--center"><span class="connection__info">Developers</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__itm team__itm--second">
+                    <div class="connection">
+                        <div class="connection__outer">
+                            <div class="connection__top">
+                                <img class="map__img" src="~/images/car-testers.png" />
+                            </div>
+                            <div class="connection__bottom connection--center"><span class="connection__info">Testers</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__itm team__itm--last">
+                    <div class="connection">
+                        <div class="connection__outer">
+                            <div class="connection__top">
+                                <img class="map__img" src="~/images/car-sales.png" />
+                            </div>
+                            <div class="connection__bottom connection--center"><span class="connection__info">Sales</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="work">
+        <div class="container">
+            <div class="work__wrap--center">
+                <h2 class="title-h2">Our values</h2>
+                <h3 class="title-h3">Candidate Interviewer is a sum of great technology, innovative culture, and smart people. Our values are what we respect and care about.</h3>
+            </div>
+            <div class="work__outer work__outer--value">
+                <div class="work__itm">
+                    <div class="work__preview">
+                        <div class="work__preview-row">
+                            <div class="work__preview-col">
+                                <i class="work__icon">
+                                    <img class="work__img" src="~/images/ic-work.png">
+                                </i>
+                            </div>
+                            <div class="work__preview-col">
+                                <span class="work__ttl">Excellence at work</span>
+                                <p class="work__text"> The will to win, the desire to succeed, and the urge to reach our full potential can all be boiled down to one word: excellence. Commitment to excellence at every stage of app development, from planning to  delivery, is the key that unlocks value.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work__itm">
+                    <div class="work__preview">
+                        <div class="work__preview-row">
+                            <div class="work__preview-col">
+                                <i class="work__icon">
+                                    <img class="work__img" src="~/images/ic-process.png">
+                                </i>
+                            </div>
+                            <div class="work__preview-col">
+                                <span class="work__ttl">People over processes</span>
+                                <p class="work__text">The most impressive feats are accomplished by groups of people, not individuals. We are team players  and we hire people with a similar outlook, because the success of our team is integral to our own success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work__itm">
+                    <div class="work__preview">
+                        <div class="work__preview-row">
+                            <div class="work__preview-col">
+                                <i class="work__icon">
+                                    <img class="work__img" src="~/images/ic-knowleage.png">
+                                </i>
+                            </div>
+                            <div class="work__preview-col">
+                                <span class="work__ttl">Knowledge sharing</span>
+                                <p class="work__text">Knowledge is power and the way to get power is by sharing knowledge. By teaching others, we teach ourselves. Spreading knowledge both within our company and to the world at large is the smart way to do business.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work__itm">
+                    <div class="work__preview">
+                        <div class="work__preview-row">
+                            <div class="work__preview-col">
+                                <i class="work__icon">
+                                    <img class="work__img" src="~/images/ic-relationships.png">
+                                </i>
+                            </div>
+                            <div class="work__preview-col">
+                                <span class="work__ttl">Strong relationships</span>
+                                <p class="work__text">One of the key elements in our relationships with clients is the ability to trust and be trusted.Trust is earned by being honest and transparent, doing our work consistently, and delivering great results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map development">
+        <div class="container">
+            <h2 class="title-h2">Our Legal Address</h2>
+            <img class="map__img" src="~/images/map.png" />
+        </div>
+    </section>
+</div>

@@ -19,11 +19,9 @@
     }
 
     &__copy {
-        font-weight: 600;
-        font-family: var(--alternativeFont);
-        font-size: 13px;
-        color: #fff;
         text-align: center;
+        font-family: var(--fontBold);
+        color: var(--brendCol);
     }
 
     .nav {

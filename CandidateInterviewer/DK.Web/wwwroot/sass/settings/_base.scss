@@ -36,6 +36,10 @@ img {
     padding: 0 15px;
 }
 
+.no-width {
+    width: unset !important;
+}
+
 .content {
     min-height: 100%;
     margin-bottom: -170px;
@@ -92,6 +96,13 @@ img {
         .content__outer {
             padding: 0;
         }
+    }
+
+
+    &__fixed {
+        position: relative;
+        z-index: 1;
+        padding: 200px 0 100px !important;
     }
 }
 
