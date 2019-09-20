@@ -4,4 +4,13 @@ Web sample of candidate interviewer system. Solution includes: web site (ASP.NET
 Project is under development. Source code does not uploaded fully to the repository!
 
 
-![Application screenshotes](https://user-images.githubusercontent.com/54624273/65143527-e2790700-da1d-11e9-83ff-2aad9c878eac.png)
+HOME PAGE
+
+
+![Application screenshotes](https://user-images.githubusercontent.com/54624273/65337971-e057a980-dbd1-11e9-8cf0-f58c7d9eec52.png)
+
+
+CONTACTS PAGE
+
+
+![ci_contacts](https://user-images.githubusercontent.com/54624273/65337983-e5b4f400-dbd1-11e9-9de8-b7e7ab60bfbc.png)
