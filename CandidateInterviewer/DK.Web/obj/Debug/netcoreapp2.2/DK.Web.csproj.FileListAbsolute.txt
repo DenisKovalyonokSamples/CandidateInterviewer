@@ -30,3 +30,4 @@ D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.W
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\Contacts.g.cshtml.cs
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Interview\Index.g.cshtml.cs
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Results\Index.g.cshtml.cs
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\DK.Web.csprojAssemblyReference.cache
