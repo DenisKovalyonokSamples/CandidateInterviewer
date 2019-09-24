@@ -1,0 +1,9 @@
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\bin\Debug\netcoreapp2.2\DK.BusinessLogic.deps.json
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\bin\Debug\netcoreapp2.2\DK.BusinessLogic.dll
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\bin\Debug\netcoreapp2.2\DK.BusinessLogic.pdb
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\obj\Debug\netcoreapp2.2\DK.BusinessLogic.csproj.CoreCompileInputs.cache
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\obj\Debug\netcoreapp2.2\DK.BusinessLogic.AssemblyInfoInputs.cache
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\obj\Debug\netcoreapp2.2\DK.BusinessLogic.AssemblyInfo.cs
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\obj\Debug\netcoreapp2.2\DK.BusinessLogic.dll
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\obj\Debug\netcoreapp2.2\DK.BusinessLogic.pdb
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\obj\Debug\netcoreapp2.2\DK.BusinessLogic.csprojAssemblyReference.cache

@@ -1,0 +1,11 @@
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\bin\Debug\netcoreapp2.2\DK.Dal.deps.json
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\bin\Debug\netcoreapp2.2\DK.Dal.dll
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\obj\Debug\netcoreapp2.2\DK.Dal.csproj.CoreCompileInputs.cache
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\obj\Debug\netcoreapp2.2\DK.Dal.AssemblyInfoInputs.cache
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\obj\Debug\netcoreapp2.2\DK.Dal.AssemblyInfo.cs
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\bin\Debug\netcoreapp2.2\DK.Dal.pdb
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\obj\Debug\netcoreapp2.2\DK.Dal.csprojAssemblyReference.cache
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\obj\Debug\netcoreapp2.2\DK.Dal.dll
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\obj\Debug\netcoreapp2.2\DK.Dal.pdb
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\bin\Debug\netcoreapp2.2\DK.Dal.runtimeconfig.json
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\bin\Debug\netcoreapp2.2\DK.Dal.runtimeconfig.dev.json

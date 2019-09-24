@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <UserSecretsId>4e5772d6-c9db-4e6f-a582-ff0e04260cde</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,6 +32,11 @@
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />
     <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\DK.BusinessLogic\DK.BusinessLogic.csproj" />
   </ItemGroup>
 
 </Project>
