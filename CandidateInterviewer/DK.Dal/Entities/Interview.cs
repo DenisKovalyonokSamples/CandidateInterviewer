@@ -1,7 +1,7 @@
-﻿using DK.Dal.Entities.Base;
+﻿using DK.DataAccess.Entities.Base;
 using System;
 
-namespace DK.Dal.Entities
+namespace DK.DataAccess.Entities
 {
     public class Interview : BaseEntity
     {

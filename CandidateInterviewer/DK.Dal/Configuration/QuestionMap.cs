@@ -1,8 +1,8 @@
-﻿using DK.Dal.Entities;
+﻿using DK.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DK.Dal.Configuration
+namespace DK.DataAccess.Configuration
 {
     public class QuestionMap : IEntityTypeConfiguration<Question>
     {
@@ -24,9 +24,9 @@ namespace DK.Dal.Configuration
             builder.Property(a => a.Type)
                 .IsRequired();
 
-            builder.HasOne(ci => ci.Interview)
+            builder.HasOne(ci => ci.Exam)
                 .WithMany()
-                .HasForeignKey(ci => ci.InterviewId);
+                .HasForeignKey(ci => ci.ExamId);
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿using DK.Dal.Entities;
+﻿using DK.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DK.Dal.Configuration
+namespace DK.DataAccess.Configuration
 {
     public class ExamMap : IEntityTypeConfiguration<Exam>
     {
@@ -22,6 +22,9 @@ namespace DK.Dal.Configuration
                 .HasMaxLength(180);
 
             builder.Property(a => a.Logo)
+                .IsRequired();
+
+            builder.Property(a => a.Type)
                 .IsRequired();
 
             builder.HasOne(ci => ci.Category)

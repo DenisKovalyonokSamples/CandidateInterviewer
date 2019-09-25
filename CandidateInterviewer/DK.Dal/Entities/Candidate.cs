@@ -1,6 +1,6 @@
-﻿using DK.Dal.Entities.Base;
+﻿using DK.DataAccess.Entities.Base;
 
-namespace DK.Dal.Entities
+namespace DK.DataAccess.Entities
 {
     public class Candidate : BaseEntity
     {
@@ -8,6 +8,7 @@ namespace DK.Dal.Entities
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Email { get; set; }
         public string Description { get; set; }
 
         public Interview Interview { get; set; }

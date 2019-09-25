@@ -37,6 +37,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DK.BusinessLogic\DK.BusinessLogic.csproj" />
+    <ProjectReference Include="..\DK.Dal\DK.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DK.Dal.Entities.Base
+﻿namespace DK.DataAccess.Entities.Base
 {
     public class BaseEntity
     {

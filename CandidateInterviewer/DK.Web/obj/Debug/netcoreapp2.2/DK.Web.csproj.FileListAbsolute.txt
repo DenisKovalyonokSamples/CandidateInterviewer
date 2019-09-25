@@ -33,3 +33,5 @@ D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.W
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\DK.Web.csprojAssemblyReference.cache
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\bin\Debug\netcoreapp2.2\DK.BusinessLogic.dll
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\bin\Debug\netcoreapp2.2\DK.BusinessLogic.pdb
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\bin\Debug\netcoreapp2.2\DK.DataAccess.dll
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\bin\Debug\netcoreapp2.2\DK.DataAccess.pdb

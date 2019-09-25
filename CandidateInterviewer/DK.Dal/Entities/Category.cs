@@ -1,10 +1,11 @@
-﻿using DK.Dal.Entities.Base;
+﻿using DK.DataAccess.Entities.Base;
 
-namespace DK.Dal.Entities
+namespace DK.DataAccess.Entities
 {
     public class Category : BaseEntity
     {
         public string Name { get; set; }
         public string Description { get; set; }
+        public string Logo { get; set; }
     }
 }

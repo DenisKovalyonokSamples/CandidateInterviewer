@@ -1,6 +1,7 @@
-﻿using DK.Dal.Entities.Base;
+﻿using DK.DataAccess.Entities.Base;
+using DK.DataAccess.Enums;
 
-namespace DK.Dal.Entities
+namespace DK.DataAccess.Entities
 {
     public class Exam : BaseEntity
     {
@@ -9,6 +10,7 @@ namespace DK.Dal.Entities
         public string Name { get; set; }
         public string Logo { get; set; }
         public string Description { get; set; }
+        public ExamType Type { get; set; }
 
         public Category Category { get; set; }
     }

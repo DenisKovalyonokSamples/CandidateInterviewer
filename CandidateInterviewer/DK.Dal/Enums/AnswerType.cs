@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DK.Dal.Enums
+namespace DK.DataAccess.Enums
 {
     public enum AnswerType : int
     {

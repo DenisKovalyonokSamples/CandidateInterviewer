@@ -1,8 +1,8 @@
-﻿using DK.Dal.Entities;
+﻿using DK.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DK.Dal.Configuration
+namespace DK.DataAccess.Configuration
 {
     public class CandidateMap : IEntityTypeConfiguration<Candidate>
     {
@@ -19,6 +19,9 @@ namespace DK.Dal.Configuration
                 .HasMaxLength(60);
 
             builder.Property(a => a.LastName)
+                .HasMaxLength(60);
+
+            builder.Property(a => a.Email)
                 .HasMaxLength(60);
 
             builder.Property(a => a.Description)

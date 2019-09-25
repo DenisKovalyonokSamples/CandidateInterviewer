@@ -1,8 +1,8 @@
-﻿using DK.Dal.Entities;
+﻿using DK.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DK.Dal.Configuration
+namespace DK.DataAccess.Configuration
 {
     public class InterviewMap : IEntityTypeConfiguration<Interview>
     {

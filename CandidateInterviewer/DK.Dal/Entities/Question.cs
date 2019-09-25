@@ -1,16 +1,16 @@
-﻿using DK.Dal.Entities.Base;
-using DK.Dal.Enums;
+﻿using DK.DataAccess.Entities.Base;
+using DK.DataAccess.Enums;
 
-namespace DK.Dal.Entities
+namespace DK.DataAccess.Entities
 {
     public class Question : BaseEntity
     {
-        public int InterviewId { get; set; }
+        public int ExamId { get; set; }
 
         public string Title { get; set; }
         public string Notes { get; set; }
         public AnswerType Type { get; set; }
 
-        public Interview Interview { get; set; }
+        public Exam Exam { get; set; }
     }
 }

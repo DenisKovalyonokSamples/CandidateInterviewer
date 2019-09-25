@@ -1,12 +1,12 @@
-﻿using DK.Dal.Entities;
+﻿using DK.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
-namespace DK.Dal
+namespace DK.DataAccess
 {
-    public class AppContext : DbContext
+    public class DataContext : DbContext
     {
-        public AppContext(DbContextOptions<AppContext> options)
+        public DataContext(DbContextOptions<DataContext> options)
             : base(options)
         {
             Database.SetCommandTimeout(120);
@@ -16,6 +16,7 @@ namespace DK.Dal
         public DbSet<Question> Questions { get; set; }
         public DbSet<Interview> Interviews { get; set; }
         public DbSet<Candidate> Candidates { get; set; }
+        public DbSet<Exam> Exams { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

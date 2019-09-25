@@ -1,8 +1,8 @@
-﻿using DK.Dal.Entities;
+﻿using DK.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DK.Dal.Configuration
+namespace DK.DataAccess.Configuration
 {
     public class CategoryMap : IEntityTypeConfiguration<Category>
     {
@@ -20,6 +20,9 @@ namespace DK.Dal.Configuration
 
             builder.Property(a => a.Description)
                 .HasMaxLength(180);
+
+            builder.Property(a => a.Logo)
+                .IsRequired();
         }
     }
 }
