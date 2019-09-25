@@ -1,9 +1,10 @@
 ﻿using DK.Core.Base;
+using DK.Core.Interfaces;
 using System;
 
 namespace DK.DataAccess.Entities
 {
-    public class Interview : BaseEntity
+    public class Interview : BaseEntity, IAggregateRoot
     {
         public int CandidateId { get; set; }
         public int ExamId { get; set; }

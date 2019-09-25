@@ -1,9 +1,10 @@
 ﻿using DK.Core.Base;
+using DK.Core.Interfaces;
 using DK.DataAccess.Enums;
 
 namespace DK.DataAccess.Entities
 {
-    public class Exam : BaseEntity
+    public class Exam : BaseEntity, IAggregateRoot
     {
         public int CategoryId { get; set; }
 

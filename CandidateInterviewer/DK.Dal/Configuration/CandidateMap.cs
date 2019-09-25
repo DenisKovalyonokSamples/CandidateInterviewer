@@ -26,10 +26,6 @@ namespace DK.DataAccess.Configuration
 
             builder.Property(a => a.Description)
                 .HasMaxLength(180);
-
-            builder.HasOne(ci => ci.Interview)
-                .WithMany()
-                .HasForeignKey(ci => ci.InterviewId);
         }
     }
 }

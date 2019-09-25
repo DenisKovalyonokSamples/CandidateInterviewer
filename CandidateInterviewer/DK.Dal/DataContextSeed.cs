@@ -26,12 +26,6 @@ namespace DK.DataAccess
                     dataContext.Exams.AddRange(GetInitialExams());
                     dataContext.SaveChanges();
                 }
-
-                if (!dataContext.Questions.Any())
-                {
-                    dataContext.Questions.AddRange(GetInitialQuestions());
-                    dataContext.SaveChanges();
-                }
             }
             catch (Exception ex)
             {
@@ -89,18 +83,6 @@ namespace DK.DataAccess
                 new Exam() { CategoryId = 5, Name = "Entity Framework Advanced Exam", Description = "Base questions for Entity Framework Core interview. Exam include such topics as EF Core, ORM, Database. Candidate will be limited in time for this exam.", Logo = "cat-ef.png", Type = ExamType.Advanced },
                 new Exam() { CategoryId = 6, Name = "Java Script Advanced Exam", Description = "Base questions for Java Script interview. Exam include questions for Java Script functionality. Candidate will be limited in time for this exam.", Logo = "cat-js.png", Type = ExamType.Advanced },
                 new Exam() { CategoryId = 7, Name = "Node JS Advanced Exam", Description = "Base questions for Node JS interview. Exam include questions for Node JS functionality. Candidate will be limited in time for this exam.", Logo = "cat-node.png", Type = ExamType.Advanced }
-            };
-        }
-
-        static IEnumerable<Question> GetInitialQuestions()
-        {
-            return new List<Question>()
-            {
-                new Question() { ExamId = 1, Title = "", Notes = "", Type = AnswerType.Text },
-                new Question() { ExamId = 1, Title = "", Notes = "", Type = AnswerType.Text },
-                new Question() { ExamId = 1, Title = "", Notes = "", Type = AnswerType.Text },
-                new Question() { ExamId = 1, Title = "", Notes = "", Type = AnswerType.Text },
-                new Question() { ExamId = 1, Title = "", Notes = "", Type = AnswerType.Text }
             };
         }
     }
