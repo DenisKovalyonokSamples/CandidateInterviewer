@@ -1,0 +1,9 @@
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Core\bin\Debug\netcoreapp2.2\DK.Core.deps.json
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Core\bin\Debug\netcoreapp2.2\DK.Core.dll
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Core\bin\Debug\netcoreapp2.2\DK.Core.pdb
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Core\obj\Debug\netcoreapp2.2\DK.Core.csproj.CoreCompileInputs.cache
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Core\obj\Debug\netcoreapp2.2\DK.Core.AssemblyInfoInputs.cache
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Core\obj\Debug\netcoreapp2.2\DK.Core.AssemblyInfo.cs
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Core\obj\Debug\netcoreapp2.2\DK.Core.dll
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Core\obj\Debug\netcoreapp2.2\DK.Core.pdb
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Core\obj\Debug\netcoreapp2.2\DK.Core.csprojAssemblyReference.cache

@@ -1,4 +1,4 @@
-﻿using DK.BusinessLogic.Interfaces;
+﻿using DK.Core.Interfaces;
 using System;
 
 namespace DK.BusinessLogic.Services

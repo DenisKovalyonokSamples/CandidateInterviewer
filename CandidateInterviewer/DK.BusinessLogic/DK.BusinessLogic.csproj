@@ -13,4 +13,8 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DK.Core\DK.Core.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -943,6 +943,16 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
+      },
+      "DK.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/DK.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DK.Core.dll": {}
+        }
       }
     }
   },
@@ -3603,10 +3613,16 @@
         "system.threading.tasks.4.0.11.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "DK.Core/1.0.0": {
+      "type": "project",
+      "path": "../DK.Core/DK.Core.csproj",
+      "msbuildProject": "../DK.Core/DK.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "DK.Core >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.6",
       "Microsoft.EntityFrameworkCore.Tools >= 2.2.6",
       "Microsoft.NETCore.App >= 2.2.0"
@@ -3642,7 +3658,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Dev\\SourceControls\\GitHub\\Mine\\CandidateInterviewer\\CandidateInterviewer\\DK.Core\\DK.Core.csproj": {
+              "projectPath": "D:\\Dev\\SourceControls\\GitHub\\Mine\\CandidateInterviewer\\CandidateInterviewer\\DK.Core\\DK.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

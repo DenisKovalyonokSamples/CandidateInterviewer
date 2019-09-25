@@ -1,4 +1,4 @@
-﻿namespace DK.BusinessLogic.Interfaces
+﻿namespace DK.Core.Interfaces
 {
     public interface INotificationService
     {

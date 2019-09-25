@@ -9,3 +9,6 @@ D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.D
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\obj\Debug\netcoreapp2.2\DK.DataAccess.AssemblyInfo.cs
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\obj\Debug\netcoreapp2.2\DK.DataAccess.dll
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\obj\Debug\netcoreapp2.2\DK.DataAccess.pdb
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\bin\Debug\netcoreapp2.2\DK.Core.dll
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\bin\Debug\netcoreapp2.2\DK.Core.pdb
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Dal\obj\Debug\netcoreapp2.2\DK.DataAccess.csproj.CopyComplete

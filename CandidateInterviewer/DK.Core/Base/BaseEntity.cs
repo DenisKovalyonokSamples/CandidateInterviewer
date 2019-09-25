@@ -1,4 +1,4 @@
-﻿namespace DK.DataAccess.Entities.Base
+﻿namespace DK.Core.Base
 {
     public class BaseEntity
     {

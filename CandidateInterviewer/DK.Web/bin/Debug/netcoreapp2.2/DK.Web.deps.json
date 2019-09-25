@@ -543,6 +543,7 @@
       },
       "DK.BusinessLogic/1.0.0": {
         "dependencies": {
+          "DK.Core": "1.0.0",
           "Microsoft.Extensions.Logging": "2.2.0"
         },
         "runtime": {
@@ -552,8 +553,17 @@
           "DK.BusinessLogic.dll": {}
         }
       },
+      "DK.Core/1.0.0": {
+        "runtime": {
+          "DK.Core.dll": {}
+        },
+        "compile": {
+          "DK.Core.dll": {}
+        }
+      },
       "DK.DataAccess/1.0.0": {
         "dependencies": {
+          "DK.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6"
         },
         "runtime": {
@@ -3874,6 +3884,11 @@
       "hashPath": "system.text.encoding.codepages.4.5.0.nupkg.sha512"
     },
     "DK.BusinessLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DK.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

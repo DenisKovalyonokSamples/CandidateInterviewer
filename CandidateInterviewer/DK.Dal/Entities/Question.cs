@@ -1,4 +1,4 @@
-﻿using DK.DataAccess.Entities.Base;
+﻿using DK.Core.Base;
 using DK.DataAccess.Enums;
 
 namespace DK.DataAccess.Entities

@@ -4725,6 +4725,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "DK.Core": "1.0.0",
           "Microsoft.Extensions.Logging": "2.2.0"
         },
         "compile": {
@@ -4734,10 +4735,21 @@
           "bin/placeholder/DK.BusinessLogic.dll": {}
         }
       },
+      "DK.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/DK.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DK.Core.dll": {}
+        }
+      },
       "DK.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "DK.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6"
         },
         "compile": {
@@ -12965,6 +12977,11 @@
       "type": "project",
       "path": "../DK.BusinessLogic/DK.BusinessLogic.csproj",
       "msbuildProject": "../DK.BusinessLogic/DK.BusinessLogic.csproj"
+    },
+    "DK.Core/1.0.0": {
+      "type": "project",
+      "path": "../DK.Core/DK.Core.csproj",
+      "msbuildProject": "../DK.Core/DK.Core.csproj"
     },
     "DK.DataAccess/1.0.0": {
       "type": "project",

@@ -1,4 +1,4 @@
-﻿using DK.BusinessLogic.Interfaces;
+﻿using DK.Core.Interfaces;
 using Microsoft.Extensions.Logging;
 
 namespace DK.BusinessLogic.Services
