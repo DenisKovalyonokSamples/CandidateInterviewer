@@ -1,4 +1,4 @@
-﻿namespace DK.Core.Interfaces
+﻿namespace DK.DataAccess.Interfaces
 {
     public interface IUserService
     {

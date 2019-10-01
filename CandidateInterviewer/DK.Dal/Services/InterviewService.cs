@@ -1,5 +1,9 @@
 ﻿using DK.Core.Interfaces;
 using DK.DataAccess.Entities;
+using DK.DataAccess.Interfaces;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace DK.DataAccess.Services
 {
@@ -19,6 +23,15 @@ namespace DK.DataAccess.Services
             _questionRepository = questionRepository;
         }
 
-       //TODO: Add public methods
+        #region Categories
+
+        public async Task<List<Category>> GetCategoriesAsync()
+        {
+            var entities = await _categoryRepository.ListAllAsync();
+
+            return entities;
+        }
+
+        #endregion
     }
 }

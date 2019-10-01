@@ -1,4 +1,5 @@
-﻿@{
+﻿@model DK.Web.ViewModels.HomeViewModel
+@{
     ViewData["Title"] = "Home";
 }
 
@@ -109,66 +110,34 @@
                 <div class="slider__outer owl-carousel owl-carousel-project owl-loaded owl-drag">
                     <div class="owl-stage-outer">
                         <div class="owl-stage">
-                            <div class="owl-item">
-                                <div class="slider__itm">
-                                    <div class="connection connection--slider">
-                                        <div class="connection__outer">
-                                            <div class="connection__top">
-                                                <div class="connection__wrap">
-                                                    <img class="platform__img" src="~/images/cat-core.png" />
+                            @if (Model.Catgories.Any())
+                            {
+                                for (int i = 0; i < Model.Catgories.Count; i++)
+                                {
+                                    @Html.HiddenFor(m => m.Catgories[i].Id)
+
+                                    <div class="owl-item">
+                                        <div class="slider__itm">
+                                            <div class="connection connection--slider">
+                                                <div class="connection__outer">
+                                                    <div class="connection__top">
+                                                        <div class="connection__wrap">
+                                                            <img class="platform__img" src="~/images/@Model.Catgories[i].Logo" />
+                                                        </div>
+                                                        <div class="connection__desc">
+                                                            <span class="connection__ttl">@Model.Catgories[i].Name</span>
+                                                            <p class="connection__text">@Model.Catgories[i].Description</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="connection__bottom">
+                                                        <a class="connection__link connection__link--arrow" href="#">MORE INFORMATION<span class="connection__link-icon"></span></a>
+                                                    </div>
                                                 </div>
-                                                <div class="connection__desc">
-                                                    <span class="connection__ttl">.NET Core</span>
-                                                    <p class="connection__text">Free and open-source, managed computer software framework for Windows, Linux, and macOS operating systems.</p>
-                                                </div>
-                                            </div>
-                                            <div class="connection__bottom">
-                                                <a class="connection__link connection__link--arrow" href="#">MORE INFORMATION<span class="connection__link-icon"></span></a>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="owl-item">
-                                <div class="slider__itm">
-                                    <div class="connection connection--slider">
-                                        <div class="connection__outer">
-                                            <div class="connection__top">
-                                                <div class="connection__wrap">
-                                                    <img class="platform__img" src="~/images/cat-angular.png" />
-                                                </div>
-                                                <div class="connection__desc">
-                                                    <span class="connection__ttl">Angular JS</span>
-                                                    <p class="connection__text">JavaScript-based open-source front-end web framework mainly maintained by Google.</p>
-                                                </div>
-                                            </div>
-                                            <div class="connection__bottom">
-                                                <a class="connection__link connection__link--arrow" href="#">MORE INFORMATION<span class="connection__link-icon"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item">
-                                <div class="slider__itm">
-                                    <div class="connection connection--slider">
-                                        <div class="connection__outer">
-                                            <div class="connection__top">
-                                                <div class="connection__wrap">
-                                                    <img class="platform__img" src="~/images/cat-xamarin.png" />
-                                                </div>
-                                                <div class="connection__desc">
-                                                    <span class="connection__ttl">Xamarin</span>
-                                                    <p class="connection__text">Free and open source mobile app platform for building native and high-performance iOS, Android, tvOS, watchOS, macOS, and Windows apps.</p>
-                                                </div>
-                                            </div>
-                                            <div class="connection__bottom">
-                                                <a class="connection__link connection__link--arrow" href="#">MORE INFORMATION<span class="connection__link-icon"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                }
+                            }
                         </div>
                     </div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div>
                 </div>
@@ -278,4 +247,3 @@
         </div>
     </section>
 </div>
-

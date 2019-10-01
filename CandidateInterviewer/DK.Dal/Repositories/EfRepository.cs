@@ -22,7 +22,7 @@ namespace DK.DataAccess.Repositories
             return await _dbContext.Set<T>().FindAsync(id);
         }
 
-        public async Task<IReadOnlyList<T>> ListAllAsync()
+        public async Task<List<T>> ListAllAsync()
         {
             return await _dbContext.Set<T>().ToListAsync();
         }

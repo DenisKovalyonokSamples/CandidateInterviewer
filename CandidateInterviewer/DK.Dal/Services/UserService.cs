@@ -1,5 +1,6 @@
 ﻿using DK.Core.Interfaces;
 using DK.DataAccess.Entities;
+using DK.DataAccess.Interfaces;
 
 namespace DK.DataAccess.Services
 {

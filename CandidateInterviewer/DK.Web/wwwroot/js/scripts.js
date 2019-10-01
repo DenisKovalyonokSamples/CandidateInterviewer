@@ -32,7 +32,7 @@ $(function () {
     owlProject.owlCarousel({
         nav: false,
         loop: true,
-        autoplay: false,
+        autoplay: true,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
         smartSpeed: 700,
