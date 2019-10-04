@@ -21,11 +21,11 @@ namespace DK.DataAccess
                     dataContext.SaveChanges();
                 }
 
-                if (!dataContext.Exams.Any())
-                {
-                    dataContext.Exams.AddRange(GetInitialExams());
-                    dataContext.SaveChanges();
-                }
+                //if (!dataContext.Exams.Any())
+                //{
+                //    dataContext.Exams.AddRange(GetInitialExams());
+                //    dataContext.SaveChanges();
+                //}
             }
             catch (Exception ex)
             {
@@ -43,13 +43,21 @@ namespace DK.DataAccess
         {
             return new List<Category>()
             {
-                new Category() { Name = "Xamarin", Description = "Free and open source mobile app platform for building native and high-performance iOS, Android, tvOS, watchOS, macOS, and Windows apps.", Logo = "cat-xamarin.png" },
-                new Category() { Name = ".NET Core", Description = "Free and open-source, managed computer software framework for Windows, Linux, and macOS operating systems.", Logo = "cat-core.png" },
-                new Category() { Name = "Angular JS", Description = "JavaScript-based open-source front-end web framework mainly maintained by Google.", Logo = "cat-angular.png" },
-                new Category() { Name = "ASP.NET MVC", Description = "Web application framework developed by Microsoft, which implements the model–view–controller (MVC) pattern.", Logo = "cat-asp.png" },
-                new Category() { Name = "Entity Framework", Description = "Open source object-relational mapping (ORM) framework for ADO.NET.", Logo = "cat-ef.png" },
-                new Category() { Name = "Java Script", Description = "High-level, interpreted scripting language that conforms to the ECMAScript specification.", Logo = "cat-js.png" },
-                new Category() { Name = "Node JS", Description = "Open-source, cross-platform, JavaScript run-time environment that executes JavaScript code outside of a browser.", Logo = "cat-node.png" }
+                //Mobile Development
+                new Category() { Name = "Xamarin", Description = "Free and open source mobile app platform for building native and high-performance iOS, Android, tvOS, watchOS, macOS, and Windows apps.", Logo = "cat-xamarin.png", Type = AreaType.MobileDevelopment },
+                new Category() { Name = "Swift", Description = "General-purpose, multi-paradigm, compiled programming language developed by Apple Inc. for iOS, iPadOS, macOS, watchOS, tvOS, Linux, and z/OS.", Logo = "cat-swift.png", Type = AreaType.MobileDevelopment },
+                new Category() { Name = "Kotlin", Description = "Cross-platform, statically typed, general-purpose programming language with type inference.", Logo = "cat-kotlin.png", Type = AreaType.MobileDevelopment },
+                //Web Development
+                new Category() { Name = ".NET Core", Description = "Free and open-source, managed computer software framework for Windows, Linux, and macOS operating systems.", Logo = "cat-core.png", Type = AreaType.WebDevelopment  },
+                new Category() { Name = "Angular JS", Description = "JavaScript-based open-source front-end web framework mainly maintained by Google.", Logo = "cat-angular.png", Type = AreaType.WebDevelopment  },
+                new Category() { Name = "ASP.NET MVC", Description = "Web application framework developed by Microsoft, which implements the model–view–controller (MVC) pattern.", Logo = "cat-asp.png", Type = AreaType.WebDevelopment },
+                new Category() { Name = "Entity Framework", Description = "Open source object-relational mapping (ORM) framework for ADO.NET.", Logo = "cat-ef.png", Type = AreaType.WebDevelopment},
+                new Category() { Name = "Java Script", Description = "High-level, interpreted scripting language that conforms to the ECMAScript specification.", Logo = "cat-js.png", Type = AreaType.WebDevelopment },
+                new Category() { Name = "Node JS", Description = "Open-source, cross-platform, JavaScript run-time environment that executes JavaScript code outside of a browser.", Logo = "cat-node.png", Type = AreaType.WebDevelopment },
+                //Quality Assurance
+                new Category() { Name = "Unit Testing", Description = "Software testing level where individual units or components of a software are tested.", Logo = "cat-unit.png", Type = AreaType.QualityAssurance },
+                new Category() { Name = "Smoke Testing", Description = "Preliminary testing to reveal simple failures severe enough to, for example, reject a prospective software release.", Logo = "cat-smoke.png", Type = AreaType.QualityAssurance },
+                new Category() { Name = "Stress Testing", Description = "Form of deliberately intense or thorough testing used to determine the stability of a given system or entity.", Logo = "cat-stress.png", Type = AreaType.QualityAssurance }
             };
         }
 

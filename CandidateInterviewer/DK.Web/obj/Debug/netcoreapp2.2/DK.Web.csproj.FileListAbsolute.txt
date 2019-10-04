@@ -37,3 +37,4 @@ D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.W
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\bin\Debug\netcoreapp2.2\DK.DataAccess.pdb
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\bin\Debug\netcoreapp2.2\DK.Core.dll
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\bin\Debug\netcoreapp2.2\DK.Core.pdb
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\Interviews.g.cshtml.cs

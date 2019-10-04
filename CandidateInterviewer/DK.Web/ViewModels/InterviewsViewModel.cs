@@ -2,7 +2,7 @@
 
 namespace DK.Web.ViewModels
 {
-    public class HomeViewModel
+    public class InterviewsViewModel
     {
         public List<CategoryViewModel> Categories { get; set; }
     }

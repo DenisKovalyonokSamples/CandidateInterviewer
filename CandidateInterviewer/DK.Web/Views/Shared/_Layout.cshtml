@@ -37,10 +37,10 @@
                                 <a class="header__btn js-toggleNavMobile" href="#"><span></span></a>
                                 <div class="header__nav">
                                     <ul class="nav__ul">
-                                        <li class="nav__li"><a class="nav__link nav__link--active" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                                        <li class="nav__li"><a class="nav__link" asp-area="" asp-controller="Interview" asp-action="Index">Interviews</a></li>
-                                        <li class="nav__li"><a class="nav__link" asp-area="" asp-controller="Results" asp-action="Index">Results</a></li>
-                                        <li class="nav__li"><a class="nav__link" asp-area="" asp-controller="Home" asp-action="Contacts">Contacts</a></li>
+                                        <li class="nav__li"><a class="nav__link @(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "nav__link--active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                                        <li class="nav__li"><a class="nav__link @(ViewContext.RouteData.Values["Action"].ToString() == "Interviews" ? "nav__link--active" : "")" asp-area="" asp-controller="Home" asp-action="Interviews">Interviews</a></li>
+                                        <li class="nav__li"><a class="nav__link @(ViewContext.RouteData.Values["Action"].ToString() == "Results" ? "nav__link--active" : "")" asp-area="" asp-controller="Results" asp-action="Index">Results</a></li>
+                                        <li class="nav__li"><a class="nav__link @(ViewContext.RouteData.Values["Action"].ToString() == "Contacts" ? "nav__link--active" : "")" asp-area="" asp-controller="Home" asp-action="Contacts">Contacts</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                         <div class="footer__itm">
                             <ul class="nav">
                                 <li class="nav__li"><a class="nav__link nav__link--active" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                                <li class="nav__li"><a class="nav__link" asp-area="" asp-controller="Interview" asp-action="Index">Interviews</a></li>
+                                <li class="nav__li"><a class="nav__link" asp-area="" asp-controller="Home" asp-action="Interviews">Interviews</a></li>
                                 <li class="nav__li"><a class="nav__link" asp-area="" asp-controller="Results" asp-action="Index">Results</a></li>
                                 <li class="nav__li"><a class="nav__link" asp-area="" asp-controller="Home" asp-action="Contacts">Contacts</a></li>
                             </ul>

@@ -1,0 +1,248 @@
+﻿@model InterviewsViewModel
+
+@using DK.DataAccess.Enums;
+@using DK.BusinessLogic.Helpers;
+
+@{
+    ViewData["Title"] = "Interviews";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var mobileCategories = Model.Categories?.Where(e => e.Type == AreaType.MobileDevelopment)?.ToList();
+    var webCategories = Model.Categories?.Where(e => e.Type == AreaType.WebDevelopment)?.ToList();
+    var qaCategories = Model.Categories?.Where(e => e.Type == AreaType.QualityAssurance)?.ToList();
+}
+
+<div class="service">
+    <div class="service__phone"></div><i class="service__icon service__icon--cube-blue bounceInDown animated"></i><i class="service__icon service__icon--cube-yellow bounceInDown animated"></i><i class="service__icon service__icon--platform bounceInDown animated"></i>
+</div>
+
+<section class="about about--service">
+    <div class="container">
+        <div class="about__desc">
+            <h2 class="title-h2">Select Interview</h2>
+            <h3 class="title-h3">Please select required categories for you and start the test!</h3>
+        </div>
+    </div>
+</section>
+
+<section class="model">
+    <div class="container">
+        <h2 class="title-h2">Difficulty levels</h2>
+        <h3 class="title-h3">To meet the requirements of each unique client, we offer three difficulty levels – Base, Intermediate and Advanced.</h3>
+        <div class="model__wrap">
+            <div class="model__outer">
+                <div class="model__itm">
+                    <div class="model__preview model__preview--team">
+                        <div class="model__desc">
+                            <div class="model__link-outer"><a class="model__link" href="#">Base Exam</a></div>
+                            <p class="model__text">Exams for base knowleage level. Perfect for begginers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="model__itm">
+                    <div class="model__preview model__preview--product">
+                        <div class="model__desc">
+                            <div class="model__link-outer"><a class="model__link" href="#">Intermediate Exam</a></div>
+                            <p class="model__text">Medium difficulty exams for candidates with middle experience level.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="model__itm">
+                    <div class="model__preview model__preview--service">
+                        <div class="model__desc">
+                            <div class="model__link-outer"><a class="model__link" href="#">Advanced Exam</a></div>
+                            <p class="model__text">The most complex exams for candidates with great experience level.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="development separator"></div>
+
+@if (mobileCategories?.Any() == true)
+{
+    <section class="examples">
+        <div class="container">
+            <h2 class="title-h2">@AreaType.MobileDevelopment.GetEnumDisplayName()</h2>
+            <h3 class="title-h3">Tests for mobile developers.</h3>
+            <div class="examples__outer">
+                <div class="slider">
+                    <div class="slider__outer owl-carousel owl-loaded owl-drag">
+                        <div class="owl-stage-outer">
+                            <div class="static-stage">
+                                @for (int i = 0; i < mobileCategories.Count(); i++)
+                                {
+                                    <div class="owl-item">
+                                        <div class="slider__itm">
+                                            <div class="connection connection--slider">
+                                                <div class="connection__outer">
+                                                    <div class="connection__top">
+                                                        <div class="connection__wrap">
+                                                            <img class="platform__img" src="~/images/@mobileCategories[i].Logo" />
+                                                        </div>
+                                                        <div class="connection__desc">
+                                                            <span class="connection__ttl">@mobileCategories[i].Name</span>
+                                                            <p class="connection__text">@mobileCategories[i].Description</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="connection__bottom">
+                                                        <a class="connection__link connection__link--arrow" href="#">
+                                                            START TEST<span class="connection__link-icon"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="owl-nav disabled">
+                            <button type="button" role="presentation" class="owl-prev">
+                                <span aria-label="Previous">‹</span>
+                            </button>
+                            <button type="button" role="presentation" class="owl-next">
+                                <span aria-label="Next">›</span>
+                            </button>
+                        </div>
+                        <div class="owl-dots">
+                            <button role="button" class="owl-dot active">
+                                <span></span>
+                            </button>
+                            <button role="button" class="owl-dot">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+@if (webCategories?.Any() == true)
+{
+    <section class="examples">
+        <div class="container">
+            <h2 class="title-h2">@AreaType.WebDevelopment.GetEnumDisplayName()</h2>
+            <h3 class="title-h3">Tests for web developers.</h3>
+            <div class="examples__outer">
+                <div class="slider">
+                    <div class="slider__outer owl-carousel owl-loaded owl-drag">
+                        <div class="owl-stage-outer">
+                            <div class="static-stage">
+                                @for (int i = 0; i < webCategories.Count(); i++)
+                                {
+                                    <div class="owl-item">
+                                        <div class="slider__itm">
+                                            <div class="connection connection--slider">
+                                                <div class="connection__outer">
+                                                    <div class="connection__top">
+                                                        <div class="connection__wrap">
+                                                            <img class="platform__img" src="~/images/@webCategories[i].Logo" />
+                                                        </div>
+                                                        <div class="connection__desc">
+                                                            <span class="connection__ttl">@webCategories[i].Name</span>
+                                                            <p class="connection__text">@webCategories[i].Description</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="connection__bottom">
+                                                        <a class="connection__link connection__link--arrow" href="#">
+                                                            START TEST<span class="connection__link-icon"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="owl-nav disabled">
+                            <button type="button" role="presentation" class="owl-prev">
+                                <span aria-label="Previous">‹</span>
+                            </button>
+                            <button type="button" role="presentation" class="owl-next">
+                                <span aria-label="Next">›</span>
+                            </button>
+                        </div>
+                        <div class="owl-dots">
+                            <button role="button" class="owl-dot active">
+                                <span></span>
+                            </button>
+                            <button role="button" class="owl-dot">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+@if (qaCategories?.Any() == true)
+{
+    <section class="examples">
+        <div class="container">
+            <h2 class="title-h2">@AreaType.QualityAssurance.GetEnumDisplayName()</h2>
+            <h3 class="title-h3">Tests for QA specialists.</h3>
+            <div class="examples__outer">
+                <div class="slider">
+                    <div class="slider__outer owl-carousel owl-loaded owl-drag">
+                        <div class="owl-stage-outer">
+                            <div class="static-stage">
+                                @for (int i = 0; i < qaCategories.Count(); i++)
+                                {
+                                    <div class="owl-item">
+                                        <div class="slider__itm">
+                                            <div class="connection connection--slider">
+                                                <div class="connection__outer">
+                                                    <div class="connection__top">
+                                                        <div class="connection__wrap">
+                                                            <img class="platform__img" src="~/images/@qaCategories[i].Logo" />
+                                                        </div>
+                                                        <div class="connection__desc">
+                                                            <span class="connection__ttl">@qaCategories[i].Name</span>
+                                                            <p class="connection__text">@qaCategories[i].Description</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="connection__bottom">
+                                                        <a class="connection__link connection__link--arrow" href="#">
+                                                            START TEST<span class="connection__link-icon"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="owl-nav disabled">
+                            <button type="button" role="presentation" class="owl-prev">
+                                <span aria-label="Previous">‹</span>
+                            </button>
+                            <button type="button" role="presentation" class="owl-next">
+                                <span aria-label="Next">›</span>
+                            </button>
+                        </div>
+                        <div class="owl-dots">
+                            <button role="button" class="owl-dot active">
+                                <span></span>
+                            </button>
+                            <button role="button" class="owl-dot">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+<div class="development separator"></div>

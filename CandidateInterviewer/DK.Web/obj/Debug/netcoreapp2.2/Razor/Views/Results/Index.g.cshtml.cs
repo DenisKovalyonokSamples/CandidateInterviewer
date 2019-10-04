@@ -19,12 +19,12 @@ using DK.Web;
 #line default
 #line hidden
 #line 2 "D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\Views\_ViewImports.cshtml"
-using DK.Web.Models;
+using DK.Web.ViewModels;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"249ab11414bcbaca3775d9affe58c2c389916434", @"/Views/Results/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ab614f7331b9106c44de1e432e37ac3040cf632c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d0c0b10d1ca970eda3aaac8e60075617da4643ff", @"/Views/_ViewImports.cshtml")]
     public class Views_Results_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

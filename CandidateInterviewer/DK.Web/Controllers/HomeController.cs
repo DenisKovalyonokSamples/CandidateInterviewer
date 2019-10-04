@@ -1,11 +1,11 @@
 ﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using DK.Web.Models;
 using DK.DataAccess.Interfaces;
 using System.Linq;
 using DK.Web.ViewModels;
 using System.Collections.Generic;
+using DK.Web.Managers;
 
 namespace DK.Web.Controllers
 {
@@ -22,16 +22,16 @@ namespace DK.Web.Controllers
         public async Task<IActionResult> Index()
         {
             var categories = await _interviewService.GetCategoriesAsync();
+            var viewModel = ViewModelBuilder.GetHomeViewModel(categories);
 
-            var viewModel = new HomeViewModel();
-            viewModel.Catgories = categories?
-              .Select(o => new CategoryViewModel()
-              {
-                  Id = o.Id,
-                  Name = o.Name,
-                  Description = o.Description,
-                  Logo = o.Logo
-              })?.ToList() ?? new List<CategoryViewModel>();
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Interviews()
+        {
+            var categories = await _interviewService.GetCategoriesAsync();
+            var viewModel = ViewModelBuilder.GetInterviewsViewModel(categories);
 
             return View(viewModel);
         }

@@ -1,6 +1,4 @@
-using System;
-
-namespace DK.Web.Models
+namespace DK.Web.ViewModels
 {
     public class ErrorViewModel
     {

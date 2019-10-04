@@ -4,6 +4,24 @@
 
     &.about--service {
         min-height: 600px;
+        height: 100%;
+
+        .title-h2 {
+            text-transform: uppercase;
+        }
+
+        .about__desc {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15px;
+            padding-top: 0;
+        }
+
+        .container {
+            position: relative;
+            height: 100%;
+        }
     }
 
     &.about--technology {
