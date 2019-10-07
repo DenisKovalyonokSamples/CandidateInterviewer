@@ -37,6 +37,12 @@ namespace DK.Web.Controllers
         }
 
         [HttpGet]
+        public async Task<IActionResult> Results()
+        {
+            return View();
+        }
+
+        [HttpGet]
         public async Task<IActionResult> Contacts()
         {
             return View();

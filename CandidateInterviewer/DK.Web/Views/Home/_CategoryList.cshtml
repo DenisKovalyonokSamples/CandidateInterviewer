@@ -1,0 +1,64 @@
+﻿@model List<CategoryViewModel>
+
+@using DK.BusinessLogic.Helpers;
+
+@if (Model?.Any() == true)
+{
+    <section class="examples">
+        <div class="container">
+            <h2 class="title-h2">@Model.FirstOrDefault().Type.GetEnumDisplayName()</h2>
+            <h3 class="title-h3">Tests for mobile developers.</h3>
+            <div class="examples__outer">
+                <div class="slider">
+                    <div class="slider__outer owl-carousel owl-loaded owl-drag">
+                        <div class="owl-stage-outer">
+                            <div class="static-stage">
+                                @for (int i = 0; i < Model.Count(); i++)
+                                {
+                                    <div class="owl-item">
+                                        <div class="slider__itm">
+                                            <div class="connection connection--slider">
+                                                <div class="connection__outer">
+                                                    <div class="connection__top">
+                                                        <div class="connection__wrap">
+                                                            <img class="platform__img" src="~/images/@Model[i].Logo" />
+                                                        </div>
+                                                        <div class="connection__desc">
+                                                            <span class="connection__ttl">@Model[i].Name</span>
+                                                            <p class="connection__text">@Model[i].Description</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="connection__bottom">
+                                                        <a class="connection__link connection__link--arrow" href="#">
+                                                            START TEST<span class="connection__link-icon"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="owl-nav disabled">
+                            <button type="button" role="presentation" class="owl-prev">
+                                <span aria-label="Previous">‹</span>
+                            </button>
+                            <button type="button" role="presentation" class="owl-next">
+                                <span aria-label="Next">›</span>
+                            </button>
+                        </div>
+                        <div class="owl-dots">
+                            <button role="button" class="owl-dot active">
+                                <span></span>
+                            </button>
+                            <button role="button" class="owl-dot">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

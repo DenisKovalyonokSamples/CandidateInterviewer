@@ -29,7 +29,6 @@ D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.W
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\DK.Web.csproj.CopyComplete
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\Contacts.g.cshtml.cs
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Interview\Index.g.cshtml.cs
-D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Results\Index.g.cshtml.cs
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\DK.Web.csprojAssemblyReference.cache
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\bin\Debug\netcoreapp2.2\DK.BusinessLogic.dll
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\bin\Debug\netcoreapp2.2\DK.BusinessLogic.pdb
@@ -38,3 +37,6 @@ D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.W
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\bin\Debug\netcoreapp2.2\DK.Core.dll
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\bin\Debug\netcoreapp2.2\DK.Core.pdb
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\Interviews.g.cshtml.cs
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\_CategoryList.g.cshtml.cs
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\Results.g.cshtml.cs
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Menu.g.cshtml.cs
