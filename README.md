@@ -10,6 +10,18 @@ HOME PAGE
 ![Application screenshotes](https://user-images.githubusercontent.com/54624273/65337971-e057a980-dbd1-11e9-8cf0-f58c7d9eec52.png)
 
 
+INTERVIEWS PAGE
+
+
+![ci_interviews](https://user-images.githubusercontent.com/54624273/66349768-5134ea80-e962-11e9-8ecf-ecf85f8d6b01.png)
+
+
+START INTERVIEW PAGE
+
+
+![ci_start_interview](https://user-images.githubusercontent.com/54624273/66349794-56923500-e962-11e9-9ce7-77bc7e3d63d6.png)
+
+
 CONTACTS PAGE
 
 
