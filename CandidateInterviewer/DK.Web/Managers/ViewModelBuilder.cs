@@ -45,5 +45,21 @@ namespace DK.Web.Managers
 
             return viewModel;
         }
+
+        public static CategoryViewModel GetCategoryViewModel(Category entity)
+        {
+            var viewModel = new CategoryViewModel();
+
+            if (entity != null)
+            {
+                viewModel.Id = entity.Id;
+                viewModel.Name = entity.Name;
+                viewModel.Description = entity.Description;
+                viewModel.Logo = entity.Logo;
+                viewModel.Type = entity.Type;
+            }
+
+            return viewModel;
+        }
     }
 }

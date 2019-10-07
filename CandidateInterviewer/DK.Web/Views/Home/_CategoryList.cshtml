@@ -7,7 +7,7 @@
     <section class="examples">
         <div class="container">
             <h2 class="title-h2">@Model.FirstOrDefault().Type.GetEnumDisplayName()</h2>
-            <h3 class="title-h3">Tests for mobile developers.</h3>
+            <h3 class="title-h3">Tests for @Model.FirstOrDefault().Type.GetEnumDisplayName().ToLower() specialists.</h3>
             <div class="examples__outer">
                 <div class="slider">
                     <div class="slider__outer owl-carousel owl-loaded owl-drag">
@@ -29,8 +29,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="connection__bottom">
-                                                        <a class="connection__link connection__link--arrow" href="#">
-                                                            START TEST<span class="connection__link-icon"></span>
+                                                        <a class="connection__link connection__link--arrow" asp-area="" asp-controller="Interview" asp-action="Index" asp-route-id="@Model[i].Id">
+                                                            START THE TEST<span class="connection__link-icon"></span>
                                                         </a>
                                                     </div>
                                                 </div>

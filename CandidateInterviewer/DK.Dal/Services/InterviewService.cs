@@ -25,6 +25,13 @@ namespace DK.DataAccess.Services
 
         #region Categories
 
+        public async Task<Category> GetCategoryAsync(int id)
+        {
+            var entity = await _categoryRepository.GetByIdAsync(id);
+
+            return entity;
+        }
+
         public async Task<List<Category>> GetCategoriesAsync()
         {
             var entities = await _categoryRepository.ListAllAsync();

@@ -45,7 +45,7 @@ namespace DK.DataAccess
             {
                 //Mobile Development
                 new Category() { Name = "Xamarin", Description = "Free and open source mobile app platform for building native and high-performance iOS, Android, tvOS, watchOS, macOS, and Windows apps.", Logo = "cat-xamarin.png", Type = AreaType.MobileDevelopment },
-                new Category() { Name = "Swift", Description = "General-purpose, multi-paradigm, compiled programming language developed by Apple Inc. for iOS, iPadOS, macOS, watchOS, tvOS, Linux, and z/OS.", Logo = "cat-swift.png", Type = AreaType.MobileDevelopment },
+                new Category() { Name = "Swift", Description = "General-purpose, multi-paradigm, compiled programming language developed by Apple Inc. for iOS, iPadOS, macOS, watchOS, tvOS.", Logo = "cat-swift.png", Type = AreaType.MobileDevelopment },
                 new Category() { Name = "Kotlin", Description = "Cross-platform, statically typed, general-purpose programming language with type inference.", Logo = "cat-kotlin.png", Type = AreaType.MobileDevelopment },
                 //Web Development
                 new Category() { Name = ".NET Core", Description = "Free and open-source, managed computer software framework for Windows, Linux, and macOS operating systems.", Logo = "cat-core.png", Type = AreaType.WebDevelopment  },
