@@ -1,5 +1,7 @@
 ﻿@model InterviewViewModel
 
+@using DK.DataAccess.Enums;
+
 @using DK.BusinessLogic.Helpers;
 
 @{
@@ -29,7 +31,7 @@
         </div>
         <div class="work__outer">
             <div class="work__itm">
-                <div class="work__preview">
+                <div class="work__preview" data-value="@ExamType.Base">
                     <div class="work__preview-row">
                         <div class="work__preview-col">
                             <i class="work__icon">
@@ -37,14 +39,14 @@
                             </i>
                         </div>
                         <div class="work__preview-col">
-                            <span class="work__ttl">BASE</span>
+                            <span class="work__ttl">@ExamType.Base.GetEnumDisplayName().ToUpper()</span>
                             <p class="work__text">Exams for base knowleage level. Perfect for begginers.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="work__itm">
-                <div class="work__preview">
+                <div class="work__preview" data-value="@ExamType.Intermediate">
                     <div class="work__preview-row">
                         <div class="work__preview-col">
                             <i class="work__icon">
@@ -52,14 +54,14 @@
                             </i>
                         </div>
                         <div class="work__preview-col">
-                            <span class="work__ttl">INTERMEDIATE</span>
+                            <span class="work__ttl">@ExamType.Intermediate.GetEnumDisplayName().ToUpper()</span>
                             <p class="work__text">Medium difficulty exams for candidates with middle experience level.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="work__itm">
-                <div class="work__preview">
+                <div class="work__preview" data-value="@ExamType.Advanced">
                     <div class="work__preview-row">
                         <div class="work__preview-col">
                             <i class="work__icon">
@@ -67,7 +69,7 @@
                             </i>
                         </div>
                         <div class="work__preview-col">
-                            <span class="work__ttl">ADVANCED</span>
+                            <span class="work__ttl">@ExamType.Advanced.GetEnumDisplayName().ToUpper()</span>
                             <p class="work__text">The most complex exams for candidates with great experience level.</p>
                         </div>
                     </div>
@@ -88,6 +90,7 @@
                 <form method="post" class="form">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     @Html.HiddenFor(e => e.Category.Id)
+                    @Html.HiddenFor(e => e.SelectedExamType)
                     <div class="form__outer">
                         <div class="form__itm form__itm--name">
                             <input asp-for="Candidate.Name" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Candidate.Name)" />
@@ -153,6 +156,9 @@
         });
 
         $(".work__preview").click(function () {
+            var examType = $(this).attr('data-value');
+            $("#SelectedExamType").val(examType);
+
             $(".work__preview").css("background", "white");
             $(this).css("background", "darkgray");
 

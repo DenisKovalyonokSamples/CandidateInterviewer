@@ -1,4 +1,5 @@
 ﻿using DK.DataAccess.Entities;
+using DK.DataAccess.Enums;
 using DK.Web.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,9 +50,10 @@ namespace DK.Web.Managers
         public static InterviewViewModel GetInterviewViewModel(Category entitiy)
         {
             var viewModel = new InterviewViewModel();
-            viewModel.Candidate = new CandidateViewModel();
 
+            viewModel.Candidate = new CandidateViewModel();
             viewModel.Category = GetCategoryViewModel(entitiy);
+            viewModel.SelectedExamType = ExamType.Unknown;
 
             return viewModel;
         }
@@ -87,6 +89,23 @@ namespace DK.Web.Managers
             }
 
             return viewModel;
+        }
+
+        public static Candidate ToCandidateEntity(this CandidateViewModel viewModel)
+        {
+            var entity = new Candidate();
+
+            if (viewModel != null)
+            {
+                entity.Id = viewModel.Id;
+                entity.FirstName = viewModel.Name;
+                entity.Description = viewModel.Description;
+                entity.Email = viewModel.Email;
+                entity.Phone = viewModel.Phone;
+                entity.Skype = viewModel.Skype;
+            }
+
+            return entity;
         }
     }
 }

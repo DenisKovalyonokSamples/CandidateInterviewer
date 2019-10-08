@@ -21,11 +21,11 @@ namespace DK.DataAccess
                     dataContext.SaveChanges();
                 }
 
-                //if (!dataContext.Exams.Any())
-                //{
-                //    dataContext.Exams.AddRange(GetInitialExams());
-                //    dataContext.SaveChanges();
-                //}
+                if (!dataContext.Exams.Any())
+                {
+                    dataContext.Exams.AddRange(GetInitialExams());
+                    dataContext.SaveChanges();
+                }
             }
             catch (Exception ex)
             {

@@ -16,8 +16,4 @@
     <ProjectReference Include="..\DK.Core\DK.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Specifications\" />
-  </ItemGroup>
-
 </Project>
