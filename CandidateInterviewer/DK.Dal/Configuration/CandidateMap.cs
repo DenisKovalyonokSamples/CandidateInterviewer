@@ -16,13 +16,19 @@ namespace DK.DataAccess.Configuration
                        .IsRequired();
 
             builder.Property(a => a.FirstName)
-                .HasMaxLength(60);
+                .HasMaxLength(30);
 
             builder.Property(a => a.LastName)
-                .HasMaxLength(60);
+                .HasMaxLength(30);
 
             builder.Property(a => a.Email)
-                .HasMaxLength(60);
+                .HasMaxLength(40);
+
+            builder.Property(a => a.Phone)
+                .HasMaxLength(20);
+
+            builder.Property(a => a.Skype)
+                .HasMaxLength(30);
 
             builder.Property(a => a.Description)
                 .HasMaxLength(180);

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DK.DataAccess.Interfaces;
 using DK.Web.Managers;
+using DK.Web.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DK.Web.Controllers
@@ -26,9 +27,30 @@ namespace DK.Web.Controllers
                 return NotFound();
             }
 
-            var viewModel = ViewModelBuilder.GetCategoryViewModel(category);
+            var viewModel = ViewModelBuilder.GetInterviewViewModel(category);
 
             return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Index(InterviewViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            int examId = 0; //FIX: create real exam
+
+            return RedirectToAction(nameof(Exam), new { id = examId });
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Exam(int id)
+        {
+
+            return View();
         }
     }
 }

@@ -46,6 +46,16 @@ namespace DK.Web.Managers
             return viewModel;
         }
 
+        public static InterviewViewModel GetInterviewViewModel(Category entitiy)
+        {
+            var viewModel = new InterviewViewModel();
+            viewModel.Candidate = new CandidateViewModel();
+
+            viewModel.Category = GetCategoryViewModel(entitiy);
+
+            return viewModel;
+        }
+
         public static CategoryViewModel GetCategoryViewModel(Category entity)
         {
             var viewModel = new CategoryViewModel();
@@ -57,6 +67,23 @@ namespace DK.Web.Managers
                 viewModel.Description = entity.Description;
                 viewModel.Logo = entity.Logo;
                 viewModel.Type = entity.Type;
+            }
+
+            return viewModel;
+        }
+
+        public static CandidateViewModel GetCandidateViewModel(Candidate entity)
+        {
+            var viewModel = new CandidateViewModel();
+
+            if (entity != null)
+            {
+                viewModel.Id = entity.Id;
+                viewModel.Name = entity.FirstName + " " + entity.LastName;
+                viewModel.Description = entity.Description;
+                viewModel.Email = entity.Email;
+                viewModel.Phone = entity.Phone;
+                viewModel.Skype = entity.Skype;
             }
 
             return viewModel;

@@ -1,4 +1,4 @@
-﻿@model CategoryViewModel
+﻿@model InterviewViewModel
 
 @using DK.BusinessLogic.Helpers;
 
@@ -15,8 +15,8 @@
 <section class="about about--technology">
     <div class="container">
         <div class="about__desc">
-            <h2 class="title-h2">@Model.Name<br><span class="tools__ttl">@Model.Type.GetEnumDisplayName()</span></h2>
-            <h3 class="title-h3">@Model.Description</h3>
+            <h2 class="title-h2">@Model.Category.Name<br><span class="tools__ttl">@Model.Category.Type.GetEnumDisplayName()</span></h2>
+            <h3 class="title-h3">@Model.Category.Description</h3>
         </div>
     </div>
 </section>
@@ -85,33 +85,38 @@
         <h3 class="title-h3">Please enter information about you:</h3>
         <div class="container no-width">
             <div class="message__bottom">
-                <form class="form js-validForm">
+                <form method="post" class="form">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @Html.HiddenFor(e => e.Category.Id)
                     <div class="form__outer">
                         <div class="form__itm form__itm--name">
-                            <input class="form__inp js-validRequired" placeholder="Your name" type="text">
-                            <span class="error error-req">Required to fill</span>
+                            <input asp-for="Candidate.Name" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Candidate.Name)" />
+                            <span asp-validation-for="Candidate.Name" class="text-danger"></span>
                         </div>
+
                         <div class="form__itm form__itm--email">
-                            <input class="form__inp js-validRequired js-noSpaces js-validEmail" placeholder="Your email address" type="email">
-                            <span class="error error-req">Required to fill</span>
-                            <span class="error error-email">Invalid email</span>
+                            <input asp-for="Candidate.Email" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Candidate.Email)" />
+                            <span asp-validation-for="Candidate.Email" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="form__outer">
                         <div class="form__itm form__itm--phone">
-                            <input class="form__inp js-noSpaces" placeholder="Phone number" type="text">
+                            <input asp-for="Candidate.Phone" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Candidate.Phone)" />
+                            <span asp-validation-for="Candidate.Phone" class="text-danger"></span>
                         </div>
                         <div class="form__itm form__itm--budget">
-                            <input class="form__inp js-noSpaces" placeholder="Skype (optional)" type="text">
+                            <input asp-for="Candidate.Skype" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Candidate.Skype)" />
+                            <span asp-validation-for="Candidate.Skype" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="form__outer">
                         <div class="form__itm form__itm--full-width">
-                            <textarea class="form__inp form__textarea" placeholder="Experience"></textarea>
+                            <textarea class="form-control form__textarea" asp-for="Candidate.Description" placeholder="@Html.DisplayNameFor(m => m.Candidate.Description)"></textarea>
+                            <span asp-validation-for="Candidate.Description" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="form--center">
-                        <button class="btn-b js-submitBtn" type="button">
+                        <button class="btn-b" type="submit">
                             <span>Start Interview</span>
                         </button>
                     </div>
@@ -121,6 +126,24 @@
     </div>
     <div class="development separator"></div>
 </section>
+
+<div class="content--works-wrap">
+    <section class="design">
+        <div class="container">
+            <div class="design__outer">
+                <div class="design__itm design__itm--img">
+                    <img class="design__img" src="~/images/bg-design.png">
+                </div>
+                <div class="design__itm">
+                    <div class="design__desc">
+                        <h2 class="title-h2">Difficulty Update</h2>
+                        <h3 class="title-h3">If you pass the same interview with higher difficulty level your profile will be automaticaly updated with new results.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
 @section Scripts {
     <script>
@@ -136,4 +159,6 @@
             $(".message").removeClass("hidden");
         });
     </script>
+
+    <partial name="_ValidationScriptsPartial" />
 }
