@@ -19,7 +19,7 @@ INTERVIEWS PAGE
 START INTERVIEW PAGE
 
 
-![ci_start_interview](https://user-images.githubusercontent.com/54624273/66349794-56923500-e962-11e9-9ce7-77bc7e3d63d6.png)
+![ci_start_interview](https://user-images.githubusercontent.com/54624273/66412551-6bbca180-e9fe-11e9-8964-944745217c4c.png)
 
 
 CONTACTS PAGE
