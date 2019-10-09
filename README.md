@@ -32,3 +32,9 @@ CONTACTS PAGE
 
 
 ![ci_contacts](https://user-images.githubusercontent.com/54624273/65337983-e5b4f400-dbd1-11e9-9de8-b7e7ab60bfbc.png)
+
+
+RESPONSIVE UI (MOBILE DEVICES)
+
+
+![ci_responsive](https://user-images.githubusercontent.com/54624273/66490861-80f70600-eaba-11e9-90a0-db1d7e4a3f15.png)
