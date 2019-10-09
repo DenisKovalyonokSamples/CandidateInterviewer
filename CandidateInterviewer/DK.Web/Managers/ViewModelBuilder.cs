@@ -9,7 +9,7 @@ namespace DK.Web.Managers
     public static class ViewModelBuilder
     {
         public static HomeViewModel GetHomeViewModel(List<Category> entities)
-        {            
+        {
             var viewModel = new HomeViewModel();
 
             if (entities?.Any() == true)
@@ -47,7 +47,7 @@ namespace DK.Web.Managers
             return viewModel;
         }
 
-        public static ExamViewModel GetExamViewModel(Exam entitiy, Candidate candidate)
+        public static ExamViewModel GetExamViewModel(Exam entitiy, Candidate candidate, List<Question> questions, List<Answer> answers)
         {
             var viewModel = new ExamViewModel();
 
@@ -60,6 +60,34 @@ namespace DK.Web.Managers
             viewModel.Name = entitiy.Name;
             viewModel.Description = entitiy.Description;
             viewModel.TypeLogo = MediaManager.GetIconForExamType(entitiy.Type);
+            viewModel.Questions = GetQuestionsForExamViewModel(questions, answers);
+
+            return viewModel;
+        }
+
+        public static List<QuestionViewModel> GetQuestionsForExamViewModel(List<Question> questions, List<Answer> answers)
+        {
+            var viewModel = new List<QuestionViewModel>();
+
+            if (questions?.Any() == true && answers?.Any() == true)
+            {
+                viewModel = questions.Select(o => new QuestionViewModel()
+                {
+                    Id = o.Id,
+                    ExamId = o.ExamId,
+                    Title = o.Title,
+                    Type = o.Type,
+                    Notes = o.Notes,
+                    Score = o.Score,
+                    Answers = answers.Where(x => x.QuestionId == o.Id)?.Select(e => new AnswerViewModel()
+                    {
+                        Id = e.Id,
+                        QuestionId = e.QuestionId,
+                        IsCorrect = e.IsCorrect,
+                        Value = e.Value
+                    })?.ToList() ?? new List<AnswerViewModel>()
+                })?.ToList() ?? new List<QuestionViewModel>();
+            }
 
             return viewModel;
         }

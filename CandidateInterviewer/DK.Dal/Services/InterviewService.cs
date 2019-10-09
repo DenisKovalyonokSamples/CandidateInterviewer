@@ -16,16 +16,18 @@ namespace DK.DataAccess.Services
         private readonly IAsyncRepository<Exam> _examRepository;
         private readonly IAsyncRepository<Question> _questionRepository;
         private readonly IAsyncRepository<Interview> _interviewRepository;
+        private readonly IAsyncRepository<Answer> _answerRepository;
         private readonly ILogService<UserService> _logger;
 
         public InterviewService(IAsyncRepository<Category> categoryRepository, IAsyncRepository<Exam> examRepository, 
-            IAsyncRepository<Interview> interviewRepository, IAsyncRepository<Question> questionRepository, 
-            ILogService<UserService> logger)
+            IAsyncRepository<Interview> interviewRepository, IAsyncRepository<Question> questionRepository,
+            IAsyncRepository<Answer> answerRepository, ILogService<UserService> logger)
         {
             _categoryRepository = categoryRepository;
             _examRepository = examRepository;
             _interviewRepository = interviewRepository;
             _questionRepository = questionRepository;
+            _answerRepository = answerRepository;
             _logger = logger;
         }
 
@@ -87,6 +89,54 @@ namespace DK.DataAccess.Services
         public async Task<Exam> GetExamAsync(int id)
         {
             var entity = await _examRepository.GetByIdAsync(id);
+
+            return entity;
+        }
+
+        #endregion
+
+        #region Question
+
+        public async Task<List<Question>> GetQuestionsForExamAsync(int examId)
+        {
+            var questionSpec = new QuestionSpecification(examId);
+            var entities = (await _questionRepository.ListAsync(questionSpec))?.ToList();
+
+            if (entities == null)
+            {
+                _logger.LogInformation($"Questions for exam {examId} were not found.");
+            }
+
+            return entities;
+        }
+
+        public async Task<Question> GetQuestionAsync(int id)
+        {
+            var entity = await _questionRepository.GetByIdAsync(id);
+
+            return entity;
+        }
+
+        #endregion
+
+        #region Answer
+
+        public async Task<List<Answer>> GetAnswersForQuestionAsync(int questionId)
+        {
+            var answerSpec = new AnswerSpecification(questionId);
+            var entities = (await _answerRepository.ListAsync(answerSpec))?.ToList();
+
+            if (entities == null)
+            {
+                _logger.LogInformation($"Answers for question {questionId} were not found.");
+            }
+
+            return entities;
+        }
+
+        public async Task<Answer> GetAnswerAsync(int id)
+        {
+            var entity = await _answerRepository.GetByIdAsync(id);
 
             return entity;
         }

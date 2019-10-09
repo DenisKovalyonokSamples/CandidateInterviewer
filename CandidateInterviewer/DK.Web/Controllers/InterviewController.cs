@@ -3,6 +3,9 @@ using DK.DataAccess.Interfaces;
 using DK.Web.Managers;
 using DK.Web.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
+using System.Collections.Generic;
+using DK.DataAccess.Entities;
 
 namespace DK.Web.Controllers
 {
@@ -65,7 +68,21 @@ namespace DK.Web.Controllers
                 return RedirectToAction(nameof(HomeController.Error));
             }
 
-            var viewModel = ViewModelBuilder.GetExamViewModel(exam, candidate);
+            var answers = new List<Answer>();
+            var examQuestions = await _interviewService.GetQuestionsForExamAsync(interview.ExamId);
+            if (examQuestions?.Any() == true)
+            {
+                foreach (var question in examQuestions)
+                {
+                    var questionAnswers = await _interviewService.GetAnswersForQuestionAsync(question.Id);
+                    if (questionAnswers?.Any() == true)
+                    {
+                        answers.AddRange(questionAnswers);
+                    }
+                }
+            }
+
+            var viewModel = ViewModelBuilder.GetExamViewModel(exam, candidate, examQuestions, answers);
 
             return View(viewModel);
         }

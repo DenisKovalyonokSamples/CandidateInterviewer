@@ -1,8 +1,5 @@
 ﻿using DK.DataAccess.Enums;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DK.Web.ViewModels
 {
@@ -25,5 +22,7 @@ namespace DK.Web.ViewModels
         public string TypeLogo { get; set; }
 
         public string CandidateFullName { get; set; }
+
+        public List<QuestionViewModel> Questions { get; set; }
     }
 }

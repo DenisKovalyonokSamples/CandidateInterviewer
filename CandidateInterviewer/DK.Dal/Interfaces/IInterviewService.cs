@@ -13,5 +13,9 @@ namespace DK.DataAccess.Interfaces
         Task<Interview> InitInterviewAsync(int candidateId, int examId);
         Task<Interview> GetInterviewAsync(int id);
         Task<Exam> GetExamAsync(int id);
+        Task<List<Question>> GetQuestionsForExamAsync(int examId);
+        Task<Question> GetQuestionAsync(int id);
+        Task<List<Answer>> GetAnswersForQuestionAsync(int questionId);
+        Task<Answer> GetAnswerAsync(int id);
     }
 }
