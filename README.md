@@ -22,6 +22,12 @@ START INTERVIEW PAGE
 ![ci_start_interview](https://user-images.githubusercontent.com/54624273/66419673-281d6400-ea0d-11e9-821e-482858d70da8.png)
 
 
+EXAM PAGE
+
+
+![ci_exam](https://user-images.githubusercontent.com/54624273/66480830-23f25480-eaa8-11e9-83b1-b905e03f88c6.png)
+
+
 CONTACTS PAGE
 
 
