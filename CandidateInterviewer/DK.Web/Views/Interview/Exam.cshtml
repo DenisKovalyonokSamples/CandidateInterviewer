@@ -1,6 +1,7 @@
 ﻿@model ExamViewModel
 
 @using DK.BusinessLogic.Helpers;
+@using DK.DataAccess.Enums;
 
 @{
     ViewData["Title"] = "Exam";
@@ -32,11 +33,57 @@
             <div class="message__bottom message__slim">
                 <h2 class="title-h2">Hi, @Model.CandidateFullName!</h2>
                 <h3 class="title-h3">Please answer to interview questions:</h3>
-                <form class="form">
+                <form method="post" class="form message__container">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (Model.Questions?.Any() == true)
+                    {
+                        for (int i = 0; i < Model.Questions.Count; i++)
+                        {
+                            var questionCaption = (i + 1).ToString() + ") " + Model.Questions[i].Title;
+                            <span class="connection__ttl">@questionCaption</span>
+                            <div class="message__answers">
+                                @if (Model.Questions[i].Type == AnswerType.Text)
+                                {
+                                <div>
+                                    @Html.TextAreaFor(m => m.Questions[i].CandidateAnswer, new { @class = "message__area" })
+                                    <span asp-validation-for="Questions[i].CandidateAnswer" class="text-danger"></span>
+                                </div>
+                                }
+                                else
+                                {
+                                    for (int j = 0; j < Model.Questions[i].Answers.Count; j++)
+                                    {
+                                        <div>
+                                            @Html.HiddenFor(m => m.Questions[i].Answers[j].Id)
+                                            @Html.HiddenFor(m => m.Questions[i].Answers[j].QuestionId)
+                                            @Html.HiddenFor(m => m.Questions[i].Answers[j].IsCorrect)
+                                        </div>
+                                        <div class="message__answer">
+                                            @if (Model.Questions[i].Type == AnswerType.Single && Model.Questions[i].Answers?.Any() == true)
+                                            {
+                                                <label>
+                                                    @Html.RadioButtonFor(m => m.Questions[i].CandidateAnswer, Model.Questions[i].Answers[j].Value)
+                                                    @Model.Questions[i].Answers[j].Value
+                                                </label>
+                                                <span asp-validation-for="Questions[i].CandidateAnswer" class="text-danger"></span>
+                                            }
 
-                    <div class="form--center">
-                        <button class="btn-b js-submitBtn" type="button">
-                            <span>Finish</span>
+                                            @if (Model.Questions[i].Type == AnswerType.Multiple && Model.Questions[i].Answers?.Any() == true)
+                                            {
+                                                <label>
+                                                    @Html.CheckBoxFor(m => m.Questions[i].Answers[j].CandidateAnswer, Model.Questions[i].Answers[j].Value)
+                                                    @Model.Questions[i].Answers[j].Value
+                                                </label>
+                                            }
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        }
+                    }
+                    <div class="form--center message__button">
+                        <button class="btn-b" type="submit">
+                            <span>Accept Answers</span>
                         </button>
                     </div>
                 </form>

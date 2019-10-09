@@ -20,6 +20,8 @@ namespace DK.Web.ViewModels
 
         public int Score { get; set; }
 
+        public string CandidateAnswer { get; set; }
+
         public List<AnswerViewModel> Answers { get; set; }
     }
 }

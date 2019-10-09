@@ -86,5 +86,18 @@ namespace DK.Web.Controllers
 
             return View(viewModel);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Exam(ExamViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            //TODO: Add redirect to success page 
+            return View(model);
+        }
     }
 }
