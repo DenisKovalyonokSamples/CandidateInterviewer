@@ -11,6 +11,7 @@ namespace DK.DataAccess.Entities
         public string Title { get; set; }
         public string Notes { get; set; }
         public AnswerType Type { get; set; }
+        public int Score { get; set; }
 
         public Exam Exam { get; set; }
     }

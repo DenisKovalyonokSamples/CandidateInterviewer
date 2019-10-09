@@ -12,6 +12,6 @@ namespace DK.DataAccess.Interfaces
         Task<Exam> GetExamByCategoryAsync(int categoryId, ExamType type);
         Task<Interview> InitInterviewAsync(int candidateId, int examId);
         Task<Interview> GetInterviewAsync(int id);
-        Task<Exam> GeExamAsync(int id);
+        Task<Exam> GetExamAsync(int id);
     }
 }

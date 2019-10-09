@@ -83,6 +83,10 @@
         padding: 0 10px;
     }
 
+    &__preview-col--exam {
+        padding: 20px 10px;
+    }
+
     &__ttl {
         line-height: 24px;
         font-size: 24px;
@@ -105,5 +109,26 @@
         width: 90px;
         height: 90px;
         display: block;
+    }
+
+    &__icon--exam {
+        margin: 0 auto;
+        width: 140px;
+        height: 140px;
+        display: block;
+    }
+
+    &__img--exam {
+        width: 140px;
+        height: 140px;
+    }
+
+    &__ttl--exam {
+        line-height: 24px;
+        font-size: 24px;
+        color: var(--brendCol);
+        margin: 0px;
+        display: inline-block;
+        font-family: var(--fontBold);
     }
 }

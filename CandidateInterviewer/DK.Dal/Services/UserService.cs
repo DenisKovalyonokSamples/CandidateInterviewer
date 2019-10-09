@@ -18,6 +18,13 @@ namespace DK.DataAccess.Services
             _logger = logger;
         }
 
+        public async Task<Candidate> GetCandidateAsync(int id)
+        {
+            var entity = await _candidateRepository.GetByIdAsync(id);
+
+            return entity;
+        }
+
         public async Task<Candidate> InitCandidateAsync(Candidate entity)
         {
             if (entity == null)

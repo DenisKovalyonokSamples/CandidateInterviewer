@@ -126,6 +126,10 @@
         background: #e9ebf5;
     }
 
+    &__title-center {
+        text-align: center;
+    }
+
     &__ttl {
         margin: 0 0 5px;
         display: block;
@@ -263,6 +267,23 @@
         color: var(--brendColPink);
         font-family: var(--fontBold);
         font-size: 25px;
+    }
+
+    &__exam {
+        background-color: #fff;
+        text-align: center;
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
+    }
+
+    &__exam--container {
+        padding-top: 34px;
+    }
+
+    &__logo {
+        width: 100%;
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
     }
 
     .btn-b {

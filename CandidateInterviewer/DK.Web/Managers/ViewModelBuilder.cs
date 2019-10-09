@@ -47,6 +47,23 @@ namespace DK.Web.Managers
             return viewModel;
         }
 
+        public static ExamViewModel GetExamViewModel(Exam entitiy, Candidate candidate)
+        {
+            var viewModel = new ExamViewModel();
+
+            viewModel.Id = entitiy.Id;
+            viewModel.CategoryId = entitiy.CategoryId;
+            viewModel.CandidateId = candidate.Id;
+            viewModel.CandidateFullName = candidate.FirstName + " " + candidate.LastName;
+            viewModel.Type = entitiy.Type;
+            viewModel.Logo = entitiy.Logo;
+            viewModel.Name = entitiy.Name;
+            viewModel.Description = entitiy.Description;
+            viewModel.TypeLogo = MediaManager.GetIconForExamType(entitiy.Type);
+
+            return viewModel;
+        }
+
         public static InterviewViewModel GetInterviewViewModel(Category entitiy)
         {
             var viewModel = new InterviewViewModel();

@@ -4,14 +4,16 @@ using DK.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DK.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20191009001253_Answers_For_Question")]
+    partial class Answers_For_Question
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -162,7 +164,7 @@ namespace DK.DataAccess.Migrations
                     b.Property<int>("Score");
 
                     b.Property<string>("Title")
-                        .IsRequired();
+                        .HasMaxLength(100);
 
                     b.Property<int>("Type");
 

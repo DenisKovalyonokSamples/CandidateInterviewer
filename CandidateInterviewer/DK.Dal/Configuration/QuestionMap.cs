@@ -16,12 +16,15 @@ namespace DK.DataAccess.Configuration
                        .IsRequired();
 
             builder.Property(a => a.Title)
-                .HasMaxLength(100);
+                .IsRequired();
 
             builder.Property(a => a.Notes)
-                .HasMaxLength(180);
+                .IsRequired();
 
             builder.Property(a => a.Type)
+                .IsRequired();
+
+            builder.Property(a => a.Score)
                 .IsRequired();
 
             builder.HasOne(ci => ci.Exam)

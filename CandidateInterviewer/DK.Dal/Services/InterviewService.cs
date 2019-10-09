@@ -84,7 +84,7 @@ namespace DK.DataAccess.Services
             return entity;
         }
 
-        public async Task<Exam> GeExamAsync(int id)
+        public async Task<Exam> GetExamAsync(int id)
         {
             var entity = await _examRepository.GetByIdAsync(id);
 

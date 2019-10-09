@@ -10,10 +10,10 @@ namespace DK.DataAccess.Enums
         [Display(Name = "Text")]
         Text = 1,
 
-        [Display(Name = "Radio")]
-        Radio = 2,
+        [Display(Name = "Single")]
+        Single = 2,
 
-        [Display(Name = "Collection")]
-        Collection = 3
+        [Display(Name = "Multiple")]
+        Multiple = 3
     }
 }

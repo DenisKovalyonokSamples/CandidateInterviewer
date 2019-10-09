@@ -16,6 +16,7 @@ namespace DK.DataAccess
         public DbSet<Question> Questions { get; set; }
         public DbSet<Interview> Interviews { get; set; }
         public DbSet<Candidate> Candidates { get; set; }
+        public DbSet<Answer> Answers { get; set; }
         public DbSet<Exam> Exams { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

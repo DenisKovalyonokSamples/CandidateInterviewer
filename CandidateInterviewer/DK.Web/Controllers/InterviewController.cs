@@ -57,9 +57,17 @@ namespace DK.Web.Controllers
         public async Task<IActionResult> Exam(int id)
         {
             var interview = await _interviewService.GetInterviewAsync(id);
-            var exam = await _interviewService.GeExamAsync(interview.ExamId);
+            var exam = await _interviewService.GetExamAsync(interview.ExamId);
+            var candidate = await _userService.GetCandidateAsync(interview.CandidateId);
 
-            return View();
+            if (exam == null || candidate == null)
+            {
+                return RedirectToAction(nameof(HomeController.Error));
+            }
+
+            var viewModel = ViewModelBuilder.GetExamViewModel(exam, candidate);
+
+            return View(viewModel);
         }
     }
 }

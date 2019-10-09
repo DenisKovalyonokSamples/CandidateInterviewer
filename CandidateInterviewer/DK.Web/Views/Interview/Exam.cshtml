@@ -1,8 +1,46 @@
-﻿
+﻿@model ExamViewModel
+
+@using DK.BusinessLogic.Helpers;
+
 @{
     ViewData["Title"] = "Exam";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Exam</h1>
+<div class="content__fixed">
+    <section class="message">
+        <div class="message__wrap">
+            <div class="container no-width">
+                <div class="message__top">
+                    <div class="connection--contacts connection__exam--container">
+                        <div class="connection__outer">
+                            <div class="connection__exam">
+                                <img class="connection__logo" src="~/images/@Model.Logo" />
+                                <div class="work__preview-col--exam">
+                                    <i class="work__icon--exam">
+                                        <img class="work__img--exam" src="~/images/@Model.TypeLogo">
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="connection__bottom connection__title-center">
+                                <span class="work__ttl--exam">@Model.Type.GetEnumDisplayName().ToUpper()</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="message__bottom message__slim">
+                <h2 class="title-h2">Hi, @Model.CandidateFullName!</h2>
+                <h3 class="title-h3">Please answer to interview questions:</h3>
+                <form class="form">
 
+                    <div class="form--center">
+                        <button class="btn-b js-submitBtn" type="button">
+                            <span>Finish</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
