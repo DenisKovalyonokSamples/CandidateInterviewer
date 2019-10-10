@@ -47,13 +47,14 @@ namespace DK.Web.Managers
             return viewModel;
         }
 
-        public static ExamViewModel GetExamViewModel(Exam entitiy, Candidate candidate, List<Question> questions, List<Answer> answers)
+        public static ExamViewModel GetExamViewModel(Interview interview, Exam entitiy, Candidate candidate, List<Question> questions, List<Answer> answers)
         {
             var viewModel = new ExamViewModel();
 
             viewModel.Id = entitiy.Id;
             viewModel.CategoryId = entitiy.CategoryId;
             viewModel.CandidateId = candidate.Id;
+            viewModel.InterviewId = interview.Id;
             viewModel.CandidateFullName = candidate.FirstName + " " + candidate.LastName;
             viewModel.Type = entitiy.Type;
             viewModel.Logo = entitiy.Logo;
@@ -99,6 +100,17 @@ namespace DK.Web.Managers
             viewModel.Candidate = new CandidateViewModel();
             viewModel.Category = GetCategoryViewModel(entitiy);
             viewModel.SelectedExamType = ExamType.Unknown;
+
+            return viewModel;
+        }
+
+        public static CompleteViewModel GetCompleteViewModel(Interview interview, Candidate candidate)
+        {
+            var viewModel = new CompleteViewModel();
+
+            viewModel.InterviewId = interview.Id;
+            viewModel.Score = interview.Score;
+            viewModel.CandidateName = candidate.FirstName + " " + candidate.LastName;
 
             return viewModel;
         }

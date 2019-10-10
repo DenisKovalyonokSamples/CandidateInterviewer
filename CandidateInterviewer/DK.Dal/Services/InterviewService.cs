@@ -51,6 +51,22 @@ namespace DK.DataAccess.Services
 
         #region Interview
 
+        public async Task<bool> UpdateInterviewScoreAsync(Interview entity, int score)
+        {
+            if (entity == null)
+            {
+                _logger.LogInformation($"Interview object is empty.");
+
+                return false;
+            }
+
+            entity.Score = score.ToString();
+
+            await _interviewRepository.UpdateAsync(entity);
+
+            return true;
+        }
+
         public async Task<Interview> InitInterviewAsync(int candidateId, int examId)
         {
             var entity = new Interview();

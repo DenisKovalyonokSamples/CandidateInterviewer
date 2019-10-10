@@ -35,19 +35,31 @@
                 <h3 class="title-h3">Please answer to interview questions:</h3>
                 <form method="post" class="form message__container">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    @Html.HiddenFor(m => m.InterviewId)
+                    @Html.HiddenFor(m => m.CandidateId)
+                    @Html.HiddenFor(m => m.CategoryId)
+                    @Html.HiddenFor(m => m.Type)
+                    @Html.HiddenFor(m => m.Id)
+
                     @if (Model.Questions?.Any() == true)
                     {
                         for (int i = 0; i < Model.Questions.Count; i++)
                         {
+                            @Html.HiddenFor(m => m.Questions[i].Id)
+                            @Html.HiddenFor(m => m.Questions[i].ExamId)
+                            @Html.HiddenFor(m => m.Questions[i].Score)
+                            @Html.HiddenFor(m => m.Questions[i].Type)
+
                             var questionCaption = (i + 1).ToString() + ") " + Model.Questions[i].Title;
                             <span class="connection__ttl">@questionCaption</span>
                             <div class="message__answers">
                                 @if (Model.Questions[i].Type == AnswerType.Text)
                                 {
-                                <div>
-                                    @Html.TextAreaFor(m => m.Questions[i].CandidateAnswer, new { @class = "message__area" })
-                                    <span asp-validation-for="Questions[i].CandidateAnswer" class="text-danger"></span>
-                                </div>
+                                    <div>
+                                        @Html.TextAreaFor(m => m.Questions[i].CandidateAnswer, new { @class = "message__area" })
+                                        <span asp-validation-for="Questions[i].CandidateAnswer" class="text-danger"></span>
+                                    </div>
                                 }
                                 else
                                 {
@@ -57,6 +69,7 @@
                                             @Html.HiddenFor(m => m.Questions[i].Answers[j].Id)
                                             @Html.HiddenFor(m => m.Questions[i].Answers[j].QuestionId)
                                             @Html.HiddenFor(m => m.Questions[i].Answers[j].IsCorrect)
+                                            @Html.HiddenFor(m => m.Questions[i].Answers[j].Value)
                                         </div>
                                         <div class="message__answer">
                                             @if (Model.Questions[i].Type == AnswerType.Single && Model.Questions[i].Answers?.Any() == true)

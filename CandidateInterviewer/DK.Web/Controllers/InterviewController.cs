@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Collections.Generic;
 using DK.DataAccess.Entities;
+using DK.DataAccess.Enums;
+using DK.Core;
 
 namespace DK.Web.Controllers
 {
@@ -82,7 +84,7 @@ namespace DK.Web.Controllers
                 }
             }
 
-            var viewModel = ViewModelBuilder.GetExamViewModel(exam, candidate, examQuestions, answers);
+            var viewModel = ViewModelBuilder.GetExamViewModel(interview, exam, candidate, examQuestions, answers);
 
             return View(viewModel);
         }
@@ -96,8 +98,63 @@ namespace DK.Web.Controllers
                 return View(model);
             }
 
-            //TODO: Add redirect to success page 
-            return View(model);
+            int totalScore = 0;
+
+            foreach (var question in model.Questions)
+            {
+                if (question.Type == AnswerType.Single)
+                {
+                    if (question.Answers.Any(e => e.Value == question.CandidateAnswer && e.IsCorrect))
+                    {
+                        totalScore += question.Score;
+                    }
+                }
+
+                if (question.Type == AnswerType.Multiple)
+                {
+                    if (question.Answers.All(e => e.IsCorrect == e.CandidateAnswer))
+                    {
+                        totalScore += question.Score;
+                    }
+                }
+            }
+
+            if (model.Type == ExamType.Intermediate)
+            {
+                totalScore = totalScore * Constants.INTERMEDIATE_EXAM_COEFFICIENT;
+            }
+
+            if (model.Type == ExamType.Advanced)
+            {
+                totalScore = totalScore * Constants.ADVANCED_EXAM_COEFFICIENT;
+            }
+
+            var interview = await _interviewService.GetInterviewAsync(model.InterviewId);
+            if (interview != null)
+            {
+                if(await _interviewService.UpdateInterviewScoreAsync(interview, totalScore))
+                {
+                    return RedirectToAction(nameof(Complete), new { id = interview.Id });
+                }
+            }
+
+            return RedirectToAction(nameof(HomeController.Error));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Complete(int id)
+        {
+            var interview = await _interviewService.GetInterviewAsync(id);
+            var candidate = await _userService.GetCandidateAsync(interview.CandidateId);
+
+            if (interview == null || candidate == null)
+            {
+                return RedirectToAction(nameof(HomeController.Error));
+            }
+
+            var viewModel = ViewModelBuilder.GetCompleteViewModel(interview, candidate);
+
+            return View(viewModel);
         }
     }
 }

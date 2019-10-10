@@ -11,6 +11,8 @@ namespace DK.Web.ViewModels
 
         public int CandidateId { get; set; }
 
+        public int InterviewId { get; set; }
+
         public string Name { get; set; }
 
         public string Logo { get; set; }
