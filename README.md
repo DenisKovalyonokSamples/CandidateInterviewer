@@ -28,6 +28,12 @@ EXAM PAGE
 ![ci_exam](https://user-images.githubusercontent.com/54624273/66480830-23f25480-eaa8-11e9-83b1-b905e03f88c6.png)
 
 
+INTERVIEW COMPLETED PAGE
+
+
+![ci_completed](https://user-images.githubusercontent.com/54624273/66600673-b0873a80-ebae-11e9-86f1-e3756a144c46.png)
+
+
 CONTACTS PAGE
 
 
