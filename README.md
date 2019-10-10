@@ -31,7 +31,7 @@ EXAM PAGE
 INTERVIEW COMPLETED PAGE
 
 
-![ci_completed](https://user-images.githubusercontent.com/54624273/66600673-b0873a80-ebae-11e9-86f1-e3756a144c46.png)
+![ci_completed](https://user-images.githubusercontent.com/54624273/66605357-a4a07600-ebb8-11e9-9109-ff94cd28dcea.png)
 
 
 CONTACTS PAGE
