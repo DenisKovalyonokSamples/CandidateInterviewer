@@ -146,6 +146,19 @@
         margin: 0 auto;
     }
 
+    &__tooltip-img {
+        float: right;
+        width: 154px;
+        position: absolute;
+        padding: 15px;
+    }
+
+    &__score {
+        color: darkorange;
+        font-size: 164px;
+        line-height: 1;
+    }
+
     &__link {
         font-size: 20px;
         line-height: 20px;

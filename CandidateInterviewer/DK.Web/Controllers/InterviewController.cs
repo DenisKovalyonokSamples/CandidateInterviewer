@@ -93,46 +93,12 @@ namespace DK.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Exam(ExamViewModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-
-            int totalScore = 0;
-
-            foreach (var question in model.Questions)
-            {
-                if (question.Type == AnswerType.Single)
-                {
-                    if (question.Answers.Any(e => e.Value == question.CandidateAnswer && e.IsCorrect))
-                    {
-                        totalScore += question.Score;
-                    }
-                }
-
-                if (question.Type == AnswerType.Multiple)
-                {
-                    if (question.Answers.All(e => e.IsCorrect == e.CandidateAnswer))
-                    {
-                        totalScore += question.Score;
-                    }
-                }
-            }
-
-            if (model.Type == ExamType.Intermediate)
-            {
-                totalScore = totalScore * Constants.INTERMEDIATE_EXAM_COEFFICIENT;
-            }
-
-            if (model.Type == ExamType.Advanced)
-            {
-                totalScore = totalScore * Constants.ADVANCED_EXAM_COEFFICIENT;
-            }
+            ModelState.Clear();
 
             var interview = await _interviewService.GetInterviewAsync(model.InterviewId);
             if (interview != null)
             {
-                if(await _interviewService.UpdateInterviewScoreAsync(interview, totalScore))
+                if(await _interviewService.UpdateInterviewScoreAsync(interview, CalculationManager.CalculateFinalInterviewScore(model.Questions, model.Type)))
                 {
                     return RedirectToAction(nameof(Complete), new { id = interview.Id });
                 }
@@ -145,14 +111,15 @@ namespace DK.Web.Controllers
         public async Task<IActionResult> Complete(int id)
         {
             var interview = await _interviewService.GetInterviewAsync(id);
+            var exam = await _interviewService.GetExamAsync(interview.ExamId);
             var candidate = await _userService.GetCandidateAsync(interview.CandidateId);
 
-            if (interview == null || candidate == null)
+            if (interview == null || exam == null || candidate == null)
             {
                 return RedirectToAction(nameof(HomeController.Error));
             }
 
-            var viewModel = ViewModelBuilder.GetCompleteViewModel(interview, candidate);
+            var viewModel = ViewModelBuilder.GetCompleteViewModel(interview, exam, candidate);
 
             return View(viewModel);
         }

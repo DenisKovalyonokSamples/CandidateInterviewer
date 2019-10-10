@@ -1,6 +1,7 @@
 ﻿using DK.DataAccess.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -20,6 +21,7 @@ namespace DK.Web.ViewModels
 
         public int Score { get; set; }
 
+        [Required(ErrorMessage = "Please enter your answer.")]
         public string CandidateAnswer { get; set; }
 
         public List<AnswerViewModel> Answers { get; set; }

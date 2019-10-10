@@ -1,10 +1,50 @@
 ﻿@model CompleteViewModel
+
+@using DK.BusinessLogic.Helpers;
+
 @{
-    ViewData["Title"] = "Complete";
+    ViewData["Title"] = "Interview Completed";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Complete Page (In development)</h1>
+<div class="company">
+    <div class="connection--contacts connection__exam--container company__success bounceInDown animated">
+        <div class="connection__outer">
+            <div class="connection__exam">
+                <img class="connection__logo" src="~/images/@Model.ExamLogo" />
+                <div class="work__preview-col--exam">
+                    <i class="work__icon--exam">
+                        <img class="work__img--exam" src="~/images/@Model.ExamTypeLogo">
+                    </i>
+                </div>
+            </div>
+            <div class="connection__bottom connection__title-center">
+                <span class="work__ttl--exam">@Model.Type.GetEnumDisplayName().ToUpper()</span>
+            </div>
+        </div>
+    </div>
+    <div class="company__elem"></div>
+    <i class="company__icon company__icon--arrow bounceInDown animated"></i>
+    <i class="company__icon company__icon--graph bounceInDown animated"></i>
+    <i class="company__icon company__icon--time bounceInDown animated"></i>
+    <i class="company__icon company__icon--circle bounceInDown animated"></i>
+</div>
 
-<div>@Model.CandidateName</div>
-<div>@Model.Score</div>
+<section class="about about--company">
+    <div class="container">
+        <div class="about__desc-wide">
+            <div class="about__desc-wrap">
+                <h2 class="title-h2">Congratulations!</h2>
+                <span class="about__caption">Your Interview is Completed</span>
+            </div>
+            <a class="btn-a" href="#">@Model.CandidateName (@Model.CandidateDescription)</a>
+
+            <div class="about__desc-wrap about__desc-complete">
+                <h2 class="title-h1">
+                    Score: <span class="connection__score">@Model.Score</span>
+                    <img class="connection__tooltip-img" src="~/images/@Model.ExamTypeLogo" />
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>

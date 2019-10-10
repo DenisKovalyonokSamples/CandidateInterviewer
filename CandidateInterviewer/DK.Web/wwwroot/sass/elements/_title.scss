@@ -1,4 +1,13 @@
-﻿.title-h2 {
+﻿.title-h1 {
+    font-size: 96px;
+    line-height: 78px;
+    font-family: var(--fontBold);
+    color: var(--brendCol);
+    margin: 0 0 25px;
+    text-transform: uppercase;
+}
+
+.title-h2 {
     font-size: 52px;
     line-height: 50px;
     font-family: var(--fontBold);

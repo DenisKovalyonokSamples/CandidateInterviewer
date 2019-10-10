@@ -89,4 +89,10 @@
         background: -webkit-linear-gradient(45deg, #fcdc67 1%,#fd8791 100%);
         background: linear-gradient(45deg, #fcdc67 1%,#fd8791 100%);
     }
+
+    &__success {
+        position: absolute;
+        top: 350px;
+        right: 160px;
+    }
 }

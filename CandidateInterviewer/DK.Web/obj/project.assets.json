@@ -4726,6 +4726,7 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "DK.Core": "1.0.0",
+          "DK.DataAccess": "1.0.0",
           "Microsoft.Extensions.Logging": "2.2.0"
         },
         "compile": {

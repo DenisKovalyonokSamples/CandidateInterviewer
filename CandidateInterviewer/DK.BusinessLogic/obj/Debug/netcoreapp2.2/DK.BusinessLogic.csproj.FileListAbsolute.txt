@@ -10,3 +10,5 @@ D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.B
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\bin\Debug\netcoreapp2.2\DK.Core.dll
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\bin\Debug\netcoreapp2.2\DK.Core.pdb
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\obj\Debug\netcoreapp2.2\DK.BusinessLogic.csproj.CopyComplete
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\bin\Debug\netcoreapp2.2\DK.DataAccess.dll
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.BusinessLogic\bin\Debug\netcoreapp2.2\DK.DataAccess.pdb

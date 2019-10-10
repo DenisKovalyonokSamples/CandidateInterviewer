@@ -544,6 +544,7 @@
       "DK.BusinessLogic/1.0.0": {
         "dependencies": {
           "DK.Core": "1.0.0",
+          "DK.DataAccess": "1.0.0",
           "Microsoft.Extensions.Logging": "2.2.0"
         },
         "runtime": {

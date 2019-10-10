@@ -5,15 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Managers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DK.Core\DK.Core.csproj" />
+    <ProjectReference Include="..\DK.Dal\DK.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

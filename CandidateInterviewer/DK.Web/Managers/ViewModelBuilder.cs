@@ -104,13 +104,17 @@ namespace DK.Web.Managers
             return viewModel;
         }
 
-        public static CompleteViewModel GetCompleteViewModel(Interview interview, Candidate candidate)
+        public static CompleteViewModel GetCompleteViewModel(Interview interview, Exam exam, Candidate candidate)
         {
             var viewModel = new CompleteViewModel();
 
             viewModel.InterviewId = interview.Id;
             viewModel.Score = interview.Score;
             viewModel.CandidateName = candidate.FirstName + " " + candidate.LastName;
+            viewModel.CandidateDescription = candidate.Description;
+            viewModel.ExamLogo = exam.Logo;
+            viewModel.ExamTypeLogo = MediaManager.GetIconForExamType(exam.Type);
+            viewModel.Type = exam.Type;
 
             return viewModel;
         }

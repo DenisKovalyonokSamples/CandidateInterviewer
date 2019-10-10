@@ -58,7 +58,6 @@
                                 {
                                     <div>
                                         @Html.TextAreaFor(m => m.Questions[i].CandidateAnswer, new { @class = "message__area" })
-                                        <span asp-validation-for="Questions[i].CandidateAnswer" class="text-danger"></span>
                                     </div>
                                 }
                                 else
@@ -78,7 +77,6 @@
                                                     @Html.RadioButtonFor(m => m.Questions[i].CandidateAnswer, Model.Questions[i].Answers[j].Value)
                                                     @Model.Questions[i].Answers[j].Value
                                                 </label>
-                                                <span asp-validation-for="Questions[i].CandidateAnswer" class="text-danger"></span>
                                             }
 
                                             @if (Model.Questions[i].Type == AnswerType.Multiple && Model.Questions[i].Answers?.Any() == true)
@@ -90,6 +88,11 @@
                                             }
                                         </div>
                                     }
+                                }
+
+                                @if (Model.Questions[i].Type == AnswerType.Single || Model.Questions[i].Type == AnswerType.Text)
+                                {
+                                    <span asp-validation-for="Questions[i].CandidateAnswer" class="text-danger"></span>
                                 }
                             </div>
                         }
@@ -104,3 +107,7 @@
         </div>
     </section>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
