@@ -18,5 +18,6 @@ namespace DK.DataAccess.Interfaces
         Task<List<Answer>> GetAnswersForQuestionAsync(int questionId);
         Task<Answer> GetAnswerAsync(int id);
         Task<bool> UpdateInterviewScoreAsync(Interview entity, int score);
+        Task<List<Interview>> GetPassedInterviewsAsync();
     }
 }

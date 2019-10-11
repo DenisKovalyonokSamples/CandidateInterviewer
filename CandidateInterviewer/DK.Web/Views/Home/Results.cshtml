@@ -1,8 +1,113 @@
-﻿
+﻿@model List<ResultViewModel>
+
+@using DK.BusinessLogic.Helpers;
+@using DK.DataAccess.Enums;
+@using DK.Core;
+
 @{
     ViewData["Title"] = "Results";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Results (PAGE IN DEVELOPMENT!)</h1>
+<section class="contact" style="padding-top: 220px;">
+    <div class="contact__wrap">
+        <div class="container no-width">
+            <h2 class="title-h2">Score calculation</h2>
+            <h3 class="title-h3">Each question has it's score value. If candidate gives the right answer than score will be added to the total sum. Also we use boost coefficients for more complex exams:</h3>
+            <div class="contact__outer">
+                <div class="contact__itm">
+                    <div class="connection connection--contacts">
+                        <div class="connection__outer">
+                            <div class="connection__top">
+                                <img class="connection__icon connection__icon--campaign" src="~/images/@Constants.BASE_TYPE_ICO" />
+                                <span class="connection__ttl">@ExamType.Base.GetEnumDisplayName().ToUpper()</span>
+                                <p class="connection__text">Exams for base knowleage level.</p>
+                                <a class="connection__link" href="#">NO TIME LIMIT</a>
+                            </div>
+                            <div class="connection__bottom">
+                                <a class="btn-b btn-b--small" href="#">
+                                    <span>COEFFICIENT: @Constants.BASE_EXAM_COEFFICIENT X</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__itm">
+                    <div class="connection connection--contacts">
+                        <div class="connection__outer">
+                            <div class="connection__top">
+                                <img class="connection__icon connection__icon--campaign" src="~/images/@Constants.INTERMEDIATE_TYPE_ICO" />
+                                <span class="connection__ttl">@ExamType.Intermediate.GetEnumDisplayName().ToUpper()</span>
+                                <p class="connection__text">Medium difficulty exam.</p>
+                                <a class="connection__link" href="#">NO TIME LIMIT</a>
+                            </div>
+                            <div class="connection__bottom">
+                                <a class="btn-b btn-b--small" href="#">
+                                    <span>COEFFICIENT: @Constants.INTERMEDIATE_EXAM_COEFFICIENT X</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__itm">
+                    <div class="connection connection--contacts">
+                        <div class="connection__outer">
+                            <div class="connection__top">
+                                <img class="connection__icon connection__icon--campaign" src="~/images/@Constants.ADVANCED_TYPE_ICO" />
+                                <span class="connection__ttl">@ExamType.Advanced.GetEnumDisplayName().ToUpper()</span>
+                                <p class="connection__text">Medium difficulty exam.</p>
+                                <a class="connection__link" href="#">TIME LIMITED</a>
+                            </div>
+                            <div class="connection__bottom">
+                                <a class="btn-b btn-b--small" href="#">
+                                    <span>COEFFICIENT: @Constants.ADVANCED_EXAM_COEFFICIENT X</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="contact__sect-cnt">
+    <div class="contact__wrap">
+        <div class="container no-width">
+            <h2 class="title-h2">Candidate Results</h2>
+            <h3 class="title-h3">Sorted by higher score</h3>
+            <div class="contact__outer--results">
+                @foreach (var interview in Model)
+                {
+                    <div class="work__itm--results">
+                        <div class="work__preview--results" data-value="@interview.Type">
+                            <div class="work__preview-row">
+                                <div class="work__preview-col--results">
+                                    <i class="work__icon">
+                                        <img class="work__img" src="/images/@interview.ExamTypeLogo">
+                                    </i>
+                                    <span class="work__ttl--results">@interview.Score</span>
+                                </div>
+                                <div class="work__preview-col">
+                                    <img class="exam-logo--results" src="/images/@interview.ExamLogo">
+                                </div>
+                                <div class="work__preview-col--descr">
+                                    <span class="work__ttl">@interview.ExamName</span>
+                                    <p class="work__text">@interview.CandidateFullName (@interview.CandidateDescription)</p>
+                                    <p class="work__text-email">@interview.Email</p>
+                                    <a class="connection__link" href="#">@interview.Date.ToLocalTime().ToShortDateString()</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-ci">
+    <div class="container">
+        <h2 class="title-h2">Need more statistics?</h2><a class="btn-b" asp-area="" asp-controller="Home" asp-action="Contacts"><span>Contact us</span></a>
+    </div>
+</section>

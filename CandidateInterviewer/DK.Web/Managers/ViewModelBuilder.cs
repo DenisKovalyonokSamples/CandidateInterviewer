@@ -1,6 +1,7 @@
 ﻿using DK.DataAccess.Entities;
 using DK.DataAccess.Enums;
 using DK.Web.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -167,6 +168,24 @@ namespace DK.Web.Managers
             }
 
             return entity;
+        }
+
+        public static ResultViewModel GetResultViewModels(Interview interview, Candidate candidate, Exam exam)
+        {
+            var viewModel = new ResultViewModel();
+
+            viewModel.InterviewId = interview.Id;
+            viewModel.Score = Convert.ToInt32(interview.Score);
+            viewModel.CandidateFullName = candidate.FirstName + " " + candidate.LastName;
+            viewModel.CandidateDescription = candidate.Description;
+            viewModel.ExamLogo = exam.Logo;
+            viewModel.ExamTypeLogo = MediaManager.GetIconForExamType(exam.Type);
+            viewModel.Type = exam.Type;
+            viewModel.Date = interview.Date;
+            viewModel.ExamName = exam.Name;
+            viewModel.Email = candidate.Email;
+
+            return viewModel;
         }
     }
 }

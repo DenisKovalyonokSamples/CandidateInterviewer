@@ -4,6 +4,7 @@ using DK.DataAccess.Interfaces;
 using DK.DataAccess.Specifications;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace DK.DataAccess.Services
 {
@@ -53,6 +54,13 @@ namespace DK.DataAccess.Services
                 await _candidateRepository.UpdateAsync(candidate);
                 return candidate;
             }
+        }
+
+        public async Task<List<Candidate>> GetCandidatesAsync()
+        {
+            var entities = await _candidateRepository.ListAllAsync();
+
+            return entities;
         }
     }
 }

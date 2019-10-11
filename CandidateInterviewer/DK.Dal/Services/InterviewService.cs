@@ -85,6 +85,14 @@ namespace DK.DataAccess.Services
             return entity;
         }
 
+        public async Task<List<Interview>> GetPassedInterviewsAsync()
+        {
+            var interviewsSpec = new InterviewsSpecification();
+            var entities = (await _interviewRepository.ListAsync(interviewsSpec))?.ToList();
+
+            return entities;
+        }
+
         #endregion
 
         #region Exam

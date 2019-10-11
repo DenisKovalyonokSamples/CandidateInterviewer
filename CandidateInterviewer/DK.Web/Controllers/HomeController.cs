@@ -12,10 +12,12 @@ namespace DK.Web.Controllers
     public class HomeController : Controller
     {
         private readonly IInterviewService _interviewService;
+        private readonly IUserService _userService;
 
-        public HomeController(IInterviewService interviewService)
+        public HomeController(IInterviewService interviewService, IUserService userService)
         {
             _interviewService = interviewService;
+            _userService = userService;
         }
 
         [HttpGet]
@@ -39,11 +41,32 @@ namespace DK.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Results()
         {
-            return View();
+            var interviews = await _interviewService.GetPassedInterviewsAsync();
+            var candidates = await _userService.GetCandidatesAsync();
+
+            if (interviews?.Any() != true || candidates?.Any() != true)
+            {
+                return RedirectToAction(nameof(HomeController.Error));
+            }
+
+            var viewModels = new List<ResultViewModel>();
+
+            foreach (var interview in interviews)
+            {
+                var candidate = candidates.FirstOrDefault(e => e.Id == interview.CandidateId);
+
+                if (candidate != null)
+                {
+                    var exam = await _interviewService.GetExamAsync(interview.ExamId);
+                    viewModels.Add(ViewModelBuilder.GetResultViewModels(interview, candidate, exam));
+                }
+            }
+
+            return View(viewModels.OrderByDescending(e => e.Score).ToList());
         }
 
         [HttpGet]
-        public async Task<IActionResult> Contacts()
+        public IActionResult Contacts()
         {
             return View();
         }

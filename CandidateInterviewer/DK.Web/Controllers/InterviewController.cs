@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Collections.Generic;
 using DK.DataAccess.Entities;
-using DK.DataAccess.Enums;
-using DK.Core;
 
 namespace DK.Web.Controllers
 {
