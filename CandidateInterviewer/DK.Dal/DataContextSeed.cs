@@ -118,7 +118,24 @@ namespace DK.DataAccess
                 new Question() { ExamId = 17, Title = "How would you specify that a scope variable should have one-time binding only?", Score = Constants.SIMPLE_QUESTION_SCORE, Type = AnswerType.Single, Notes = "By using “::” in front of it. This allows you to check if the candidate is aware of the available variable bindings in AngularJS." },
                 new Question() { ExamId = 17, Title = "Explain how $scope.$apply() works?", Score = Constants.HARD_QUESTION_SCORE, Type = AnswerType.Text, Notes = "$scope.$apply re-evaluates all the declared ng-models and applies the change to any that have been altered (i.e. assigned to a new value) Explanation: scope.scope.apply() is one of the core angular functions that should never be used explicitly, it forces the angular engine to run on all the watched variables and all external variables and apply the changes on their values." },
                 new Question() { ExamId = 17, Title = "What directive would you use to hide elements from the HTML DOM by removing them from that DOM not changing their styling?", Score = Constants.SIMPLE_QUESTION_SCORE, Type = AnswerType.Single, Notes = "The ngIf Directive, when applied to an element, will remove that element from the DOM if it’s condition is false." },
-                new Question() { ExamId = 17, Title = "What is a digest cycle in AngularJS?", Score = Constants.HARD_QUESTION_SCORE, Type = AnswerType.Text, Notes = "In each digest cycle Angular compares the old and the new version of the scope model values. The digest cycle is triggered automatically. We can also use $apply() if we want to trigger the digest cycle manually." }
+                new Question() { ExamId = 17, Title = "What is a digest cycle in AngularJS?", Score = Constants.HARD_QUESTION_SCORE, Type = AnswerType.Text, Notes = "In each digest cycle Angular compares the old and the new version of the scope model values. The digest cycle is triggered automatically. We can also use $apply() if we want to trigger the digest cycle manually." },
+                
+                //.NET Core Intermediate Exam
+                new Question() { ExamId = 9, Title = "What is Common Type System (CTS)?", Score = Constants.SIMPLE_QUESTION_SCORE, Type = AnswerType.Single, Notes = "System that standardizes the data types of all programming languages using .NET under the umbrella of .NET to a common data type." },
+                new Question() { ExamId = 9, Title = "What's the difference between SDK and Runtime in .NET Core?", Score = Constants.MEDIUM_QUESTION_SCORE, Type = AnswerType.Text, Notes = "The SDK is all of the stuff that is needed/makes developing a .NET Core application easier, such as the CLI and a compiler. The runtime is the 'virtual machine' that hosts/runs the application and abstracts all the interaction with the base operating system." },
+                new Question() { ExamId = 9, Title = "What is included in .NET Core?", Score = Constants.MEDIUM_QUESTION_SCORE, Type = AnswerType.Multiple, Notes = "1) A .NET runtime, which provides a type system, assembly loading, a garbage collector, native interop and other basic services. 2) A set of framework libraries, which provide primitive data types, app composition types and fundamental utilities. 3) A set of SDK tools and language compilers that enable the base developer experience, available in the .NET Core SDK. 4) The 'dotnet' app host, which is used to launch .NET Core apps. It selects the runtime and hosts the runtime, provides an assembly loading policy and launches the app. The same host is also used to launch SDK tools in much the same way." },
+                new Question() { ExamId = 9, Title = "What is CoreCLR?", Score = Constants.SIMPLE_QUESTION_SCORE, Type = AnswerType.Text, Notes = "CoreCLR is the .NET execution engine in .NET Core, performing functions such as garbage collection and compilation to machine code." },
+                new Question() { ExamId = 9, Title = "What's the difference between Task and Thread in .NET?", Score = Constants.HARD_QUESTION_SCORE, Type = AnswerType.Text, Notes = "Thread represents an actual OS-level thread, with its own stack and kernel resources. Thread allows the highest degree of control; you can Abort() or Suspend() or Resume() a thread, you can observe its state, and you can set thread-level properties like the stack size, apartment state, or culture. ThreadPool is a wrapper around a pool of threads maintained by the CLR. The Task class from the Task Parallel Library offers the best of both worlds.Like the ThreadPool, a task does not create its own OS thread.Instead, tasks are executed by a TaskScheduler; the default scheduler simply runs on the ThreadPool.Unlike the ThreadPool, Task also allows you to find out when it finishes, and (via the generic Task) to return a result." },
+                new Question() { ExamId = 9, Title = "What is Kestrel?", Score = Constants.SIMPLE_QUESTION_SCORE, Type = AnswerType.Single, Notes = "Kestrel is a cross-platform web server built for ASP.NET Core based on libuv (a cross-platform asynchronous I/O library)." },
+                new Question() { ExamId = 9, Title = "What is the difference betweeen Value Types and Reference Types?", Score = Constants.SIMPLE_QUESTION_SCORE, Type = AnswerType.Text, Notes = "Value Types stored directly on the stack or allocated inline in a structure. Reference Types store a reference to the value‘s memory address and are allocated on the heap. Reference types can be any of the pointer types, interface types or self-describing types (arrays and class types such as user-defined classes, boxed value types and delegates)." },
+                new Question() { ExamId = 9, Title = "Dependency Injection in ASP.NET Core?", Score = Constants.SIMPLE_QUESTION_SCORE, Type = AnswerType.Single, Notes = "Dependency Injection comes as a part of ASP.NET Core Framework and everything is built around it." },
+                new Question() { ExamId = 9, Title = "What is .NET Standard?", Score = Constants.SIMPLE_QUESTION_SCORE, Type = AnswerType.Text, Notes = ".NET Standard is a set of APIs that all .NET platforms have to implement. This unifies the .NET platforms and prevents future fragmentation." },
+                new Question() { ExamId = 9, Title = "What is Middleware in ASP.NET Core?", Score = Constants.SIMPLE_QUESTION_SCORE, Type = AnswerType.Single, Notes = "Middleware is software that turns an application into a pipeline to process requests and responses. It controls how the application responds to HTTP requests." },
+                new Question() { ExamId = 9, Title = "What is new in ASP.NET Core 2, compared to ASP.NET Core 1?", Score = Constants.MEDIUM_QUESTION_SCORE, Type = AnswerType.Multiple, Notes = "1) Razor Pages 2) NuGet packages auto restoring 3) Microsoft.AspNetCore.All, 4) DbContext Pooling 5) Configuration is a part of DI" },
+                new Question() { ExamId = 9, Title = "Where are the static files in ASP.NET Core (MVC) located?", Score = Constants.SIMPLE_QUESTION_SCORE, Type = AnswerType.Single, Notes = "All static files are now (by default) located inside of wwwroot folder." },
+                new Question() { ExamId = 9, Title = "What are SignalR transports?", Score = Constants.HARD_QUESTION_SCORE, Type = AnswerType.Multiple, Notes = "1) WebSockets 2) Server Sent Events 3) Forever Frame 4) Long polling" },
+                new Question() { ExamId = 9, Title = "What is the startup class in ASP.NET core?", Score = Constants.SIMPLE_QUESTION_SCORE, Type = AnswerType.Single, Notes = "Startup class is the entry point of the ASP.NET Core application. Every .NET Core application must have this class." },
+                new Question() { ExamId = 9, Title = "What is ASP.NET Core Module?", Score = Constants.HARD_QUESTION_SCORE, Type = AnswerType.Text, Notes = "ASP.NET Core Module lets you run ASP.NET Core apps behind IIS. It works only with kestrel. ASP.NET Core is a native IIS module that hooks into the IIS pipeline and redirects traffic to the backend ASP.NET Core application. ASP.NET Core application run in a process separate from the IIS worker process. It also does process management. ASP.NET Core module starts the process for the ASP.NET Core application when the first request comes in and restarts it when it crashes." }
             };
         }
 
@@ -126,6 +143,7 @@ namespace DK.DataAccess
         {
             return new List<Answer>()
             {
+                //Angular JS Advanced Exam 
                 new Answer() { QuestionId = 1, Value = "Good", IsCorrect = false },
                 new Answer() { QuestionId = 1, Value = "Bad", IsCorrect = true },
 
@@ -154,7 +172,58 @@ namespace DK.DataAccess
 
                 new Answer() { QuestionId = 7, Value = "ngIf", IsCorrect = true },
                 new Answer() { QuestionId = 7, Value = "ng-show", IsCorrect = false },
-                new Answer() { QuestionId = 7, Value = "ng-if", IsCorrect = false }
+                new Answer() { QuestionId = 7, Value = "ng-if", IsCorrect = false },
+
+                //.NET Core Intermediate Exam
+                new Answer() { QuestionId = 9, Value = "System that includes all the supported package by ASP.NET code with their dependencies into one package.", IsCorrect = false },
+                new Answer() { QuestionId = 9, Value = "System that standardizes the data types of all programming languages using .NET under the umbrella of .NET to a common data type.", IsCorrect = true },
+                new Answer() { QuestionId = 9, Value = "Cross-Site Request Forgery", IsCorrect = false },
+
+                new Answer() { QuestionId = 11, Value = "web.config file", IsCorrect = false },
+                new Answer() { QuestionId = 11, Value = "Global.asax file", IsCorrect = false },
+                new Answer() { QuestionId = 11, Value = "Runtime (type system, assembly loading, garbage collector, native interop, basic services).", IsCorrect = true },
+                new Answer() { QuestionId = 11, Value = "Built-in supports for the notification framework", IsCorrect = false },
+                new Answer() { QuestionId = 11, Value = "Content-Generating Middleware", IsCorrect = false },
+                new Answer() { QuestionId = 11, Value = "Set of framework libraries (primitive data types, app composition types, fundamental utilities).", IsCorrect = true },
+                new Answer() { QuestionId = 11, Value = "Set of SDK tools and language compilers.", IsCorrect = true },
+                new Answer() { QuestionId = 11, Value = "'dotnet' app host.", IsCorrect = true },
+
+                new Answer() { QuestionId = 16, Value = "Own", IsCorrect = true },
+                new Answer() { QuestionId = 16, Value = "Third-Party", IsCorrect = false },
+
+                new Answer() { QuestionId = 14, Value = "Dependency Injection module.", IsCorrect = false },
+                new Answer() { QuestionId = 14, Value = "Cross-platform solution to add real-time features to web apps.", IsCorrect = false },
+                new Answer() { QuestionId = 14, Value = "Cross-platform web server built for ASP.NET Core based on libuv.", IsCorrect = true },
+
+                new Answer() { QuestionId = 18, Value = "Application host.", IsCorrect = false },
+                new Answer() { QuestionId = 18, Value = "Software that turns an application into a pipeline to process requests and responses.", IsCorrect = true },
+                new Answer() { QuestionId = 18, Value = "Cross-platform web server environment.", IsCorrect = false },
+
+                new Answer() { QuestionId = 19, Value = "Razor Pages", IsCorrect = true },
+                new Answer() { QuestionId = 19, Value = "wwwroot folder", IsCorrect = false },
+                new Answer() { QuestionId = 19, Value = "NuGet packages auto restoring", IsCorrect = true },
+                new Answer() { QuestionId = 19, Value = "SignalR", IsCorrect = false },
+                new Answer() { QuestionId = 19, Value = "Microsoft.AspNetCore.All", IsCorrect = true },
+                new Answer() { QuestionId = 19, Value = "IHostingEnvironment", IsCorrect = false },
+                new Answer() { QuestionId = 19, Value = "DbContext Pooling", IsCorrect = true },
+                new Answer() { QuestionId = 19, Value = "Configuration is a part of DI", IsCorrect = true },
+
+                new Answer() { QuestionId = 20, Value = "root folder", IsCorrect = false },
+                new Answer() { QuestionId = 20, Value = "wwwroot folder", IsCorrect = true },
+                new Answer() { QuestionId = 20, Value = "resources folder", IsCorrect = false },
+
+                new Answer() { QuestionId = 21, Value = "Slow polling", IsCorrect = false },
+                new Answer() { QuestionId = 21, Value = "Long polling", IsCorrect = true },
+                new Answer() { QuestionId = 21, Value = "Conventional routes", IsCorrect = false },
+                new Answer() { QuestionId = 21, Value = "Forever Frame", IsCorrect = true },
+                new Answer() { QuestionId = 21, Value = "Server Sent Events", IsCorrect = true },
+                new Answer() { QuestionId = 21, Value = "Server Log Events", IsCorrect = false },
+                new Answer() { QuestionId = 21, Value = "Attribute routes", IsCorrect = false },
+                new Answer() { QuestionId = 21, Value = "WebSockets", IsCorrect = true },
+
+                new Answer() { QuestionId = 22, Value = "Configuration point", IsCorrect = false },
+                new Answer() { QuestionId = 22, Value = "API initializer", IsCorrect = false },
+                new Answer() { QuestionId = 22, Value = "Entry point of the application", IsCorrect = true }
             };
         }
     }

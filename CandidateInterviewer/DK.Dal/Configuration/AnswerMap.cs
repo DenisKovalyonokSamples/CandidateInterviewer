@@ -16,7 +16,7 @@ namespace DK.DataAccess.Configuration
                        .IsRequired();
 
             builder.Property(a => a.Value)
-                .HasMaxLength(100);
+                .IsRequired();
 
             builder.Property(a => a.IsCorrect)
                 .IsRequired();
