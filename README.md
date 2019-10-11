@@ -34,6 +34,12 @@ INTERVIEW COMPLETED PAGE
 ![ci_completed](https://user-images.githubusercontent.com/54624273/66605357-a4a07600-ebb8-11e9-9109-ff94cd28dcea.png)
 
 
+RESULTS PAGE
+
+
+![ci-results](https://user-images.githubusercontent.com/54624273/66617770-2c00e000-ebdf-11e9-85de-e5c2519bd301.png)
+
+
 CONTACTS PAGE
 
 
