@@ -1,7 +1,5 @@
 # CandidateInterviewer
-Web sample of candidate interviewer system. Solution includes: web site (ASP.NET Core Web Application), ORM (Entity Framework Core, Code First), Database (Microsoft SQL Server 2019). Web site allows job applicants to be tested in a selected subject. After passing the test, the system processes the results of the responses and displays a table with the final grades. The employer can see which of the candidates received the highest marks and contact them.
-
-Project is under development. Source code does not uploaded fully to the repository!
+.NET Core Web sample of candidate interviewer system. Solution includes: web site (ASP.NET MVC Core Application), ORM (Entity Framework Core, Code First), Database Server (Microsoft SQL Server 2019). Web site allows job applicants to be tested in a selected subject. After passing the test, the system processes the results of the responses and displays a table with the final grades. The employer can see which of the candidates received the highest marks and contact them.
 
 
 HOME PAGE
@@ -37,7 +35,13 @@ INTERVIEW COMPLETED PAGE
 RESULTS PAGE
 
 
-![ci-results](https://user-images.githubusercontent.com/54624273/66617770-2c00e000-ebdf-11e9-85de-e5c2519bd301.png)
+![ci-results](https://user-images.githubusercontent.com/54624273/66786882-9ae57e00-eeea-11e9-9aba-a3219d145316.png)
+
+
+REVIEW EXAM PAGE
+
+
+![ci_review_exam](https://user-images.githubusercontent.com/54624273/66786895-a6d14000-eeea-11e9-806c-f8357bbf1d60.png)
 
 
 CONTACTS PAGE
