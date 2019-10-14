@@ -4,14 +4,16 @@ using DK.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DK.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20191014145044_Approval_Type_For_Response")]
+    partial class Approval_Type_For_Response
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -181,13 +183,13 @@ namespace DK.DataAccess.Migrations
                         .HasAnnotation("SqlServer:HiLoSequenceName", "response_hilo")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.SequenceHiLo);
 
-                    b.Property<int>("ApprovalType");
-
                     b.Property<int>("InterviewId");
 
                     b.Property<bool>("IsApproved");
 
                     b.Property<int>("QuestionId");
+
+                    b.Property<int>("Type");
 
                     b.Property<string>("Value")
                         .IsRequired();

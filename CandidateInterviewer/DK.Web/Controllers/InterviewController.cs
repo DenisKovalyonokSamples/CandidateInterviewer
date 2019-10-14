@@ -96,7 +96,8 @@ namespace DK.Web.Controllers
             var interview = await _interviewService.GetInterviewAsync(model.InterviewId);
             if (interview != null)
             {
-                if(await _interviewService.UpdateInterviewScoreAsync(interview, CalculationManager.CalculateFinalInterviewScore(model.Questions, model.Type)))
+                await _interviewService.SaveResponcesForInterviewAsync(ViewModelBuilder.GetExamResponses(model));
+                if (await _interviewService.UpdateInterviewScoreAsync(interview, CalculationManager.CalculateFinalInterviewScore(model.Questions, model.Type)))
                 {
                     return RedirectToAction(nameof(Complete), new { id = interview.Id });
                 }
@@ -118,6 +119,39 @@ namespace DK.Web.Controllers
             }
 
             var viewModel = ViewModelBuilder.GetCompleteViewModel(interview, exam, candidate);
+
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ExamReview(int id)
+        {
+            var interview = await _interviewService.GetInterviewAsync(id);
+            var exam = await _interviewService.GetExamAsync(interview.ExamId);
+            var candidate = await _userService.GetCandidateAsync(interview.CandidateId);
+
+            if (exam == null || candidate == null)
+            {
+                return RedirectToAction(nameof(HomeController.Error));
+            }
+
+            var answers = new List<Answer>();
+            var examQuestions = await _interviewService.GetQuestionsForExamAsync(interview.ExamId);
+            if (examQuestions?.Any() == true)
+            {
+                foreach (var question in examQuestions)
+                {
+                    var questionAnswers = await _interviewService.GetAnswersForQuestionAsync(question.Id);
+                    if (questionAnswers?.Any() == true)
+                    {
+                        answers.AddRange(questionAnswers);
+                    }
+                }
+            }
+
+            var responses = await _interviewService.GetResponsesForInterviewAsync(interview.Id);
+            var viewModel = ViewModelBuilder.GetExamViewModel(interview, exam, candidate, examQuestions, answers);
+            viewModel.Responses = ViewModelBuilder.GetResponseViewModels(responses);
 
             return View(viewModel);
         }

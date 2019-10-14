@@ -4,14 +4,16 @@ using DK.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DK.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20191014133924_Response_Entity")]
+    partial class Response_Entity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -181,22 +183,19 @@ namespace DK.DataAccess.Migrations
                         .HasAnnotation("SqlServer:HiLoSequenceName", "response_hilo")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.SequenceHiLo);
 
-                    b.Property<int>("ApprovalType");
+                    b.Property<int?>("AnswerId");
 
                     b.Property<int>("InterviewId");
 
                     b.Property<bool>("IsApproved");
 
-                    b.Property<int>("QuestionId");
-
-                    b.Property<string>("Value")
-                        .IsRequired();
+                    b.Property<string>("Value");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("InterviewId");
+                    b.HasIndex("AnswerId");
 
-                    b.HasIndex("QuestionId");
+                    b.HasIndex("InterviewId");
 
                     b.ToTable("Response");
                 });
@@ -240,15 +239,14 @@ namespace DK.DataAccess.Migrations
 
             modelBuilder.Entity("DK.DataAccess.Entities.Response", b =>
                 {
+                    b.HasOne("DK.DataAccess.Entities.Answer", "Answer")
+                        .WithMany()
+                        .HasForeignKey("AnswerId");
+
                     b.HasOne("DK.DataAccess.Entities.Interview", "Interview")
                         .WithMany()
                         .HasForeignKey("InterviewId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("DK.DataAccess.Entities.Question", "Question")
-                        .WithMany()
-                        .HasForeignKey("QuestionId")
-                        .OnDelete(DeleteBehavior.Restrict);
                 });
 #pragma warning restore 612, 618
         }

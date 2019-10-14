@@ -10,6 +10,6 @@ namespace DK.DataAccess.Entities
         public bool IsCorrect { get; set; }
         public string Value { get; set; }
 
-        public Question Question { get; set; }
+        public virtual Question Question { get; set; }
     }
 }

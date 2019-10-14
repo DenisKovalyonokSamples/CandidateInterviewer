@@ -18,6 +18,7 @@ namespace DK.DataAccess
         public DbSet<Candidate> Candidates { get; set; }
         public DbSet<Answer> Answers { get; set; }
         public DbSet<Exam> Exams { get; set; }
+        public DbSet<Response> Responses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,6 +28,7 @@ namespace DK.DataAccess
         protected void Configure(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            //modelBuilder.Entity<Response>().HasOne(e => e.Question).WithMany().IsRequired().OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

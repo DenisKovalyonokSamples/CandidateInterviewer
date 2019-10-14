@@ -1,4 +1,5 @@
-﻿using DK.DataAccess.Entities;
+﻿using DK.Core;
+using DK.DataAccess.Entities;
 using DK.DataAccess.Enums;
 using DK.Web.ViewModels;
 using System;
@@ -48,21 +49,96 @@ namespace DK.Web.Managers
             return viewModel;
         }
 
-        public static ExamViewModel GetExamViewModel(Interview interview, Exam entitiy, Candidate candidate, List<Question> questions, List<Answer> answers)
+        public static ExamViewModel GetExamViewModel(Interview interview, Exam exam, Candidate candidate, List<Question> questions, List<Answer> answers)
         {
             var viewModel = new ExamViewModel();
 
-            viewModel.Id = entitiy.Id;
-            viewModel.CategoryId = entitiy.CategoryId;
+            viewModel.Id = exam.Id;
+            viewModel.CategoryId = exam.CategoryId;
             viewModel.CandidateId = candidate.Id;
             viewModel.InterviewId = interview.Id;
             viewModel.CandidateFullName = candidate.FirstName + " " + candidate.LastName;
-            viewModel.Type = entitiy.Type;
-            viewModel.Logo = entitiy.Logo;
-            viewModel.Name = entitiy.Name;
-            viewModel.Description = entitiy.Description;
-            viewModel.TypeLogo = MediaManager.GetIconForExamType(entitiy.Type);
+            viewModel.CandidateDescription = candidate.Description;
+            viewModel.CandidateEmail = candidate.Email;
+            viewModel.CandidatePhone = candidate.Phone;
+            viewModel.Type = exam.Type;
+            viewModel.Logo = exam.Logo;
+            viewModel.Name = exam.Name;
+            viewModel.Description = exam.Description;
+            viewModel.TypeLogo = MediaManager.GetIconForExamType(exam.Type);
             viewModel.Questions = GetQuestionsForExamViewModel(questions, answers);
+
+            return viewModel;
+        }
+
+        public static List<Response> GetExamResponses(ExamViewModel model)
+        {
+            var entities = new List<Response>();
+
+            if (model.Questions?.Any() == true)
+            {
+                foreach (var question in model.Questions)
+                {
+                    var response = new Response();
+                    response.InterviewId = model.InterviewId;
+                    response.QuestionId = question.Id;
+
+                    if (question.Type == AnswerType.Text)
+                    {
+                        response.IsApproved = false;
+                        response.ApprovalType = ApprovalType.Manual;
+                        response.Value = question.CandidateAnswer;
+                    }
+
+                    if (question.Type == AnswerType.Single)
+                    {
+                        var selectedAnswer = question.Answers?.FirstOrDefault(e => e.Value == question.CandidateAnswer);
+                        if (selectedAnswer != null)
+                        {
+                            response.IsApproved = true;
+                            response.ApprovalType = ApprovalType.Automatical;
+                            response.Value = question.CandidateAnswer;
+                        }
+                    }
+
+                    if (question.Type == AnswerType.Multiple)
+                    {
+                        var candidateAnswers = question.Answers?.Where(e => e.CandidateAnswer)?.ToList() ?? new List<AnswerViewModel>();
+                        foreach (var answer in candidateAnswers)
+                        {
+                            response.Value += answer.Value + Constants.ANSWER_SEPARATOR;
+                        }
+
+                        response.IsApproved = true;
+                        response.ApprovalType = ApprovalType.Automatical;
+                    }
+
+                    if (!string.IsNullOrEmpty(response.Value))
+                    {
+                        entities.Add(response);
+                    }
+                }
+            }
+
+            return entities;
+        }
+
+        public static List<ResponseViewModel> GetResponseViewModels(List<Response> responses)
+        {
+            var viewModel = new List<ResponseViewModel>();
+
+            if (responses?.Any() == true)
+            {
+                viewModel = responses.Select(o => new ResponseViewModel()
+                {
+                    Id = o.Id,
+                    InterviewId = o.InterviewId,
+                    QuestionId = o.QuestionId,
+                    Type = o.ApprovalType,
+                    IsApproved = o.IsApproved,
+                    Value = o.Value
+                })?.ToList() ?? new List<ResponseViewModel>();
+            }
 
             return viewModel;
         }

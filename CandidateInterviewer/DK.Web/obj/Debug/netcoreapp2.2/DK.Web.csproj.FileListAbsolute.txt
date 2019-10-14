@@ -42,3 +42,4 @@ D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.W
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Menu.g.cshtml.cs
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Interview\Exam.g.cshtml.cs
 D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Interview\Complete.g.cshtml.cs
+D:\Dev\SourceControls\GitHub\Mine\CandidateInterviewer\CandidateInterviewer\DK.Web\obj\Debug\netcoreapp2.2\Razor\Views\Interview\ExamReview.g.cshtml.cs

@@ -14,5 +14,7 @@
         public const string INTERMEDIATE_TYPE_ICO = "ic-management.png";
         public const string ADVANCED_TYPE_ICO = "ic-knowleage.png";
         public const string UNKNOWN_TYPE_ICO = "ic-work.png";
+
+        public const string ANSWER_SEPARATOR = "asw@sep";
     }
 }

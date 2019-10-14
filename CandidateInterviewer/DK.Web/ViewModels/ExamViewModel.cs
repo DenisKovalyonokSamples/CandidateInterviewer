@@ -25,6 +25,14 @@ namespace DK.Web.ViewModels
 
         public string CandidateFullName { get; set; }
 
+        public string CandidateDescription { get; set; }
+
+        public string CandidateEmail { get; set; }
+
+        public string CandidatePhone { get; set; }
+
         public List<QuestionViewModel> Questions { get; set; }
+
+        public List<ResponseViewModel> Responses { get; set; }
     }
 }

@@ -44,4 +44,28 @@
     &__button {
         margin-top: 60px;
     }
+
+    &__candidate-info {
+        display: flex;
+        padding: 0px 25px 15px 25px;
+        font-size: 20px;
+
+        .info-title {
+            margin-left: 15px;
+        }
+    }
+
+    &__candidate-ctr {
+        margin-bottom: 75px;
+        margin-top: 75px;
+    }
+
+    &__correct-answer {
+        color: green;
+    }
+
+    &__incorrect-answer {
+        color: red;
+        font-weight: bold;
+    }
 }

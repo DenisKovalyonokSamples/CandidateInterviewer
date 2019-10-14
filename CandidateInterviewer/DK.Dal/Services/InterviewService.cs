@@ -17,17 +17,20 @@ namespace DK.DataAccess.Services
         private readonly IAsyncRepository<Question> _questionRepository;
         private readonly IAsyncRepository<Interview> _interviewRepository;
         private readonly IAsyncRepository<Answer> _answerRepository;
-        private readonly ILogService<UserService> _logger;
+        private readonly IAsyncRepository<Response> _responseRepository;
+        private readonly ILogService<InterviewService> _logger;
 
         public InterviewService(IAsyncRepository<Category> categoryRepository, IAsyncRepository<Exam> examRepository, 
-            IAsyncRepository<Interview> interviewRepository, IAsyncRepository<Question> questionRepository,
-            IAsyncRepository<Answer> answerRepository, ILogService<UserService> logger)
+            IAsyncRepository<Interview> interviewRepository, IAsyncRepository<Question> questionRepository, 
+            IAsyncRepository<Answer> answerRepository, IAsyncRepository<Response> responseRepository, 
+            ILogService<InterviewService> logger)
         {
             _categoryRepository = categoryRepository;
             _examRepository = examRepository;
             _interviewRepository = interviewRepository;
             _questionRepository = questionRepository;
             _answerRepository = answerRepository;
+            _responseRepository = responseRepository;
             _logger = logger;
         }
 
@@ -161,6 +164,38 @@ namespace DK.DataAccess.Services
         public async Task<Answer> GetAnswerAsync(int id)
         {
             var entity = await _answerRepository.GetByIdAsync(id);
+
+            return entity;
+        }
+
+        #endregion
+
+        #region Response
+
+        public async Task<List<Response>> GetResponsesForInterviewAsync(int interviewId)
+        {
+            var responseSpec = new ResponseSpecification(interviewId);
+            var entities = (await _responseRepository.ListAsync(responseSpec))?.ToList();
+
+            if (entities == null)
+            {
+                _logger.LogInformation($"Responses for Interview {interviewId} were not found.");
+            }
+
+            return entities;
+        }
+
+        public async Task SaveResponcesForInterviewAsync(List<Response> entities)
+        {
+            foreach (var entity in entities)
+            {
+                await _responseRepository.AddAsync(entity);
+            }
+        }
+
+        public async Task<Response> GetResponseAsync(int id)
+        {
+            var entity = await _responseRepository.GetByIdAsync(id);
 
             return entity;
         }

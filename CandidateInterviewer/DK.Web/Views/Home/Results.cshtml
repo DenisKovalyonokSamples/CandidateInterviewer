@@ -96,6 +96,9 @@
                                     <p class="work__text">@interview.CandidateFullName (@interview.CandidateDescription)</p>
                                     <p class="work__text-email">@interview.Email</p>
                                     <a class="connection__link" href="#">@interview.Date.ToLocalTime().ToShortDateString()</a>
+                                    <a class="btn-b btn-b--small work__preview-more" asp-area="" asp-controller="Interview" asp-action="ExamReview" asp-route-id="@interview.InterviewId">
+                                        <span>Review Answers</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>

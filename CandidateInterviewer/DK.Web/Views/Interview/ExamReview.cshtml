@@ -1,0 +1,143 @@
+﻿@model ExamViewModel
+
+@using DK.BusinessLogic.Helpers;
+@using DK.DataAccess.Enums;
+
+@{
+    ViewData["Title"] = "ExamReview";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content__fixed">
+    <section class="message">
+        <div class="message__wrap">
+            <div class="container no-width">
+                <div class="message__top">
+                    <div class="connection--contacts connection__exam--container">
+                        <div class="connection__outer">
+                            <div class="connection__exam">
+                                <img class="connection__logo" src="~/images/@Model.Logo" />
+                                <div class="work__preview-col--exam">
+                                    <i class="work__icon--exam">
+                                        <img class="work__img--exam" src="~/images/@Model.TypeLogo">
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="connection__bottom connection__title-center">
+                                <span class="work__ttl--exam">@Model.Type.GetEnumDisplayName().ToUpper()</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="message__bottom message__slim">
+                <h2 class="title-h2">Exam Review</h2>
+                <h3 class="title-h3">@Model.Description</h3>
+
+                <div class="message__candidate-ctr">
+                    <div class="message__candidate-info">
+                        <span class="connection__ttl">Candidate:</span>
+                        <span class="info-title">@Model.CandidateFullName</span>
+                    </div>
+                    <div class="message__candidate-info">
+                        <span class="connection__ttl">Position:</span>
+                        <span class="info-title">@Model.CandidateDescription</span>
+                    </div>
+                    <div class="message__candidate-info">
+                        <span class="connection__ttl">Email:</span>
+                        <span class="info-title">@Model.CandidateEmail</span>
+                    </div>
+                </div>
+
+                @if (Model.Questions?.Any() == true)
+                {
+                    for (int i = 0; i < Model.Questions.Count; i++)
+                    {
+                        @Html.HiddenFor(m => m.Questions[i].Id)
+                        @Html.HiddenFor(m => m.Questions[i].Notes)
+                        @Html.HiddenFor(m => m.Questions[i].Score)
+                        @Html.HiddenFor(m => m.Questions[i].Type)
+
+                        var isCorrectAndApproved = false;
+                        var questionCaption = (i + 1).ToString() + ") " + Model.Questions[i].Title;
+                        var responses = Model.Responses?.Where(e => e.QuestionId == Model.Questions[i].Id)?.ToList();
+
+                        <span class="connection__ttl">@questionCaption</span>
+                        <div class="message__answers">
+                            @if (Model.Questions[i].Type == AnswerType.Text)
+                            {
+                                var answerResponse = responses?.FirstOrDefault(e => e.QuestionId == Model.Questions[i].Id);
+                                isCorrectAndApproved = answerResponse?.IsApproved ?? false;
+                                if (answerResponse != null)
+                                {
+                                    Model.Questions[i].CandidateAnswer = answerResponse.Value;
+                                }
+                                <div>
+                                    @Html.TextAreaFor(m => m.Questions[i].CandidateAnswer, new { @class = "message__area" })
+                                </div>
+                            }
+                            else
+                            {
+                                for (int j = 0; j < Model.Questions[i].Answers.Count; j++)
+                                {
+                                    <div>
+                                        @Html.HiddenFor(m => m.Questions[i].Answers[j].Id)
+                                        @Html.HiddenFor(m => m.Questions[i].Answers[j].QuestionId)
+                                        @Html.HiddenFor(m => m.Questions[i].Answers[j].IsCorrect)
+                                        @Html.HiddenFor(m => m.Questions[i].Answers[j].Value)
+                                    </div>
+                                    <div class="message__answer">
+                                        @if (Model.Questions[i].Type == AnswerType.Single && Model.Questions[i].Answers?.Any() == true)
+                                        {
+                                            var answer = Model.Questions[i].Answers[j];
+                                            var answerResponse = responses?.FirstOrDefault(e => e.Value == Model.Questions[i].Answers[j].Value);
+                                            if (answerResponse != null)
+                                            {
+                                                Model.Questions[i].CandidateAnswer = answerResponse.Value;
+                                            }
+                                            if (answer?.IsCorrect == true && answer?.Value == answerResponse?.Value)
+                                            {
+                                                isCorrectAndApproved = true;
+                                            }
+
+                                            <label class="@(answer.IsCorrect ? "message__correct-answer" : (answerResponse != null ? "message__incorrect-answer" : ""))">
+                                                @Html.RadioButtonFor(m => m.Questions[i].CandidateAnswer, answer.Value)
+                                                @answer.Value
+                                            </label>
+                                        }
+
+                                        @if (Model.Questions[i].Type == AnswerType.Multiple && Model.Questions[i].Answers?.Any() == true)
+                                        {
+                                            <label>
+                                                @Html.CheckBoxFor(m => m.Questions[i].Answers[j].CandidateAnswer, Model.Questions[i].Answers[j].Value)
+                                                @Model.Questions[i].Answers[j].Value
+                                            </label>
+                                        }
+                                    </div>
+                                }
+                            }
+
+                            <div class="work__itm--results">
+                                <div class="work__preview--results">
+                                    <div class="work__preview-row">
+                                        <div class="work__preview-col--results @(isCorrectAndApproved == false ? "grayscale" : "")">
+                                            <i class="work__icon">
+                                                <img class="work__img" src="/images/@Model.TypeLogo">
+                                            </i>
+                                            <span class="work__ttl--results">@Model.Questions[i].Score</span>
+                                        </div>
+                                        <div class="work__preview-col--descr">
+                                            <span class="work__ttl">Correct Answer</span>
+                                            <p class="work__text">@Model.Questions[i].Notes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </section>
+</div>
+
