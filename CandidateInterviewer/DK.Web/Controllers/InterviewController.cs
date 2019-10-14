@@ -155,5 +155,22 @@ namespace DK.Web.Controllers
 
             return View(viewModel);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> ExamReview(ExamViewModel model, string submit)
+        {
+            if (!string.IsNullOrEmpty(submit))
+            {
+                int questionId = 0;
+                var parameters = submit.Split("-");
+
+                if (int.TryParse(parameters[1], out questionId))
+                {
+                    await _interviewService.UpdateQuestionApprovalAsync(model.InterviewId, questionId, parameters[0] == "approve" ? true : false);
+                }
+            }
+
+            return RedirectToAction(nameof(ExamReview), new { id = model.InterviewId });
+        }
     }
 }

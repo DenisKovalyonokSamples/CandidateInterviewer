@@ -31,6 +31,8 @@ namespace DK.Web.ViewModels
 
         public string CandidatePhone { get; set; }
 
+        public string Score { get; set; }
+
         public List<QuestionViewModel> Questions { get; set; }
 
         public List<ResponseViewModel> Responses { get; set; }

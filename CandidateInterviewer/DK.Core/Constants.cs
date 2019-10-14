@@ -15,6 +15,11 @@
         public const string ADVANCED_TYPE_ICO = "ic-knowleage.png";
         public const string UNKNOWN_TYPE_ICO = "ic-work.png";
 
+        public const string BASE_TYPE_COLOR_CLASS = "work__score--base";
+        public const string INTERMEDIATE_TYPE_COLOR_CLASS = "work__score--intermediate";
+        public const string ADVANCED_TYPE_COLOR_CLASS = "work__score--advanced";
+        public const string UNKNOWN_TYPE_COLOR_CLASS = "work__score--unknown";
+
         public const string ANSWER_SEPARATOR = "asw@sep";
     }
 }

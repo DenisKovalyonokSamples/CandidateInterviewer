@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DK.Core;
+using DK.DataAccess.Enums;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
@@ -16,11 +18,19 @@ namespace DK.BusinessLogic.Helpers
         public static string GetEnumDisplayName(this Enum enumeration)
             => enumeration.DisplayName();
 
+        /// <summary>
+        /// Gets an attribute dislay color class on an enum field value
+        /// </summary>        
+        /// <param name="enumeration">ExamType enum value</param>
+        /// <returns>The Dislay Color Class</returns>
+        public static string GetEnumDisplayColorClass(this ExamType enumeration)
+            => enumeration.DisplayColorClass();
+
         #endregion
 
         #region Private Methods
 
-        public static string DisplayName(this Enum value)
+        private static string DisplayName(this Enum value)
         {
             if (value == null)
             {
@@ -53,6 +63,29 @@ namespace DK.BusinessLogic.Helpers
             }
 
             return outString ?? enumValue;
+        }
+
+        private static string DisplayColorClass(this ExamType value)
+        {
+            string colorClass = string.Empty;
+
+            switch (value)
+            {
+                case ExamType.Base:
+                    colorClass = Constants.BASE_TYPE_COLOR_CLASS;
+                    break;
+                case ExamType.Intermediate:
+                    colorClass = Constants.INTERMEDIATE_TYPE_COLOR_CLASS;
+                    break;
+                case ExamType.Advanced:
+                    colorClass = Constants.ADVANCED_TYPE_COLOR_CLASS;
+                    break;
+                default:
+                    colorClass = Constants.UNKNOWN_TYPE_COLOR_CLASS;
+                    break;
+            }
+
+            return colorClass;
         }
 
         #endregion

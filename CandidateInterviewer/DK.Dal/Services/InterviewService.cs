@@ -200,6 +200,34 @@ namespace DK.DataAccess.Services
             return entity;
         }
 
+        public async Task<bool> UpdateQuestionApprovalAsync(int interviewId, int questionId, bool isApproved)
+        {
+            var responseSpec = new ResponseSpecification(interviewId, questionId);
+            var entity = (await _responseRepository.ListAsync(responseSpec))?.FirstOrDefault();
+
+            if (entity == null)
+            {
+                _logger.LogInformation($"Response for Interview {interviewId} were not found.");
+            }
+
+            entity.IsApproved = isApproved;
+            entity.ApprovalType = isApproved ? ApprovalType.Manual : ApprovalType.Rejected;
+            await _responseRepository.UpdateAsync(entity);
+
+            if (isApproved)
+            {
+                var interview = await _interviewRepository.GetByIdAsync(interviewId);
+                var question = await _questionRepository.GetByIdAsync(questionId);
+                if (interview != null && question != null)
+                {
+                    interview.Score = (Convert.ToInt32(interview.Score) + question.Score).ToString();
+                    await _interviewRepository.UpdateAsync(interview);
+                }
+            }
+
+            return true;
+        }
+
         #endregion
     }
 }

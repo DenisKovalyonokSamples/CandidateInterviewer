@@ -9,5 +9,11 @@ namespace DK.DataAccess.Specifications
             : base(e => e.InterviewId == interviewId)
         {
         }
+
+        public ResponseSpecification(int interviewId, int questionId)
+            : base(e => e.InterviewId == interviewId 
+            && e.QuestionId == questionId)
+        {
+        }
     }
 }

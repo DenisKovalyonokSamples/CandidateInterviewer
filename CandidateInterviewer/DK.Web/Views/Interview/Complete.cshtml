@@ -41,7 +41,7 @@
 
             <div class="about__desc-wrap about__desc-complete">
                 <h2 class="title-h1">
-                    Score: <span class="connection__score">@Model.Score</span>
+                    Score: <span class="connection__score @(Model.Type.GetEnumDisplayColorClass())">@Model.Score</span>
                     <img class="connection__tooltip-img" src="~/images/@Model.ExamTypeLogo" />
                 </h2>
             </div>

@@ -171,8 +171,65 @@
         margin: 0;
         font-size: 42px;
         width: 100%;
-        color: darkorange;
         padding-top: 10px;
         line-height: 1;
+        font-weight: bold;
+    }
+
+    &__itm--reviews {
+        padding: 0;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    &__score--base {
+        color: crimson;
+    }
+
+    &__score--intermediate {
+        color: darkorchid;
+    }
+
+    &__score--advanced {
+        color: darkorange;
+    }
+
+    &__score--unknown {
+        color: gray;
+    }
+
+    &__correct {
+        color: green;
+    }
+
+    &__incorrect {
+        color: red;
+    }
+
+    &__answer {
+        color: var(--brendColLight);
+    }
+
+    &__preview--approve {
+        margin-top: 20px;
+    }
+
+    &__row--approve {
+        min-height: 160px;
+    }
+
+    &__tooltip-img {
+        width: 42px;
+        position: absolute;
+    }
+
+    &__status {
+        padding-top: 20px;
+    }
+
+    &__incorrect--img {
+        width: 22px;
+        margin-right: 10px;
     }
 }

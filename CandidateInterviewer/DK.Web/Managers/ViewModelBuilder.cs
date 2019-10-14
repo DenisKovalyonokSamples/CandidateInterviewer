@@ -64,6 +64,7 @@ namespace DK.Web.Managers
             viewModel.Type = exam.Type;
             viewModel.Logo = exam.Logo;
             viewModel.Name = exam.Name;
+            viewModel.Score = interview.Score;
             viewModel.Description = exam.Description;
             viewModel.TypeLogo = MediaManager.GetIconForExamType(exam.Type);
             viewModel.Questions = GetQuestionsForExamViewModel(questions, answers);

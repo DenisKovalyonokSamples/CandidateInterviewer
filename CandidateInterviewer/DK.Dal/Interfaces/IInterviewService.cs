@@ -22,5 +22,6 @@ namespace DK.DataAccess.Interfaces
         Task<List<Response>> GetResponsesForInterviewAsync(int interviewId);
         Task SaveResponcesForInterviewAsync(List<Response> entities);
         Task<Response> GetResponseAsync(int id);
+        Task<bool> UpdateQuestionApprovalAsync(int interviewId, int questionId, bool isApproved);
     }
 }
