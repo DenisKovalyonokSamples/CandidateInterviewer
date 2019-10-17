@@ -15,6 +15,13 @@
         height: 633px;
         width: 492px;
 
+        &__success {
+            position: absolute;
+            top: 210px;
+            right: 100px;
+            width: 165px;
+        }
+
         &__elem {
             height: 240px;
             width: 174px;
@@ -319,6 +326,12 @@
 
     .work {
         padding-bottom: 45px;
+
+        &__icon--exam, 
+        &__img--exam {
+            width: 100px;
+            height: 100px;
+        }
 
         &__itm {
             width: 50%;

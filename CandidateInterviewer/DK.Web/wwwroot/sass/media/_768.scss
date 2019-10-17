@@ -79,6 +79,10 @@
     }
 
     .connection {
+        &__bottom {
+            padding: 5px 5px;
+        }
+
         &__ttl {
             font-size: 18px;
         }
@@ -141,6 +145,13 @@
         height: 330px;
         width: 250px;
 
+        &__success {
+            position: absolute;
+            top: 82px;
+            right: 60px;
+            width: 90px;
+        }
+
         &__elem {
             height: 120px;
             width: 87px;
@@ -167,10 +178,6 @@
     }
 
     .about {
-        &__desc {
-            padding-top: 0;
-        }
-
         &__arrow {
             display: none !important;
         }
@@ -189,11 +196,11 @@
         }
 
         &.about--company {
-            min-height: 315px;
+            min-height: 715px;
             height: auto;
 
             .container {
-                min-height: 315px;
+                min-height: 715px;
             }
 
             .about__desc {
@@ -553,8 +560,19 @@
     .work {
         padding-bottom: 25px;
 
-        &__ttl {
-            font-size: 20px;
+        &__icon--exam,
+        &__img--exam {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__preview-col--exam {
+            padding: 10px 10px;
+        }
+
+        &__ttl, &__ttl--exam {
+            line-height: 10px;
+            font-size: 10px;
         }
 
         &__outer--value {
