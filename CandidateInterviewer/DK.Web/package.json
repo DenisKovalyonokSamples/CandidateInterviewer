@@ -12,7 +12,7 @@
     "gulp-rename": "1.4.0",
     "gulp-sass": "4.0.1",
     "gulp-uglify": "3.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-migrate": "3.0.1",
     "jquery.scrollbar": "0.2.11",
     "modernizr": "^3.7.1",
